@@ -1,13 +1,52 @@
 import React, { useState, useEffect } from 'react';
-import './Modal.css'; // Import the modal CSS
+import './Modal.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFloppyDisk,faCircleXmark,faellipsis } from '@fortawesome/free-solid-svg-icons';
+import { faFloppyDisk, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
+// Import Ranked Borders
+import challengerBorder from './assets/ranked-emblem/wings/wings_challenger.png';
+import gMasterBorder from './assets/ranked-emblem/wings/wings_grandmaster.png';
 import masterBorder from './assets/ranked-emblem/wings/wings_master.png';
+import diamondBorder from './assets/ranked-emblem/wings/wings_diamond.png';
+import emeraldBorder from './assets/ranked-emblem/wings/wings_platinum.png';
+import goldBorder from './assets/ranked-emblem/wings/wings_gold.png';
+import silverBorder from './assets/ranked-emblem/wings/wings_silver.png';
+import bronzeBorder from './assets/ranked-emblem/wings/wings_bronze.png';
+import ironBorder from './assets/ranked-emblem/wings/wings_iron.png';
 
+// Function to get the correct rank border
+const getRankBorder = (tier) => {
+  switch (tier) {
+    case 'CHALLENGER':
+      return challengerBorder;
+    case 'GRANDMASTER':
+      return gMasterBorder;
+    case 'MASTER':
+      return masterBorder;
+    case 'DIAMOND':
+      return diamondBorder;
+    case 'EMERALD':
+    case 'PLATINUM':
+      return emeraldBorder;
+    case 'GOLD':
+      return goldBorder;
+    case 'SILVER':
+      return silverBorder;
+    case 'BRONZE':
+      return bronzeBorder;
+    case 'IRON':
+      return ironBorder;
+    default:
+      return masterBorder; // Default to masterBorder if no rank is found
+  }
+};
 
+const Modal = ({ isOpen, onClose, onSubmit, onReset, existingCredentials, profileIconId, gameName, tagLine, tier }) => {
 
-const Modal = ({ isOpen, onClose, onSubmit, onReset, existingCredentials, profileIconId, gameName, tagLine }) => {
+  // Log the tier received in Modal.js
+  console.log("Tier received in Modal.js: ", tier);
+  console.log("Profile Icon ID received in Modal.js: ", profileIconId);
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -21,39 +60,50 @@ const Modal = ({ isOpen, onClose, onSubmit, onReset, existingCredentials, profil
     }
   }, [existingCredentials]);
 
-  if (!isOpen) return null; // If modal is not open, return nothing
+  if (!isOpen) return null;
 
   const handleSave = () => {
     onSubmit({ username, password });
-    onClose(); // Close modal after saving
+    onClose();
   };
 
   const handleReset = () => {
     setUsername('');
     setPassword('');
-    onReset(); // Reset credentials
-    onClose(); // Close modal after resetting
+    onReset();
+    onClose();
   };
+
+  // Debugging logs to verify tier and profileIconId are being passed correctly
+  console.log("Tier in Modal: ", tier);  // This should log the tier such as 'GRANDMASTER'
+  console.log("Profile Icon ID in Modal: ", profileIconId);
 
   const profileIconUrl = profileIconId
     ? `https://ddragon.leagueoflegends.com/cdn/14.17.1/img/profileicon/${profileIconId}.png`
     : null;
 
+
+  // Check tier is passed correctly into Modal
+  console.log("Tier received in Modal.js: ", tier);
+  const rankBorder = getRankBorder(tier);
+
   return (
     <>
       <div className="modal-overlay" onClick={onClose}></div>
       <div className="modal">
-        <span className="" onClick={onClose}><FontAwesomeIcon icon="fa-circle-xmark" /></span>
-        
-        {/* Container to display both profile border and icon */}
+        <span className="close-button" onClick={onClose}>
+          <FontAwesomeIcon icon={faCircleXmark} />
+        </span>
+
+        {/* Display rank border and profile icon */}
         <div className="icon-container">
-          <img className="border-image" src={masterBorder} alt="Master Border" />
+          <img className="border-image" src={rankBorder} alt={`${tier} Border`} />
           {profileIconUrl && (
             <img className="icon-modal" src={profileIconUrl} alt="Profile Icon" />
           )}
         </div>
 
-        {/* Display gameName and tagLine at the top */}
+        {/* Display gameName and tagLine */}
         <h2 className="ign-modal">{gameName}#{tagLine}</h2>
 
         <form className="form-modal">
@@ -75,14 +125,16 @@ const Modal = ({ isOpen, onClose, onSubmit, onReset, existingCredentials, profil
             />
           </label>
         </form>
+
         <div className="buttons-modal">
           <button className="button-modal" onClick={handleSave}>
-            {existingCredentials ? <FontAwesomeIcon icon={faFloppyDisk} size="lg" /> : 'Save Credentials'}
+            <FontAwesomeIcon icon={faFloppyDisk} size="lg" />
           </button>
-          
         </div>
-        {/* <svg className='svg-wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#EABEC3" fill-opacity="1" d="M0,224L720,256L1440,32L1440,320L720,320L0,320Z"></path></svg> */}
-        <svg className='svg-wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#EABEC3" fill-opacity="1" d="M0,256L120,256C240,256,480,256,720,229.3C960,203,1200,149,1320,122.7L1440,96L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+
+        <svg className='svg-wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#EABEC3" fillOpacity="1" d="M0,256L120,256C240,256,480,256,720,229.3C960,203,1200,149,1320,122.7L1440,96L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+        </svg>
       </div>
     </>
   );

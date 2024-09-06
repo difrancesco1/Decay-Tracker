@@ -42,6 +42,8 @@ function App() {
   const [currentPlayerGameName, setCurrentPlayerGameName] = useState('');
   const [currentPlayerTagLine, setCurrentPlayerTagLine] = useState('');
   const [currentCredentials, setCurrentCredentials] = useState({ username: '', password: '' });
+  const [currentTier, setCurrentTier] = useState('UNRANKED');
+
 
   useEffect(() => {
     // Fetch profile icons
@@ -121,6 +123,32 @@ function App() {
     }
   };
 
+  const getRankBorder = (tier) => {
+    switch (tier) {
+      case 'CHALLENGER':
+        return challengerBorder;
+      case 'GRANDMASTER':
+        return gMasterBorder;
+      case 'MASTER':
+        return masterBorder;
+      case 'DIAMOND':
+        return diamondBorder;
+      case 'EMERALD':
+      case 'PLATINUM':
+        return emeraldBorder;
+      case 'GOLD':
+        return goldBorder;
+      case 'SILVER':
+        return silverBorder;
+      case 'BRONZE':
+        return bronzeBorder;
+      case 'IRON':
+        return ironBorder;
+      default:
+        return masterBorder; // Default to Master if no rank found
+    }
+  };
+
   const calculateWinRate = (wins, losses) => {
     if (wins + losses === 0) return 0;
     return ((wins / (wins + losses)) * 100).toFixed(2);
@@ -158,25 +186,43 @@ function App() {
 
   const openModal = (playerKey) => {
     const normalizedKey = playerKey.toLowerCase();
-
     const selectedPlayer = playerData[normalizedKey];
+    
+    console.log("Selected Player Data: ", selectedPlayer);
+  
     if (selectedPlayer && selectedPlayer.summonerData) {
+      const soloQueueData = getSoloQueueData(selectedPlayer.leagueData);
+      console.log("Solo Queue Data: ", soloQueueData);
+  
+      if (!soloQueueData) {
+        console.error("No soloQueueData found for player.");
+        return;
+      }
+  
+      const tier = soloQueueData?.tier || 'UNRANKED';  // Fallback in case tier is undefined
+      console.log("Tier before opening modal: ", tier);
+  
+      // Set the state and pass the tier directly as props
       setCurrentPlayerKey(normalizedKey);
       setProfileIconId(selectedPlayer.summonerData.profileIconId);
       setCurrentPlayerGameName(selectedPlayer.gameName);
       setCurrentPlayerTagLine(selectedPlayer.tagLine);
-
-      if (selectedPlayer.credentials) {
-        setCurrentCredentials(selectedPlayer.credentials);
-      } else {
-        setCurrentCredentials({ username: '', password: '' });
-      }
-
+      
+      // Set the modal tier explicitly into a separate state
       setModalOpen(true);
+  
+      // This ensures the tier is explicitly passed as a prop to the Modal
+      console.log("Tier passed to Modal: ", tier);
+      setCurrentTier(tier); // Add this line if you're missing a tier state
     } else {
       console.error('Player data or summonerData not found for key:', normalizedKey);
     }
   };
+  
+  
+  
+  
+  
 
   const closeModal = () => {
     setModalOpen(false);
@@ -318,6 +364,9 @@ function App() {
       const wins = soloQueueData.wins;
       const losses = soloQueueData.losses;
 
+      // Dynamically get the appropriate border based on the player's rank
+      const rankBorder = getRankBorder(soloQueueData.tier);
+
       return (
         <div key={index} className="player-data">
           <button className="credentials-button" onClick={() => openModal(uniqueKey)}>
@@ -326,7 +375,8 @@ function App() {
           <div className='data-cont'>
             <div className="player-profile">
               <div className="icon-container-app">
-                <img className="border-image-app" src={masterBorder} alt="Master Border" />
+                {/* Dynamically set the border image based on the player's rank */}
+                <img className="border-image-app" src={rankBorder} alt={`${soloQueueData.tier} Border`} />
                 {profileIconUrl && (
                   <img className="icon-modal-app" src={profileIconUrl} alt="Profile Icon" />
                 )}
@@ -391,6 +441,10 @@ function App() {
     });
   };
 
+
+  // Add the log to verify tier before the return statement
+  console.log("Tier passed to Modal in App.js: ", playerData && playerData[currentPlayerKey]?.soloQueueData?.tier || 'UNRANKED');
+
   return (
     <div className="App">
       <div className='container-main'>
@@ -405,6 +459,7 @@ function App() {
             <button className='search-btn' onClick={searchForPlayer}>DT.GG</button>
           </div>
         </div>
+
         <div className='container-data'>
           {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
           <button className='btn-filter' onClick={handleSort}>Filter
@@ -414,15 +469,18 @@ function App() {
         </div>
 
         <Modal
-          isOpen={modalOpen}
-          onClose={closeModal}
-          onSubmit={handleSaveCredentials}
-          onReset={handleResetCredentials}
-          existingCredentials={currentPlayerKey && playerData[currentPlayerKey]?.credentials}
-          gameName={currentPlayerGameName}
-          tagLine={currentPlayerTagLine}
-          profileIconId={profileIconId}
-        />
+  isOpen={modalOpen}
+  onClose={closeModal}
+  onSubmit={handleSaveCredentials}
+  onReset={handleResetCredentials}
+  existingCredentials={currentPlayerKey && playerData && playerData[currentPlayerKey]?.credentials}
+  gameName={currentPlayerGameName}
+  tagLine={currentPlayerTagLine}
+  profileIconId={profileIconId}
+  tier={currentTier}  // Pass the stored tier
+/>
+
+
       </div>
     </div>
   );
