@@ -76,16 +76,10 @@ app.get('/search/:riotID/:tagline', (req, res) => {
         // Now use summonerId to get the league data
         const leagueApiUrl = `https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerId}?api_key=${API_KEY}`;
 
-        //match history API for W/L data
-        // const leagueApiMatchId = `https://na1.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=20&api_key=${API_KEY}`;
+        // Match history API to get the match IDs
+        const matchHistoryApiUrl = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=20&api_key=${API_KEY}`;
 
-        //Use leagueApiWL (matchId's) to get summoners mh
-        // const leagueApiWL = `https://na1.api.riotgames.com/lol/match/v5/matches/${matchId}?api_key=${API_KEY}`
-
-        // Use the "leagyeApiMatchId" to retrieve the matchId's (20) then store only the result and champion 
-        // Use "https://ddragon.leagueoflegends.com/cdn/14.17.1/data/en_US/champion.json" to get the champion ICON and send to App.js :] ALong with W/L to conditionally style the W/L section 
-
-
+        // Retrieve match history and league data
         return axios.get(leagueApiUrl).then(leagueResponse => {
           const leagueData = leagueResponse.data;
 
@@ -93,16 +87,51 @@ app.get('/search/:riotID/:tagline', (req, res) => {
           const combinedPlayerData = {
             ...playerData,
             summonerData,
-            leagueData
+            leagueData,
           };
 
-          // Add combined player data to playerData.json
-          readDataFromFile((data) => {
-            const playerKey = `${riotID.toLowerCase()}-${tagline.toLowerCase()}`;
-            data[playerKey] = combinedPlayerData;
+          // Fetch match history for ranked solo games and store them
+          return axios.get(matchHistoryApiUrl).then(matchHistoryResponse => {
+            const matchIds = matchHistoryResponse.data;
 
-            writeDataToFile(data, () => {
-              res.json(combinedPlayerData);
+            // Retrieve each match's details
+            const matchDetailsPromises = matchIds.map(matchId => {
+              const matchDetailApiUrl = `https://americas.api.riotgames.com/lol/match/v5/matches/${matchId}?api_key=${API_KEY}`;
+
+              return axios.get(matchDetailApiUrl).then(matchDetailResponse => {
+                const matchInfo = matchDetailResponse.data.info;
+                const rankedSoloGame = matchInfo.queueId === 420; // Queue ID 420 = Ranked Solo
+
+                if (rankedSoloGame) {
+                  const playerDataInMatch = matchInfo.participants.find(
+                    participant => participant.puuid === puuid
+                  );
+
+                  return {
+                    matchId,
+                    win: playerDataInMatch.win,
+                    champion: playerDataInMatch.championName,
+                  };
+                }
+                return null;
+              });
+            });
+
+            return Promise.all(matchDetailsPromises).then(matches => {
+              const rankedSoloMatches = matches.filter(match => match !== null);
+
+              // Add the ranked solo match history to the player data
+              combinedPlayerData.rankedSoloMatches = rankedSoloMatches;
+
+              // Add combined player data to playerData.json
+              readDataFromFile((data) => {
+                const playerKey = `${riotID.toLowerCase()}-${tagline.toLowerCase()}`;
+                data[playerKey] = combinedPlayerData;
+
+                writeDataToFile(data, () => {
+                  res.json(combinedPlayerData);
+                });
+              });
             });
           });
         });
