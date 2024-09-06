@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const API_KEY = 'RGAPI-4bda1a2e-c9d1-46f1-8d59-5b13487e49ef';  // Replace with a valid Riot API Key
+const API_KEY = 'RGAPI-64b1c86b-b3b8-4372-88ab-5cce14c3b5bd';  // Replace with a valid Riot API Key
 
 // Utility to read data from file
 const readDataFromFile = (callback) => {

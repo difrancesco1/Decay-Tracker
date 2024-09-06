@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 import Modal from './Modal'; // Import the modal component
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsis,faFilter } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -383,7 +383,7 @@ function App() {
 
       {/* Sort button */}
       <button onClick={handleSort} style={{ marginBottom: '20px' }}>
-        Sort by Rank & League Points
+      <FontAwesomeIcon icon={faFilter}  size="4x" color="white" />
       </button>
 
       {renderPlayerData()}

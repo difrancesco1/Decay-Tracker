@@ -211,10 +211,46 @@
         "freshBlood": false,
         "hotStreak": false
       }
-    ],
-    "credentials": {
-      "username": "usr",
-      "password": "psd"
-    }
+    ]
+  },
+  "turbo inter l9 -rosie": {
+    "puuid": "7Z7S3GUOzlSal9DB0U3F7CGxULqfFoxDGXIXkH6qWq-Ue4-MD1hkaxsJfAeacDUNIt3Ec4umG9VsZw",
+    "gameName": "TURBO INTER L9",
+    "tagLine": "rosie",
+    "summonerData": {
+      "id": "u5PZ8hAvg81X00PalZWEylloN8E2LYIBFnQeWKiRkZWgn_o",
+      "accountId": "s-P1LYgm8f4abTwGt0M-Im7FCGv1dvut7kbp1bPozH0YAVs",
+      "puuid": "7Z7S3GUOzlSal9DB0U3F7CGxULqfFoxDGXIXkH6qWq-Ue4-MD1hkaxsJfAeacDUNIt3Ec4umG9VsZw",
+      "profileIconId": 5453,
+      "revisionDate": 1725522871000,
+      "summonerLevel": 175
+    },
+    "leagueData": [
+      {
+        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "MASTER",
+        "rank": "I",
+        "summonerId": "u5PZ8hAvg81X00PalZWEylloN8E2LYIBFnQeWKiRkZWgn_o",
+        "leaguePoints": 127,
+        "wins": 41,
+        "losses": 35,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      },
+      {
+        "queueType": "CHERRY",
+        "summonerId": "u5PZ8hAvg81X00PalZWEylloN8E2LYIBFnQeWKiRkZWgn_o",
+        "leaguePoints": 0,
+        "wins": 9,
+        "losses": 3,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": true
+      }
+    ]
   }
 }
