@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "turbo inter l9-rosie": {
     "puuid": "7Z7S3GUOzlSal9DB0U3F7CGxULqfFoxDGXIXkH6qWq-Ue4-MD1hkaxsJfAeacDUNIt3Ec4umG9VsZw",
@@ -773,6 +774,9 @@
       }
     ]
   },
+=======
+  {
+>>>>>>> ros.style
   "turbo inter l9 -rosie": {
     "puuid": "7Z7S3GUOzlSal9DB0U3F7CGxULqfFoxDGXIXkH6qWq-Ue4-MD1hkaxsJfAeacDUNIt3Ec4umG9VsZw",
     "gameName": "TURBO INTER L9",
@@ -810,6 +814,46 @@
         "inactive": false,
         "freshBlood": false,
         "hotStreak": true
+      }
+    ]
+  },
+  "为啥不好好玩 -rosie": {
+    "puuid": "nF08w27f6194UvbgThF8Ins2eRH-PaDrDzQAO3lCk6-cwWySXs8QcvUcWq8jKthlnrKjd2ukPy0zSA",
+    "gameName": "为啥不好好玩",
+    "tagLine": "rosie",
+    "summonerData": {
+      "id": "na1qD3lbr69A_FzGf3o8eFsYgAWT2Deo9LUmnB8dpQ2st9DMgFCdj_C00w",
+      "accountId": "6JnsDoZTOgxnCeF2EOrV4pOOg_SZMXuSwOKWR6poKUaAezQGE12fEvrv",
+      "puuid": "nF08w27f6194UvbgThF8Ins2eRH-PaDrDzQAO3lCk6-cwWySXs8QcvUcWq8jKthlnrKjd2ukPy0zSA",
+      "profileIconId": 5453,
+      "revisionDate": 1725488246000,
+      "summonerLevel": 52
+    },
+    "leagueData": [
+      {
+        "queueType": "CHERRY",
+        "summonerId": "na1qD3lbr69A_FzGf3o8eFsYgAWT2Deo9LUmnB8dpQ2st9DMgFCdj_C00w",
+        "leaguePoints": 0,
+        "wins": 6,
+        "losses": 2,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      },
+      {
+        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "MASTER",
+        "rank": "I",
+        "summonerId": "na1qD3lbr69A_FzGf3o8eFsYgAWT2Deo9LUmnB8dpQ2st9DMgFCdj_C00w",
+        "leaguePoints": 256,
+        "wins": 88,
+        "losses": 55,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
       }
     ]
   }
