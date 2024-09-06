@@ -1,0 +1,146 @@
+* {
+    font-family: "Outfit", sans-serif;
+}
+body, .your-element {
+    cursor: url('./assets/Normal\ Select.cur'), auto;
+  }
+  body, p, span, div, input, textarea, .text-element, button {
+    cursor: url('./assets/Normal\ Select.cur'), auto;
+  }
+
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #EDEEF3;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid #EABEC3;
+    width: 326.917px;
+    height: 256.917px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.form-modal {
+    padding: 10px;
+}
+
+.buttons-modal {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: end;
+    padding-right: 10px;
+}
+
+.button-modal { 
+    margin-top: 15px;
+}
+
+.label-modal {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-modal {
+    width: 70px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 85px;
+}
+
+.border-image {
+    width: 200px;
+    position: absolute;
+    z-index: -1;
+    bottom: 16px;
+}
+
+.ign-modal {
+    margin-top: -50px;
+    color: #423a36;
+    /* text-shadow: 1px 0 1px #514945, -1px 0 1px #514945, 0 1px 1px #514945, 0 -1px 1px #514945, 1px 1px 1px #514945, -1px -1px 1px #514945, 1px -1px 1px #514945, -1px 1px 1px #514945; */
+    letter-spacing: .5px;
+}
+
+.input-modal {
+    width: 200px;
+    display: block;
+    padding: 10px 10px;
+    border: solid #514945 .1px;
+    transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+    background-position: -200px 0;
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    color: #DD868C;
+    font-weight: bold;
+}
+.input-modal:focus {
+    outline: none; /* Remove the default blue outline */
+    border: 1px solid #DD868C; /* Set your own border color */
+    box-shadow: 0 0 5px #DD868C; /* Add a custom shadow for focus */
+  }
+
+.button-modal {
+    appearance: none;
+    border: 0.14em solid #514945;
+    padding: .5em 1em;
+    color: #FFF;
+    border-radius: 15px;
+    transition: 1s;
+    background-color: #DD868C;
+    opacity: .7;
+}
+
+.button-modal:hover {
+    appearance: none;
+    border: 0.14em solid #514945;
+    padding: .5em 1em;
+    color: #DD868C;
+    border-radius: 15px;
+    transition: 1s;
+    background-color: #FFF;
+    
+}
+.svg-wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    z-index: -1;
+    margin-bottom: -9px;
+  }

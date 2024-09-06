@@ -1,0 +1,220 @@
+{
+  "tallhandsometop-na1": {
+    "puuid": "yCsNdn7kWFsasvT2U5coCZX75jC3B9IDrohy22j75usic14nsf9GzOQACIPbw6Ma3BZd3QlLNoVYvA",
+    "gameName": "TALLHANDSOMETOP",
+    "tagLine": "NA1",
+    "summonerData": {
+      "id": "0axOx_Js7KQul8vCik0BAfZMj1LYNt6eE6yXj3KXNRiEXZW4M5lwTY_img",
+      "accountId": "txI2vYcbJFNnDrY_lGElWYBKCMO-1kzdIHxENccZsxIO_FcWz-_E-fSv",
+      "puuid": "yCsNdn7kWFsasvT2U5coCZX75jC3B9IDrohy22j75usic14nsf9GzOQACIPbw6Ma3BZd3QlLNoVYvA",
+      "profileIconId": 5451,
+      "revisionDate": 1725517929750,
+      "summonerLevel": 199
+    },
+    "leagueData": [
+      {
+        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "MASTER",
+        "rank": "I",
+        "summonerId": "0axOx_Js7KQul8vCik0BAfZMj1LYNt6eE6yXj3KXNRiEXZW4M5lwTY_img",
+        "leaguePoints": 367,
+        "wins": 99,
+        "losses": 85,
+        "veteran": true,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      },
+      {
+        "leagueId": "35dd9a75-5a72-41cc-b2ba-a82f0d9d3999",
+        "queueType": "RANKED_FLEX_SR",
+        "tier": "DIAMOND",
+        "rank": "I",
+        "summonerId": "0axOx_Js7KQul8vCik0BAfZMj1LYNt6eE6yXj3KXNRiEXZW4M5lwTY_img",
+        "leaguePoints": 75,
+        "wins": 19,
+        "losses": 11,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      }
+    ],
+    "credentials": {
+      "username": "risingworld466",
+      "password": "password"
+    }
+  },
+  "quantum-na1": {
+    "puuid": "7W72fi4pOGFpM7g2UGm5FTwWDIIQk43vRs36i5jmW-OI4l3YRZRU799KZirJlN-8t6u6ux0UBR7AAg",
+    "gameName": "Quantum",
+    "tagLine": "NA1",
+    "summonerData": {
+      "id": "t3cM11qLvPWIl6m18LvQb0QP1DcIHbx3Oc5ovpa_XOcVIuI",
+      "accountId": "vqlLm87PDdkqYoSKCT8PVqOgHwrQgYxmHt6xGePTsW7KU3I",
+      "puuid": "7W72fi4pOGFpM7g2UGm5FTwWDIIQk43vRs36i5jmW-OI4l3YRZRU799KZirJlN-8t6u6ux0UBR7AAg",
+      "profileIconId": 5955,
+      "revisionDate": 1725505164374,
+      "summonerLevel": 1277
+    },
+    "leagueData": [
+      {
+        "leagueId": "af0200fb-8246-34c2-8377-3c289428cd4b",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "GRANDMASTER",
+        "rank": "I",
+        "summonerId": "t3cM11qLvPWIl6m18LvQb0QP1DcIHbx3Oc5ovpa_XOcVIuI",
+        "leaguePoints": 559,
+        "wins": 360,
+        "losses": 337,
+        "veteran": true,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      }
+    ],
+    "credentials": {
+      "username": "TEST1",
+      "password": "TEST"
+    }
+  },
+  "lee city-na1": {
+    "puuid": "cXIQQ_OiIPdvx1266KLOls1lv6ftWlevGd3BYhYuaUVVMpCbatuD84RP3U4X4t0v77VJlT3xcduX8Q",
+    "gameName": "Lee City",
+    "tagLine": "NA1",
+    "summonerData": {
+      "id": "P5vMuLwOgoZ5x1wd6tZ06I7Mf27kBXsDhAMwarazTBoMaPU",
+      "accountId": "r6s7sMA2ytsY0p3uWNPH3ZEYau9x4bDNd4es2REQl51kebM",
+      "puuid": "cXIQQ_OiIPdvx1266KLOls1lv6ftWlevGd3BYhYuaUVVMpCbatuD84RP3U4X4t0v77VJlT3xcduX8Q",
+      "profileIconId": 6044,
+      "revisionDate": 1725516907184,
+      "summonerLevel": 746
+    },
+    "leagueData": [
+      {
+        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "MASTER",
+        "rank": "I",
+        "summonerId": "P5vMuLwOgoZ5x1wd6tZ06I7Mf27kBXsDhAMwarazTBoMaPU",
+        "leaguePoints": 45,
+        "wins": 74,
+        "losses": 55,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      },
+      {
+        "leagueId": "0d5459af-9d77-4f04-a5bb-d5887a29f52b",
+        "queueType": "RANKED_FLEX_SR",
+        "tier": "EMERALD",
+        "rank": "III",
+        "summonerId": "P5vMuLwOgoZ5x1wd6tZ06I7Mf27kBXsDhAMwarazTBoMaPU",
+        "leaguePoints": 44,
+        "wins": 3,
+        "losses": 3,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      }
+    ],
+    "credentials": {
+      "username": "sadfasd",
+      "password": "asdfasdf"
+    }
+  },
+  "god sai-kenny": {
+    "puuid": "BE5FhZ-dGEQhJkPq00QJ1XbCDxOSz5hQckG39pG6qH_mFZgp1_ZJK_rwgiWDaC7nb-JqCdheOPxaPw",
+    "gameName": "God Sai",
+    "tagLine": "kenny",
+    "summonerData": {
+      "id": "tF5i7l2kPWhQvO642Mvct_vfuUNcrKfy2-ihTzvx1ZOpS_Q",
+      "accountId": "YnlbGW9o522HIUZ6-pDfnltr2wlYdQ0o88aEjbOAUvsVmRc",
+      "puuid": "BE5FhZ-dGEQhJkPq00QJ1XbCDxOSz5hQckG39pG6qH_mFZgp1_ZJK_rwgiWDaC7nb-JqCdheOPxaPw",
+      "profileIconId": 5168,
+      "revisionDate": 1725518991557,
+      "summonerLevel": 1166
+    },
+    "leagueData": [
+      {
+        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "MASTER",
+        "rank": "I",
+        "summonerId": "tF5i7l2kPWhQvO642Mvct_vfuUNcrKfy2-ihTzvx1ZOpS_Q",
+        "leaguePoints": 528,
+        "wins": 181,
+        "losses": 154,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": true,
+        "hotStreak": false
+      },
+      {
+        "leagueId": "2980cfe7-de6c-4e8d-94dd-f6a3c3ff56c6",
+        "queueType": "RANKED_FLEX_SR",
+        "tier": "DIAMOND",
+        "rank": "I",
+        "summonerId": "tF5i7l2kPWhQvO642Mvct_vfuUNcrKfy2-ihTzvx1ZOpS_Q",
+        "leaguePoints": 78,
+        "wins": 6,
+        "losses": 3,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      },
+      {
+        "queueType": "CHERRY",
+        "summonerId": "tF5i7l2kPWhQvO642Mvct_vfuUNcrKfy2-ihTzvx1ZOpS_Q",
+        "leaguePoints": 0,
+        "wins": 105,
+        "losses": 76,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      }
+    ],
+    "credentials": {
+      "username": "TEST",
+      "password": "TEST"
+    }
+  },
+  "1018-tall": {
+    "puuid": "Cg7BpnG-svgssnN4tza-AT35C-T_yRz-Rudb_9goNzNP9jtXs_ovhbUTTuOgqWdRW34GvSM1pULXYQ",
+    "gameName": "1018",
+    "tagLine": "TALL",
+    "summonerData": {
+      "id": "zWol3KafYGe0fpz6WjDFq7rZ2d9X0nIM-6SmvC8t2EizjZu8rcFzcKw6DA",
+      "accountId": "IdcpiUgiqt_8AnoxJlaT7k4FuUdpTw6QUkBLf9Xg-8I9gagRp9hmPpM1",
+      "puuid": "Cg7BpnG-svgssnN4tza-AT35C-T_yRz-Rudb_9goNzNP9jtXs_ovhbUTTuOgqWdRW34GvSM1pULXYQ",
+      "profileIconId": 6624,
+      "revisionDate": 1722473952000,
+      "summonerLevel": 34
+    },
+    "leagueData": [
+      {
+        "leagueId": "d0e1d7c5-bc49-495c-a8e8-3b3b24c338a8",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "EMERALD",
+        "rank": "IV",
+        "summonerId": "zWol3KafYGe0fpz6WjDFq7rZ2d9X0nIM-6SmvC8t2EizjZu8rcFzcKw6DA",
+        "leaguePoints": 7,
+        "wins": 24,
+        "losses": 12,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      }
+    ],
+    "credentials": {
+      "username": "usr",
+      "password": "psd"
+    }
+  }
+}

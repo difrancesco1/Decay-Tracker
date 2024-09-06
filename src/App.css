@@ -1,3 +1,14 @@
+/* #ff8aa9 darker pink for card*/
+/* #ffffff white for text*/
+/* #ffb1c0 lighter shade of pink for card */
+/* #ed6972 blue for wins (still need to do API call for match history) */
+/* #ffb1c0 red for losses  */
+/* #ffc3d0 LIGHTER pink (for something will figure that out later) */
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +46,296 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container-main {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #F5DDE0;
+}
+.search-app-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.search-btn {
+  background: #ff8aa9;
+  border-radius: 999px;
+  box-shadow: #ffb1c0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  transition: 1s;
+  text-wrap: nowrap;
+}
+
+.search-btn:hover {
+  background: #ffb1c0;
+  border-radius: 999px;
+  box-shadow: #ff8aa9 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+
+  transition: .5s;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 5px solid #ffb1c0;
+  width: 70%;
+  align-self: center;
+  border-radius: 315px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background: #EDEEF3;
+}
+
+.svg-wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  z-index: -1;
+  margin-bottom: -9px;
+}
+
+.container-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 5px solid #ffb1c0;
+  width: 70%;
+  align-self: center;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background: #EDEEF3;
+  gap: 25px;
+}
+
+.title-app {
+  text-shadow: 1px 0 1px #514945, -1px 0 1px #514945, 0 1px 1px #514945, 0 -1px 1px #514945, 1px 1px 1px #514945, -1px -1px 1px #514945, 1px -1px 1px #514945, -1px 1px 1px #514945;
+  letter-spacing: 1px;
+  color: #ff8aa9;
+  font-size: 46px;
+  margin-top: 6px;
+}
+
+.input-app {
+  width: 1117px;
+  display: block;
+  padding: 10px 10px;
+  border: solid #514945 .1px;
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  background-position: -200px 0;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  color: #DD868C;
+  font-weight: bold;
+  padding-left:25px;
+}
+
+.input-app:focus {
+  outline: none; /* Remove the default blue outline */
+  border: 1px solid #DD868C; /* Set your own border color */
+  box-shadow: 0 0 5px #DD868C; /* Add a custom shadow for focus */
+}
+
+.player-data {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 40px;
+  background-image: url(./assets/cardbg2.PNG);
+  width:555px;
+  height:200px;
+  border: 1px solid #DD868C; /* Set your own border color */
+  box-shadow: 0 0 5px #DD868C; /* Add a custom shadow for focus */
+  transition: 1s;
+}
+
+.player-data:hover {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 40px;
+  background-image: url(./assets/cardbg2.PNG);
+  width:555px;
+  height:200px;
+  border: 1px solid #DD868C; /* Set your own border color */
+  box-shadow: 0 0 35px #DD868C; /* Add a custom shadow for focus */
+  transition: 2s;
+  
+}
+
+.player-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-direction: column;
+  margin-left: 13px;
+  margin-top: 13px;
+}
+
+.profile-icon {
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.game-name {
+  display: flex;
+  font-size: 20px;
+  font-weight:bold;
+  margin:0;
+  
+}
+
+.rank-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+}
+
+.container-player-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  justify-content: center;
+  width: 230px;
+}
+
+.container-wl {
+  display: flex;
+  gap: 5px;
+}
+
+.container-rankwr {
+  display: flex;
+  gap: 5px;
+  margin-bottom: -30px;
+  margin-top: -10px;
+}
+
+.border-image-app {
+  z-index: auto;
+  width: 230px;
+  position: absolute;
+  margin-top: -57px;
+}
+
+.icon-modal-app {
+  width: 80px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.icon-container-app {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.credentials-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 6px;
+  right: 25px;
+}
+
+
+.data-cont {
+  display: flex;
+  color: white;
+  margin-left: -30px;
+
+}
+
+.decay-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  justify-content: center;
+  padding-left: 55px;
+  padding-bottom: 15px;
+}
+
+.container-right {
+  display: flex;
+  color: white;
+  position: relative;
+}
+
+.wins, .losses, .win-rate {
+  opacity: .7;
+}
+
+.user-pass-copy {
+  display: flex;
+  gap: 5px;
+}
+
+.user-copy {
+  transition: 1s;
+  z-index: 5;
+}
+
+.user-copy:hover {
+  text-shadow: 0px 0px 15px #fc0536;
+  transition: 1s;
+  z-index: 5;
+}
+
+.pass-copy:hover {
+  text-shadow: 0px 0px 15px #ffb1c0;
+  transition: 1s;
+  z-index: 5;
 }
