@@ -408,7 +408,7 @@ function App() {
         <div className='container-data'>
           {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
           <button className='btn-filter' onClick={handleSort}>Filter
-            <FontAwesomeIcon icon={faFilter} size="lg" color="#ff8aa9" />
+            <FontAwesomeIcon icon={faFilter} size="lg" color="#181a1b" />
           </button>
           {renderPlayerData()}
         </div>

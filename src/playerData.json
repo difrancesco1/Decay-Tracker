@@ -820,5 +820,136 @@
         "hotStreak": true
       }
     ]
+  },
+  "drahpehs-na1": {
+    "puuid": "bwE7tje2IU-V6-pHhk4PFnoyqKQxCmSvaTKMTPtnMtFlnyrd2a6jx2ZHpA8MnABrulFu4A_FtpQZ6g",
+    "gameName": "drahpehs",
+    "tagLine": "NA1",
+    "summonerData": {
+      "id": "C19bMRa0LiFbsMOSI9tgNY-i4NmFF2NHNOVHvYlw-ALNiHBCGmTlJF76nw",
+      "accountId": "Yt65-_bOXESF7caLegkrzZ6Kqx_LRlLonWY-0mg0ElPAPUA3XvcvNe2u",
+      "puuid": "bwE7tje2IU-V6-pHhk4PFnoyqKQxCmSvaTKMTPtnMtFlnyrd2a6jx2ZHpA8MnABrulFu4A_FtpQZ6g",
+      "profileIconId": 6227,
+      "revisionDate": 1724964546000,
+      "summonerLevel": 50
+    },
+    "leagueData": [
+      {
+        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "MASTER",
+        "rank": "I",
+        "summonerId": "C19bMRa0LiFbsMOSI9tgNY-i4NmFF2NHNOVHvYlw-ALNiHBCGmTlJF76nw",
+        "leaguePoints": 101,
+        "wins": 64,
+        "losses": 45,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      }
+    ],
+    "rankedSoloMatches": [
+      {
+        "matchId": "NA1_5097814036",
+        "win": false,
+        "champion": "Braum"
+      },
+      {
+        "matchId": "NA1_5097780640",
+        "win": false,
+        "champion": "Senna"
+      },
+      {
+        "matchId": "NA1_5097756782",
+        "win": false,
+        "champion": "Galio"
+      },
+      {
+        "matchId": "NA1_5095409539",
+        "win": true,
+        "champion": "Galio"
+      },
+      {
+        "matchId": "NA1_5095389652",
+        "win": false,
+        "champion": "Leona"
+      },
+      {
+        "matchId": "NA1_5095377466",
+        "win": false,
+        "champion": "Leona"
+      },
+      {
+        "matchId": "NA1_5095362329",
+        "win": true,
+        "champion": "Thresh"
+      },
+      {
+        "matchId": "NA1_5095344372",
+        "win": false,
+        "champion": "Braum"
+      },
+      {
+        "matchId": "NA1_5093258808",
+        "win": true,
+        "champion": "Thresh"
+      },
+      {
+        "matchId": "NA1_5093238752",
+        "win": true,
+        "champion": "Rell"
+      },
+      {
+        "matchId": "NA1_5093215703",
+        "win": false,
+        "champion": "Thresh"
+      },
+      {
+        "matchId": "NA1_5092826466",
+        "win": true,
+        "champion": "Rakan"
+      },
+      {
+        "matchId": "NA1_5092790324",
+        "win": true,
+        "champion": "Thresh"
+      },
+      {
+        "matchId": "NA1_5092717167",
+        "win": false,
+        "champion": "Camille"
+      },
+      {
+        "matchId": "NA1_5092709531",
+        "win": true,
+        "champion": "Thresh"
+      },
+      {
+        "matchId": "NA1_5089610108",
+        "win": false,
+        "champion": "Senna"
+      },
+      {
+        "matchId": "NA1_5089572529",
+        "win": true,
+        "champion": "Braum"
+      },
+      {
+        "matchId": "NA1_5089479692",
+        "win": true,
+        "champion": "Blitzcrank"
+      },
+      {
+        "matchId": "NA1_5089453152",
+        "win": false,
+        "champion": "Ashe"
+      },
+      {
+        "matchId": "NA1_5089392681",
+        "win": true,
+        "champion": "Blitzcrank"
+      }
+    ]
   }
 }
