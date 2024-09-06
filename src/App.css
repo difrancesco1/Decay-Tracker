@@ -5,6 +5,16 @@
 /* #ffb1c0 red for losses  */
 /* #ffc3d0 LIGHTER pink (for something will figure that out later) */
 
+:root {
+  --main: #ff8aa9;
+  --light: #ffb1c0;
+  --win: #69aded;
+  --loss: #e07087;
+  --bg: #292c2e;
+  --container: #181a1b;
+  --text: #9aa4af;
+}
+
 * {
   font-family: "Outfit", sans-serif;
 }
@@ -32,7 +42,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--bg);
 }
 
 .App-link {
@@ -52,37 +62,49 @@
   display:flex;
   flex-direction: column;
   justify-content: center;
-  background: #F5DDE0;
+  background: var(--bg);
 }
 .search-app-container {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  justify-content: space-evenly;
+  text-align: center;
   width: 100%;
 }
 
+.input-app { 
+  width: 1117px;
+  padding: 10px;
+  border-radius: 15px;
+  border: solid var(--main) .2px;
+  width: 800px;
+  color: var(--light);
+  font-weight: bold;
+}
+
+.input-app:focus {
+  outline: none; /* Remove the default blue outline */
+  border: 1px solid var(--main); /* Set your own border color */
+  box-shadow: 0 0 5px var(--main); /* Add a custom shadow for focus */
+}
+
 .search-btn {
-  background: #ff8aa9;
+  padding: 8px 18px;
   border-radius: 999px;
-  box-shadow: #ffb1c0 0 10px 20px -10px;
-  box-sizing: border-box;
+  border: 0;
+  background: var(--main);
   color: #FFFFFF;
   cursor: pointer;
+  transition: 1s;
+  box-sizing: border-box;
   font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   opacity: 1;
   outline: 0 solid transparent;
-  padding: 8px 18px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   width: fit-content;
   word-break: break-word;
-  border: 0;
-  transition: 1s;
   text-wrap: nowrap;
 }
 
@@ -112,19 +134,10 @@
 
 .container {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border: 5px solid #ffb1c0;
-  width: 70%;
-  align-self: center;
-  border-radius: 315px;
+  overflow-x: clip;
   padding: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
-  margin-top: 20px;
-  background: #EDEEF3;
+  background: var(--main);
 }
 
 .svg-wave {
@@ -141,14 +154,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 5px solid #ffb1c0;
-  width: 70%;
-  align-self: center;
-  border-radius: 15px;
   padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  background: #EDEEF3;
-  gap: 25px;
+  background: var(--container);
+  gap: 15px;
 }
 
 .title-app {
@@ -159,38 +168,18 @@
   margin-top: 6px;
 }
 
-.input-app {
-  width: 1117px;
-  display: block;
-  padding: 10px 10px;
-  border: solid #514945 .1px;
-  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  background-position: -200px 0;
-  background-size: 200px 100%;
-  background-repeat: no-repeat;
-  border-radius: 15px;
-  color: #DD868C;
-  font-weight: bold;
-  padding-left:25px;
-}
-
-.input-app:focus {
-  outline: none; /* Remove the default blue outline */
-  border: 1px solid #DD868C; /* Set your own border color */
-  box-shadow: 0 0 5px #DD868C; /* Add a custom shadow for focus */
-}
 
 .player-data {
   display: flex;
   flex-direction: row;
   border: 1px solid #ccc;
   padding: 20px;
-  border-radius: 40px;
+  border-radius: 20px;
   background-image: url(./assets/cardbg7.png);
   width: 555px;
   height: 200px;
-  border: 1px solid #DD868C;
-  box-shadow: 0 0 5px #DD868C;
+  border: 1px solid var(--main);
+  box-shadow: 0 0 5px var(--main);
   transition: 1s;
   position: relative;
 }
@@ -200,13 +189,13 @@
   flex-direction: row;
   border: 1px solid #ccc;
   padding: 20px;
-  border-radius: 40px;
+  border-radius: 20px;
   background-image: url(./assets/cardbg7.png);
   width:555px;
   height:200px;
-  border: 1px solid #DD868C; /* Set your own border color */
-  box-shadow: 0 0 35px #DD868C; /* Add a custom shadow for focus */
-  transition: 2s;
+  border: 1px solid var(--main); /* Set your own border color */
+  box-shadow: 0 0 15px var(--main); /* Add a custom shadow for focus */
+  transition: .5s;
   
 }
 
@@ -226,8 +215,9 @@
 
 .game-name {
   display: flex;
+  align-items: left;
   font-size: 20px;
-  font-weight:bold;
+  font-weight: bold;
   margin:0;
   
 }
@@ -260,13 +250,15 @@
 }
 
 .border-image-app {
-  z-index: auto;
+  pointer-events: none;
+  z-index: 0;
   width: 230px;
   position: absolute;
   margin-top: -57px;
 }
 
 .icon-modal-app {
+  pointer-events: none;
   width: 80px;
   border-radius: 50%;
   position: absolute;
@@ -306,8 +298,8 @@
   flex-direction: column;
   padding-top: 10px;
   justify-content: center;
-  padding-left: 55px;
-  padding-bottom: 15px;
+  padding-left: 73px;
+  padding-bottom: 30px;
 }
 
 .container-right {
@@ -317,7 +309,7 @@
 }
 
 .wins, .losses, .win-rate {
-  opacity: .7;
+  opacity: .5;
 }
 
 .user-pass-copy {
@@ -325,19 +317,32 @@
   gap: 5px;
 }
 
-.user-copy {
+.user-copy, .pass-copy {
+  opacity: .8;
   transition: 1s;
   z-index: 5;
+  padding: .5px;
 }
 
 .user-copy:hover {
-  text-shadow: 0px 0px 15px #fc0536;
+  text-shadow: 0px 0px 15px #FFFFFF;
   transition: 1s;
   z-index: 5;
 }
 
 .pass-copy:hover {
-  text-shadow: 0px 0px 15px #ffb1c0;
+  text-shadow: 0px 0px 15px #FFFFFF;
   transition: 1s;
   z-index: 5;
+}
+
+.decay-count{
+  font-size: 50px;
+}
+
+.decay-count2{
+  opacity: .7;
+  font-weight: 500;
+  margin-top: -35px;
+  font-size: 20px;
 }

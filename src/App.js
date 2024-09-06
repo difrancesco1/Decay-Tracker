@@ -277,7 +277,7 @@ function App() {
       return (
         <div key={index} className="player-data">
           <button className="credentials-button" onClick={() => openModal(uniqueKey)}>
-              {hasCredentials ? <FontAwesomeIcon icon={faEllipsis}  size="4x" color="white" /> : <FontAwesomeIcon icon={faEllipsis}  size="4x" color="white" />}
+              {hasCredentials ? <FontAwesomeIcon icon={faEllipsis}  size="3x" color="white" opacity=".6"/> : <FontAwesomeIcon icon={faEllipsis}  size="4x" color="white" />}
             </button>
           <div className='data-cont'>
           <div className="player-profile">
@@ -298,10 +298,10 @@ function App() {
         </div>
         <div className='user-pass-copy'>
           <span className='user-copy'>
-            <a className='user-copy'>user</a>
+            <a className='user-copy'>[user]</a>
           </span>
           <span className='pass-copy'>
-            pass
+          <a className='pass-copy'>[pass]</a>
           </span>
         </div>
             
@@ -343,11 +343,12 @@ function App() {
             </div>
             {/* <p className="hot-streak">Hot Streak: {hotStreak}</p> */}
             <div className='container-right'>
-           
-
-            <div className='decay-container'>
-              <h1 className='decay-count'>6 days</h1>
-            </div>
+              <div className='decay-container'>
+                <div>
+                  <h1 className='decay-count'>6</h1>
+                  <h1 className='decay-count2'>days</h1>
+                </div>
+              </div>
           </div>
           </div>
   
