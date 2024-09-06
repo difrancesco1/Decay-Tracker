@@ -324,3 +324,37 @@
   margin-top: -35px;
   font-size: 20px;
 }
+
+
+.match-history-cont {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.match-history-item {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  /* border-radius: 50%; */
+  overflow: hidden;
+  padding-bottom: 5px; /* Space for underline */
+}
+
+.match-history-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: filter 0.3s ease;
+}
+
+/* Add blue underline for win icons */
+img.win {
+  border-bottom: 3px solid #b1ddfb;
+}
+
+/* Add red underline for loss icons */
+img.lose {
+  border-bottom: 3px solid #ed6972;
+}
+

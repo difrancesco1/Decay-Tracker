@@ -321,71 +321,62 @@ function App() {
       return (
         <div key={index} className="player-data">
           <button className="credentials-button" onClick={() => openModal(uniqueKey)}>
-              {hasCredentials ? <FontAwesomeIcon icon={faEllipsis}  size="3x" color="white" opacity=".6"/> : <FontAwesomeIcon icon={faEllipsis}  size="4x" color="white" />}
-            </button>
+            <FontAwesomeIcon icon={faEllipsis} size="3x" color="white" />
+          </button>
           <div className='data-cont'>
-          <div className="player-profile">
-            {/* Profile Icon
-            {profileIconUrl && (
-              <img 
-                className="profile-icon" 
-                src={profileIconUrl} 
-                alt="Profile Icon" 
-                style={{ width: '80px', height: '80px' }} 
-              />
-            )} */}
-            <div className="icon-container-app">
-          <img className="border-image-app" src={masterBorder} alt="Master Border" />
-          {profileIconUrl && (
-            <img className="icon-modal-app" src={profileIconUrl} alt="Profile Icon" />
-          )}
-        </div>
-        <div className='user-pass-copy'>
-          <span className='user-copy'>
-            <a className='user-copy'>[user]</a>
-          </span>
-          <span className='pass-copy'>
-          <a className='pass-copy'>[pass]</a>
-          </span>
-        </div>
-            
-          </div>
-
-          
-          {/* Game Name and Tag Line */}
-          <div className='container-player-info'>
-          <h3 className="game-name">{player.gameName}#{player.tagLine}</h3>
-  
-          <div className="rank-info">
-            {/* Summoner Level */}
-            {/* <p className="summoner-level">Level: {summonerLevel}</p> */}
-            
-            {/* Rank Icon and Rank Info */}
-            {/* <img 
-              className="rank-emblem" 
-              src={getRankImage(soloQueueData.tier)} 
-              alt={`${soloQueueData.tier} emblem`} 
-              style={{ width: '100px', height: '100px' }}
-            /> */}
-            <div className='container-rankwr'>
-            <p className="rank">{playerRank} {leaguePoints}LP</p>
-            {/* <p className="lp">LP: {leaguePoints}</p> */}
-            
-            </div>
-            <div className='container-wl'>
-              <p className="wins">{wins}W</p>
-              <p className="losses">{losses}L</p>
-              <p className="win-rate">({winRate}%)</p>
-            </div>
-            </div>
-
-            <div className='match-history-cont'>
-              <div className=''>
-
+            <div className="player-profile">
+              <div className="icon-container-app">
+                <img className="border-image-app" src={masterBorder} alt="Master Border" />
+                {profileIconUrl && (
+                  <img className="icon-modal-app" src={profileIconUrl} alt="Profile Icon" />
+                )}
+              </div>
+              <div className='user-pass-copy'>
+                <span className='user-copy'>
+                  <a className='user-copy' onClick={() => copyToClipboard(credentials?.username || 'No username')}>[user]</a>
+                </span>
+                <span className='user-copy'>
+                  <a className='user-copy' onClick={() => copyToClipboard(credentials?.password || 'No password')}>[pass]</a>
+                </span>
               </div>
             </div>
+
+            <div className='container-player-info'>
+              <h3 className="game-name">{player.gameName}#{player.tagLine}</h3>
+
+              <div className="rank-info">
+                <div className='container-rankwr'>
+                  <p className="rank">{playerRank} {leaguePoints}LP</p>
+                </div>
+                <div className='container-wl'>
+                  <p className="wins">{wins}W</p>
+                  <p className="losses">{losses}L</p>
+                  <p className="win-rate">({winRate}%)</p>
+                </div>
+              </div>
+
+              <div className='match-history-cont'>
+                  {rankedSoloMatches && rankedSoloMatches.slice(0, 10).map((match, idx) => (
+                    <div
+                      key={idx}
+                      className="match-history-item"
+                      style={{
+                        position: 'relative',
+                        display: 'inline-block',
+                        margin: '0 -5px',
+                      }}
+                    >
+                      <img
+                        src={getChampionIconUrl(match.champion)}
+                        alt={match.champion}
+                        className={match.win ? 'win' : 'lose'}
+                      />
+                    </div>
+                  ))}
+                </div>
+
             </div>
-            {/* <p className="hot-streak">Hot Streak: {hotStreak}</p> */}
+
             <div className='container-right'>
               <div className='decay-container'>
                 <div>
@@ -393,8 +384,8 @@ function App() {
                   <h1 className='decay-count2'>days</h1>
                 </div>
               </div>
+            </div>
           </div>
-        </div>
         </div>
       );
     });
@@ -436,6 +427,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
