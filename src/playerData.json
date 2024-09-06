@@ -130,20 +130,6 @@
     },
     "leagueData": [
       {
-        "leagueId": "35dd9a75-5a72-41cc-b2ba-a82f0d9d3999",
-        "queueType": "RANKED_FLEX_SR",
-        "tier": "DIAMOND",
-        "rank": "I",
-        "summonerId": "0axOx_Js7KQul8vCik0BAfZMj1LYNt6eE6yXj3KXNRiEXZW4M5lwTY_img",
-        "leaguePoints": 75,
-        "wins": 19,
-        "losses": 11,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      },
-      {
         "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
         "queueType": "RANKED_SOLO_5x5",
         "tier": "MASTER",
@@ -153,6 +139,20 @@
         "wins": 99,
         "losses": 85,
         "veteran": true,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      },
+      {
+        "leagueId": "35dd9a75-5a72-41cc-b2ba-a82f0d9d3999",
+        "queueType": "RANKED_FLEX_SR",
+        "tier": "DIAMOND",
+        "rank": "I",
+        "summonerId": "0axOx_Js7KQul8vCik0BAfZMj1LYNt6eE6yXj3KXNRiEXZW4M5lwTY_img",
+        "leaguePoints": 75,
+        "wins": 19,
+        "losses": 11,
+        "veteran": false,
         "inactive": false,
         "freshBlood": false,
         "hotStreak": false
@@ -259,11 +259,7 @@
         "win": true,
         "champion": "Akshan"
       }
-    ],
-    "credentials": {
-      "username": "risingworld466",
-      "password": "1iosdjrfj"
-    }
+    ]
   },
   "quantum-na1": {
     "puuid": "7W72fi4pOGFpM7g2UGm5FTwWDIIQk43vRs36i5jmW-OI4l3YRZRU799KZirJlN-8t6u6ux0UBR7AAg",
@@ -771,7 +767,11 @@
         "win": true,
         "champion": "Annie"
       }
-    ]
+    ],
+    "credentials": {
+      "username": "",
+      "password": ""
+    }
   },
   "turbo inter l9 -rosie": {
     "puuid": "7Z7S3GUOzlSal9DB0U3F7CGxULqfFoxDGXIXkH6qWq-Ue4-MD1hkaxsJfAeacDUNIt3Ec4umG9VsZw",
