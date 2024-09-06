@@ -31,18 +31,20 @@ function App() {
   const [searchText, setSearchText] = useState("");
   const [playerData, setPlayerData] = useState(null);
   const [profileIcons, setProfileIcons] = useState({});
+  const [championData, setChampionData] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
   const [isSorted, setIsSorted] = useState(false);
   const [sortedPlayers, setSortedPlayers] = useState([]);
   const [unsortedPlayers, setUnsortedPlayers] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
-  const [currentPlayerKey, setCurrentPlayerKey] = useState(null); 
-  const [profileIconId, setProfileIconId] = useState(null); 
-  const [currentPlayerGameName, setCurrentPlayerGameName] = useState(''); 
-  const [currentPlayerTagLine, setCurrentPlayerTagLine] = useState(''); 
-  const [currentCredentials, setCurrentCredentials] = useState({ username: '', password: '' }); 
+  const [currentPlayerKey, setCurrentPlayerKey] = useState(null);
+  const [profileIconId, setProfileIconId] = useState(null);
+  const [currentPlayerGameName, setCurrentPlayerGameName] = useState('');
+  const [currentPlayerTagLine, setCurrentPlayerTagLine] = useState('');
+  const [currentCredentials, setCurrentCredentials] = useState({ username: '', password: '' });
 
   useEffect(() => {
+    // Fetch profile icons
     axios
       .get('https://ddragon.leagueoflegends.com/cdn/14.17.1/data/en_US/profileicon.json')
       .then((response) => {
@@ -52,11 +54,21 @@ function App() {
         console.log('Error fetching profile icon data:', error);
       });
 
+    // Fetch champion data
+    axios
+      .get('https://ddragon.leagueoflegends.com/cdn/14.17.1/data/en_US/champion.json')
+      .then((response) => {
+        setChampionData(response.data.data);
+      })
+      .catch((error) => {
+        console.log('Error fetching champion data:', error);
+      });
+
+    // Fetch player data
     axios
       .get('http://localhost:3001/players')
       .then((response) => {
         const data = response.data;
-        console.log('Fetched player data from server:', data);
         setPlayerData(data);
         const unsorted = Object.keys(data).map((key) => data[key]);
         setUnsortedPlayers(unsorted);
@@ -134,6 +146,14 @@ function App() {
 
         return b.soloQueueData.leaguePoints - a.soloQueueData.leaguePoints;
       });
+  };
+
+  const getChampionIconUrl = (championName) => {
+    const champion = Object.values(championData).find((champ) => champ.id === championName);
+    if (champion) {
+      return `https://ddragon.leagueoflegends.com/cdn/14.17.1/img/champion/${champion.image.full}`;
+    }
+    return null;
   };
 
   const openModal = (playerKey) => {
@@ -273,7 +293,7 @@ function App() {
     if (!playerData) return null;
 
     return sortedPlayers.map((player, index) => {
-      const { credentials } = player;
+      const { credentials, rankedSoloMatches } = player;
       const hasCredentials = credentials && credentials.username && credentials.password;
       const soloQueueData = getSoloQueueData(player.leagueData);
 
@@ -293,12 +313,10 @@ function App() {
 
       const profileIconUrl = getProfileIconUrl(player.summonerData?.profileIconId);
       const winRate = calculateWinRate(soloQueueData.wins, soloQueueData.losses);
-      const summonerLevel = player.summonerData.summonerLevel;
       const playerRank = `${soloQueueData.tier} ${soloQueueData.rank}`;
       const leaguePoints = soloQueueData.leaguePoints;
       const wins = soloQueueData.wins;
       const losses = soloQueueData.losses;
-      const hotStreak = soloQueueData.hotStreak ? 'Yes' : 'No';
 
       return (
         <div key={index} className="player-data">
@@ -338,17 +356,32 @@ function App() {
               </div>
 
               <div className='match-history-cont'>
-                <div className=''>
-
+                  {rankedSoloMatches && rankedSoloMatches.slice(0, 10).map((match, idx) => (
+                    <div
+                      key={idx}
+                      className="match-history-item"
+                      style={{
+                        position: 'relative',
+                        display: 'inline-block',
+                        margin: '0 -5px',
+                      }}
+                    >
+                      <img
+                        src={getChampionIconUrl(match.champion)}
+                        alt={match.champion}
+                        className={match.win ? 'win' : 'lose'}
+                      />
+                    </div>
+                  ))}
                 </div>
-              </div>
+
             </div>
 
             <div className='container-right'>
               <div className='decay-container'>
                 <div>
-                <h1 className='decay-count'>6</h1>
-                <h1 className='decay-count2'>days</h1>
+                  <h1 className='decay-count'>6</h1>
+                  <h1 className='decay-count2'>days</h1>
                 </div>
               </div>
             </div>
