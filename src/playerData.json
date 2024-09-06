@@ -660,7 +660,11 @@
         "win": false,
         "champion": "RekSai"
       }
-    ]
+    ],
+    "credentials": {
+      "username": "",
+      "password": ""
+    }
   },
   "1018-tall": {
     "puuid": "Cg7BpnG-svgssnN4tza-AT35C-T_yRz-Rudb_9goNzNP9jtXs_ovhbUTTuOgqWdRW34GvSM1pULXYQ",
