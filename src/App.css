@@ -68,6 +68,9 @@
 .search-app-container {
   text-align: center;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .input-app { 
@@ -253,6 +256,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
 
 .credentials-button {
@@ -358,3 +362,9 @@ img.lose {
   border-bottom: 3px solid #ed6972;
 }
 
+.decay-btn-refresh {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}

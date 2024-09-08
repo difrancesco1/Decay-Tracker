@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import Modal from './Modal'; // Import the modal component
+import Modal from './Modal';
+import DecayModal from './DecayModal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsis, faFilter } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsis, faFilter, faRotateRight } from '@fortawesome/free-solid-svg-icons';
 
 // Import rank images
 import challengerImg from './assets/ranked-emblem/emblem-challenger.png';
 import gmImg from './assets/ranked-emblem/emblem-grandmaster.png';
 import mImg from './assets/ranked-emblem/emblem-master.png';
 import diaImg from './assets/ranked-emblem/emblem-diamond.png';
-import emeraldImg from './assets/ranked-emblem/emblem-platinum.png'; // Emerald/Platinum
+import emeraldImg from './assets/ranked-emblem/emblem-platinum.png';
 import goldImg from './assets/ranked-emblem/emblem-gold.png';
 import silverImg from './assets/ranked-emblem/emblem-silver.png';
 import bronzeImg from './assets/ranked-emblem/emblem-bronze.png';
@@ -33,20 +34,29 @@ function App() {
   const [profileIcons, setProfileIcons] = useState({});
   const [championData, setChampionData] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
-  const [isSorted, setIsSorted] = useState(false);
   const [sortedPlayers, setSortedPlayers] = useState([]);
   const [unsortedPlayers, setUnsortedPlayers] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
+  const [decayModalOpen, setDecayModalOpen] = useState(false);
+  const [decayDays, setDecayDays] = useState(0);
   const [currentPlayerKey, setCurrentPlayerKey] = useState(null);
   const [profileIconId, setProfileIconId] = useState(null);
   const [currentPlayerGameName, setCurrentPlayerGameName] = useState('');
   const [currentPlayerTagLine, setCurrentPlayerTagLine] = useState('');
   const [currentCredentials, setCurrentCredentials] = useState({ username: '', password: '' });
   const [currentTier, setCurrentTier] = useState('UNRANKED');
+  const [, forceRender] = useState(0);
 
+  // Copy to Clipboard function
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text).then(() => {
+      console.log(`${text} copied to clipboard`);
+    }).catch(err => {
+      console.log("Could not copy text: ", err);
+    });
+  };
 
   useEffect(() => {
-    // Fetch profile icons
     axios
       .get('https://ddragon.leagueoflegends.com/cdn/14.17.1/data/en_US/profileicon.json')
       .then((response) => {
@@ -56,7 +66,6 @@ function App() {
         console.log('Error fetching profile icon data:', error);
       });
 
-    // Fetch champion data
     axios
       .get('https://ddragon.leagueoflegends.com/cdn/14.17.1/data/en_US/champion.json')
       .then((response) => {
@@ -66,7 +75,6 @@ function App() {
         console.log('Error fetching champion data:', error);
       });
 
-    // Fetch player data
     axios
       .get('http://localhost:3001/players')
       .then((response) => {
@@ -149,13 +157,23 @@ function App() {
     }
   };
 
+
+  const getCurrentTime = () => {
+    const date = new Date();
+    const day = date.getDate().toString().padStart(2, '0'); // Day of the month (01-31)
+    const hours = date.getHours().toString().padStart(2, '0'); // Hours in 24-hour format (00-23)
+    const minutes = date.getMinutes().toString().padStart(2, '0'); // Minutes (00-59)
+  
+    return { day, hours, minutes };
+  };
+
   const calculateWinRate = (wins, losses) => {
     if (wins + losses === 0) return 0;
     return ((wins / (wins + losses)) * 100).toFixed(2);
   };
 
-  const sortByRankAndLeaguePoints = (data) => {
-    const rankOrder = ['CHALLENGER', 'GRANDMASTER', 'MASTER', 'DIAMOND', 'EMERALD', 'PLATINUM', 'GOLD', 'SILVER', 'BRONZE', 'IRON'];
+  const sortByRankLowToHigh = (data) => {
+    const rankOrder = ['IRON', 'BRONZE', 'SILVER', 'GOLD', 'PLATINUM', 'EMERALD', 'DIAMOND', 'MASTER', 'GRANDMASTER', 'CHALLENGER'];
 
     return Object.keys(data)
       .map((key) => {
@@ -172,8 +190,44 @@ function App() {
           return rankA - rankB;
         }
 
+        return a.soloQueueData.leaguePoints - b.soloQueueData.leaguePoints;
+      });
+  };
+
+  const sortByRankHighToLow = (data) => {
+    const rankOrder = ['IRON', 'BRONZE', 'SILVER', 'GOLD', 'PLATINUM', 'EMERALD', 'DIAMOND', 'MASTER', 'GRANDMASTER', 'CHALLENGER'];
+
+    return Object.keys(data)
+      .map((key) => {
+        const player = data[key];
+        const soloQueueData = getSoloQueueData(player.leagueData);
+        return { ...player, soloQueueData };
+      })
+      .filter((player) => player.soloQueueData)
+      .sort((a, b) => {
+        const rankA = rankOrder.indexOf(a.soloQueueData.tier);
+        const rankB = rankOrder.indexOf(b.soloQueueData.tier);
+
+        if (rankA !== rankB) {
+          return rankB - rankA;
+        }
+
         return b.soloQueueData.leaguePoints - a.soloQueueData.leaguePoints;
       });
+  };
+
+  const sortByDecayLowToHigh = (data) => {
+    return Object.keys(data)
+      .map((key) => data[key])
+      .filter((player) => player.decayDaysLeft !== undefined)
+      .sort((a, b) => a.decayDaysLeft - b.decayDaysLeft);
+  };
+
+  const sortByDecayHighToLow = (data) => {
+    return Object.keys(data)
+      .map((key) => data[key])
+      .filter((player) => player.decayDaysLeft !== undefined)
+      .sort((a, b) => b.decayDaysLeft - a.decayDaysLeft);
   };
 
   const getChampionIconUrl = (championName) => {
@@ -188,41 +242,35 @@ function App() {
     const normalizedKey = playerKey.toLowerCase();
     const selectedPlayer = playerData[normalizedKey];
     
-    console.log("Selected Player Data: ", selectedPlayer);
-  
-    if (selectedPlayer && selectedPlayer.summonerData) {
-      const soloQueueData = getSoloQueueData(selectedPlayer.leagueData);
-      console.log("Solo Queue Data: ", soloQueueData);
-  
-      if (!soloQueueData) {
-        console.error("No soloQueueData found for player.");
-        return;
-      }
-  
-      const tier = soloQueueData?.tier || 'UNRANKED';  // Fallback in case tier is undefined
-      console.log("Tier before opening modal: ", tier);
-  
-      // Set the state and pass the tier directly as props
-      setCurrentPlayerKey(normalizedKey);
-      setProfileIconId(selectedPlayer.summonerData.profileIconId);
-      setCurrentPlayerGameName(selectedPlayer.gameName);
-      setCurrentPlayerTagLine(selectedPlayer.tagLine);
-      
-      // Set the modal tier explicitly into a separate state
-      setModalOpen(true);
-  
-      // This ensures the tier is explicitly passed as a prop to the Modal
-      console.log("Tier passed to Modal: ", tier);
-      setCurrentTier(tier); // Add this line if you're missing a tier state
-    } else {
+    if (!selectedPlayer || !selectedPlayer.summonerData) {
       console.error('Player data or summonerData not found for key:', normalizedKey);
+      return;
     }
+
+    const soloQueueData = getSoloQueueData(selectedPlayer.leagueData);
+    const tier = soloQueueData?.tier || 'UNRANKED';
+
+    setCurrentPlayerKey(normalizedKey);
+    setProfileIconId(selectedPlayer.summonerData.profileIconId);
+    setCurrentPlayerGameName(selectedPlayer.gameName);
+    setCurrentPlayerTagLine(selectedPlayer.tagLine);
+    setModalOpen(true);
+    setCurrentTier(tier);
   };
-  
-  
-  
-  
-  
+
+  const openDecayModal = (playerKey) => {
+    const normalizedKey = playerKey.toLowerCase();
+    const selectedPlayer = playerData[normalizedKey];
+
+    if (!selectedPlayer || selectedPlayer.decayDaysLeft === undefined) {
+      console.error(`Player data not found for key: ${normalizedKey}`);
+      return;
+    }
+
+    setCurrentPlayerKey(normalizedKey);
+    setDecayDays(selectedPlayer.decayDaysLeft || 0);
+    setDecayModalOpen(true);
+  };
 
   const closeModal = () => {
     setModalOpen(false);
@@ -259,6 +307,31 @@ function App() {
     closeModal();
   };
 
+  const handleSaveDecayDays = (days) => {
+    const updatedPlayerData = {
+      ...playerData,
+      [currentPlayerKey]: {
+        ...playerData[currentPlayerKey],
+        decayDaysLeft: days,
+      },
+    };
+
+    setPlayerData(updatedPlayerData);
+    forceRender((prev) => prev + 1);
+
+    axios
+      .post('http://localhost:3001/update-decay', { playerKey: currentPlayerKey, decayDays: days })
+      .then(() => {
+        console.log('Decay days saved successfully!');
+      })
+      .catch((error) => {
+        console.log('Error saving decay days:', error);
+      });
+
+    setDecayModalOpen(false);
+  };
+
+
   const handleResetCredentials = () => {
     const updatedPlayerData = {
       ...playerData,
@@ -267,10 +340,10 @@ function App() {
         credentials: null,
       },
     };
-
+  
     setPlayerData(updatedPlayerData);
     setCurrentCredentials({ username: '', password: '' });
-
+  
     axios
       .post('http://localhost:3001/reset-credentials', { playerKey: currentPlayerKey })
       .then(() => {
@@ -279,19 +352,33 @@ function App() {
       .catch((error) => {
         console.log('Error resetting credentials:', error);
       });
-
+  
     closeModal();
   };
 
-  const handleSort = () => {
-    const sorted = sortByRankAndLeaguePoints(playerData);
+  const handleSortRankHighToLow = () => {
+    const sorted = sortByRankHighToLow(playerData);
     setSortedPlayers(sorted);
-    setIsSorted(true);
+  };
+
+  const handleSortRankLowToHigh = () => {
+    const sorted = sortByRankLowToHigh(playerData);
+    setSortedPlayers(sorted);
+  };
+
+  const handleSortDecayLowToHigh = () => {
+    const sorted = sortByDecayLowToHigh(playerData);
+    setSortedPlayers(sorted);
+  };
+
+  const handleSortDecayHighToLow = () => {
+    const sorted = sortByDecayHighToLow(playerData);
+    setSortedPlayers(sorted);
   };
 
   const searchForPlayer = (event) => {
     event.preventDefault();
-
+  
     const [riotID, tagline] = searchText.split('#');
     if (!riotID || !tagline) {
       setErrorMessage('Please enter both RiotID and Tagline in the format: RiotID#Tagline');
@@ -299,27 +386,49 @@ function App() {
     }
 
     setErrorMessage('');
-
+  
     const APICallString = `http://localhost:3001/search/${riotID}/${tagline}`;
-
+    const currentTime = getCurrentTime();  // Get current time for lastSearchTime
+    
     axios
       .get(APICallString)
       .then(function (response) {
+        const normalizedKey = `${riotID}-${tagline}`.toLowerCase();
+        let existingDecayDays = 0;
+        let existingLastSearchTime = currentTime;  // Initialize with current time
+  
+        if (playerData && playerData[normalizedKey]) {
+          existingDecayDays = playerData[normalizedKey].decayDaysLeft || 0;
+          existingLastSearchTime = playerData[normalizedKey].lastSearchTime || currentTime;
+        }
+
         const updatedPlayerData = {
           ...playerData,
-          [`${riotID}-${tagline}`.toLowerCase()]: response.data,
+          [normalizedKey]: {
+            ...response.data,
+            decayDaysLeft: existingDecayDays,
+            lastSearchTime: currentTime,  // Update the last search time to the current time
+          },
         };
+
         setPlayerData(updatedPlayerData);
-
         const updatedUnsortedPlayers = Object.keys(updatedPlayerData).map((key) => updatedPlayerData[key]);
-        setUnsortedPlayers(updatedUnsortedPlayers);
 
-        if (isSorted) {
-          const sorted = sortByRankAndLeaguePoints(updatedPlayerData);
-          setSortedPlayers(sorted);
+        const searchedPlayer = updatedUnsortedPlayers.find(
+          (player) => `${player.gameName}-${player.tagLine}`.toLowerCase() === normalizedKey
+        );
+
+        const otherPlayers = updatedUnsortedPlayers.filter(
+          (player) => `${player.gameName}-${player.tagLine}`.toLowerCase() !== normalizedKey
+        );
+
+        if (searchedPlayer) {
+          setSortedPlayers([searchedPlayer, ...otherPlayers]);
         } else {
-          setSortedPlayers(updatedUnsortedPlayers);
+          setSortedPlayers(otherPlayers);
         }
+
+        forceRender((prev) => prev + 1);
       })
       .catch(function (error) {
         setErrorMessage('Error fetching player data. Please check the Riot ID and Tagline.');
@@ -327,13 +436,102 @@ function App() {
       });
   };
 
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text).then(() => {
-      console.log(`${text} copied to clipboard`);
-    }).catch(err => {
-      console.log("could not copy text: ", err);
-    });
+
+  const handleDecayRefresh = (playerKey) => {
+    const normalizedKey = playerKey.toLowerCase();
+  
+    if (!playerData) {
+      console.error("Player data is not loaded.");
+      return;
+    }
+  
+    const player = playerData[normalizedKey];
+    if (!player) {
+      console.error(`Player not found for key ${normalizedKey}`);
+      return;
+    }
+  
+    if (!player.lastSearchTime) {
+      player.lastSearchTime = getCurrentTime(); // Initialize if not set
+    }
+  
+    const currentTime = getCurrentTime();
+    const lastSearchTime = player.lastSearchTime;
+  
+    // The decay refresh happens at 11:44 PM PST
+    const refreshHour = 23;
+    const refreshMinute = 44;
+  
+    // Create a Date object for the last search time
+    const lastSearchDate = new Date();
+    lastSearchDate.setDate(lastSearchTime.day);
+    lastSearchDate.setHours(lastSearchTime.hours);
+    lastSearchDate.setMinutes(lastSearchTime.minutes);
+  
+    // Create a Date object for the current time
+    const currentDate = new Date();
+    currentDate.setDate(currentTime.day);
+    currentDate.setHours(currentTime.hours);
+    currentDate.setMinutes(currentTime.minutes);
+  
+    // Get the next 11:44 PM after the last search date
+    const nextRefreshDate = new Date(lastSearchDate);
+    nextRefreshDate.setHours(refreshHour, refreshMinute, 0, 0);
+  
+    if (lastSearchDate.getTime() > nextRefreshDate.getTime()) {
+      // Move to the next day if last search was after 11:44 PM
+      nextRefreshDate.setDate(nextRefreshDate.getDate() + 1);
+    }
+  
+    // Calculate the number of full decay refreshes (11:44 PMs) that have passed
+    let decayDaysPassed = 0;
+    while (nextRefreshDate.getTime() <= currentDate.getTime()) {
+      decayDaysPassed += 1;
+      nextRefreshDate.setDate(nextRefreshDate.getDate() + 1); // Move to next 11:44 PM
+    }
+  
+    // Maximum decay days based on the player's tier
+    const maxDecayDays = player.summonerData.tier === "DIAMOND" ? 28 : 14;
+  
+    // Update the decay days based on how many full refreshes have passed
+    let updatedDecayDays = Math.max(0, player.decayDaysLeft - decayDaysPassed);
+
+    // Fetch updated ranked solo match data
+    const APICallString = `http://localhost:3001/search/${player.gameName}/${player.tagLine}`;
+  
+    axios
+      .get(APICallString)
+      .then(function (response) {
+        const updatedPlayerData = {
+          ...playerData,
+          [normalizedKey]: {
+            ...player,
+            decayDaysLeft: updatedDecayDays,
+            lastSearchTime: currentTime, // Update last search time to the current time
+            rankedSoloMatches: response.data.rankedSoloMatches || player.rankedSoloMatches // Update rankedSoloMatches
+          },
+        };
+
+        setPlayerData(updatedPlayerData);
+        forceRender((prev) => prev + 1);
+
+        // Send the updated data to the server
+        axios
+          .post('http://localhost:3001/update-decay', { playerKey, decayDays: updatedDecayDays, lastSearchTime: currentTime })
+          .then(() => {
+            console.log('Decay days, lastSearchTime, and rankedSoloMatches updated successfully!');
+          })
+          .catch((error) => {
+            console.error('Error updating decay data:', error);
+          });
+      })
+      .catch(function (error) {
+        console.error('Error fetching updated player data for ranked solo matches:', error);
+      });
   };
+
+  
+  
 
   const renderPlayerData = () => {
     if (!playerData) return null;
@@ -343,7 +541,7 @@ function App() {
       const hasCredentials = credentials && credentials.username && credentials.password;
       const soloQueueData = getSoloQueueData(player.leagueData);
 
-      const uniqueKey = `${player.gameName}-${player.tagLine}`;
+      const uniqueKey = `${player.gameName.toLowerCase()}-${player.tagLine.toLowerCase()}`;
 
       if (!player.summonerData) {
         return (
@@ -364,7 +562,6 @@ function App() {
       const wins = soloQueueData.wins;
       const losses = soloQueueData.losses;
 
-      // Dynamically get the appropriate border based on the player's rank
       const rankBorder = getRankBorder(soloQueueData.tier);
 
       return (
@@ -375,7 +572,6 @@ function App() {
           <div className='data-cont'>
             <div className="player-profile">
               <div className="icon-container-app">
-                {/* Dynamically set the border image based on the player's rank */}
                 <img className="border-image-app" src={rankBorder} alt={`${soloQueueData.tier} Border`} />
                 {profileIconUrl && (
                   <img className="icon-modal-app" src={profileIconUrl} alt="Profile Icon" />
@@ -406,14 +602,14 @@ function App() {
               </div>
 
               <div className='match-history-cont'>
-                  {rankedSoloMatches && rankedSoloMatches.slice(0, 10).map((match, idx) => (
+                  {rankedSoloMatches && rankedSoloMatches.slice(0, 8).map((match, idx) => (
                     <div
                       key={idx}
                       className="match-history-item"
                       style={{
                         position: 'relative',
                         display: 'inline-block',
-                        margin: '0 -5px',
+                        margin: '0 -3px',
                       }}
                     >
                       <img
@@ -430,8 +626,16 @@ function App() {
             <div className='container-right'>
               <div className='decay-container'>
                 <div>
-                  <h1 className='decay-count'>6</h1>
+                <a className='decay-modal' onClick={() => openDecayModal(uniqueKey)}>
+                  <h1 className='decay-count'>{player.decayDaysLeft || 0}</h1>
+                </a>
                   <h1 className='decay-count2'>days</h1>
+                </div>
+
+                <div className='decay-btn-container'>
+                  <button className='decay-btn-refresh' onClick={() => handleDecayRefresh(uniqueKey)}>
+                  <FontAwesomeIcon icon={faRotateRight} size="2x" color="white" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -440,10 +644,6 @@ function App() {
       );
     });
   };
-
-
-  // Add the log to verify tier before the return statement
-  console.log("Tier passed to Modal in App.js: ", playerData && playerData[currentPlayerKey]?.soloQueueData?.tier || 'UNRANKED');
 
   return (
     <div className="App">
@@ -455,6 +655,11 @@ function App() {
               type="text"
               placeholder="Enter RiotID#Tagline"
               onChange={e => setSearchText(e.target.value)}
+              onKeyDown={e => {
+                if (e.key === 'Enter') {
+                  searchForPlayer(e);
+                }
+              }}
             />
             <button className='search-btn' onClick={searchForPlayer}>DT.GG</button>
           </div>
@@ -462,25 +667,47 @@ function App() {
 
         <div className='container-data'>
           {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-          <button className='btn-filter' onClick={handleSort}>Filter
+          
+          <button className='btn-filter' onClick={handleSortRankHighToLow}>
+            Sort Rank: High to Low
+            <FontAwesomeIcon icon={faFilter} size="lg" color="#181a1b" />
+          </button>
+
+          <button className='btn-filter' onClick={handleSortRankLowToHigh}>
+            Sort Rank: Low to High
+            <FontAwesomeIcon icon={faFilter} size="lg" color="#181a1b" />
+          </button>
+
+          <button className='btn-filter-decay' onClick={handleSortDecayLowToHigh}>
+            Sort Decay: Low to High
+            <FontAwesomeIcon icon={faFilter} size="lg" color="#181a1b" />
+          </button>
+
+          <button className='btn-filter-decay' onClick={handleSortDecayHighToLow}>
+            Sort Decay: High to Low
             <FontAwesomeIcon icon={faFilter} size="lg" color="#181a1b" />
           </button>
           {renderPlayerData()}
         </div>
 
         <Modal
-  isOpen={modalOpen}
-  onClose={closeModal}
-  onSubmit={handleSaveCredentials}
-  onReset={handleResetCredentials}
-  existingCredentials={currentPlayerKey && playerData && playerData[currentPlayerKey]?.credentials}
-  gameName={currentPlayerGameName}
-  tagLine={currentPlayerTagLine}
-  profileIconId={profileIconId}
-  tier={currentTier}  // Pass the stored tier
-/>
+          isOpen={modalOpen}
+          onClose={closeModal}
+          onSubmit={handleSaveCredentials}
+          onReset={handleResetCredentials}
+          existingCredentials={currentPlayerKey && playerData && playerData[currentPlayerKey]?.credentials}
+          gameName={currentPlayerGameName}
+          tagLine={currentPlayerTagLine}
+          profileIconId={profileIconId}
+          tier={currentTier}
+        />
 
-
+        <DecayModal
+          isOpen={decayModalOpen}
+          onClose={() => setDecayModalOpen(false)}
+          onSubmit={handleSaveDecayDays}
+          currentDecayDays={decayDays}
+        />
       </div>
     </div>
   );
