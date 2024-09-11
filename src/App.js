@@ -57,6 +57,14 @@ function App() {
   };
 
   useEffect(() => {
+
+    if (playerData) {
+      const updatedSortedPlayers = Object.keys(playerData).map((key) => playerData[key]);
+      setSortedPlayers(updatedSortedPlayers);
+      console.log('Player data changed, sortedPlayers updated.');
+    }
+    console.log('Player data changed, triggering UI update.');
+  forceRender((prev) => prev + 1);
     axios
       .get('https://ddragon.leagueoflegends.com/cdn/14.17.1/data/en_US/profileicon.json')
       .then((response) => {
@@ -239,17 +247,17 @@ function App() {
   };
 
   const openModal = (playerKey) => {
-    const normalizedKey = playerKey.toLowerCase();
-    const selectedPlayer = playerData[normalizedKey];
+    const normalizedKey = playerKey.toLowerCase(); // Ensure the key is normalized
+    const selectedPlayer = playerData[normalizedKey]; // Use the normalized key to fetch data
     
     if (!selectedPlayer || !selectedPlayer.summonerData) {
       console.error('Player data or summonerData not found for key:', normalizedKey);
       return;
     }
-
+  
     const soloQueueData = getSoloQueueData(selectedPlayer.leagueData);
     const tier = soloQueueData?.tier || 'UNRANKED';
-
+  
     setCurrentPlayerKey(normalizedKey);
     setProfileIconId(selectedPlayer.summonerData.profileIconId);
     setCurrentPlayerGameName(selectedPlayer.gameName);
@@ -288,10 +296,11 @@ function App() {
         },
       },
     };
-
+  
+    // Update local state before closing the modal
     setPlayerData(updatedPlayerData);
-    setCurrentCredentials(credentials);
-
+    setCurrentCredentials(credentials); 
+  
     axios
       .post('http://localhost:3001/update', {
         playerKey: currentPlayerKey,
@@ -299,15 +308,24 @@ function App() {
       })
       .then(() => {
         console.log('Credentials saved successfully!');
+        // Trigger a re-render to reflect the updated credentials
+        forceRender((prev) => prev + 1);
       })
       .catch((error) => {
         console.log('Error updating player data:', error);
       });
-
-    closeModal();
+  
+    // Close modal should happen after setting the state
+    closeModal(); // Close modal after saving
   };
+  
+  
+  
 
   const handleSaveDecayDays = (days) => {
+    console.log('New decayDays:', days);
+  
+    // Make sure the entire state is immutable by deeply copying the state
     const updatedPlayerData = {
       ...playerData,
       [currentPlayerKey]: {
@@ -315,21 +333,34 @@ function App() {
         decayDaysLeft: days,
       },
     };
-
-    setPlayerData(updatedPlayerData);
+  
+    // Update local state and ensure sortedPlayers also updates immediately
+    console.log('Before update:', playerData);
+  setPlayerData(updatedPlayerData);
+  console.log('After update:', updatedPlayerData);
+  
+    // Ensure sortedPlayers updates based on the updated playerData
+    const updatedSortedPlayers = Object.keys(updatedPlayerData).map((key) => updatedPlayerData[key]);
+    setSortedPlayers(updatedSortedPlayers);
+  
+    // Force a re-render to reflect the updated state in the UI
     forceRender((prev) => prev + 1);
-
+  
+    // Send update to the backend
     axios
       .post('http://localhost:3001/update-decay', { playerKey: currentPlayerKey, decayDays: days })
       .then(() => {
-        console.log('Decay days saved successfully!');
+        console.log('Decay days saved successfully on the server!');
+        setDecayModalOpen(false);
       })
       .catch((error) => {
         console.log('Error saving decay days:', error);
       });
-
-    setDecayModalOpen(false);
   };
+  
+  
+  
+  
 
 
   const handleResetCredentials = () => {
@@ -378,18 +409,21 @@ function App() {
 
   const searchForPlayer = (event) => {
     event.preventDefault();
-  
-    const [riotID, tagline] = searchText.split('#');
+    
+    // Trim the input and remove any extra spaces around the '#' symbol
+    const trimmedSearchText = searchText.trim().replace(/\s+/g, ''); // Removes all whitespace
+    const [riotID, tagline] = trimmedSearchText.split('#');
+    
     if (!riotID || !tagline) {
       setErrorMessage('Please enter both RiotID and Tagline in the format: RiotID#Tagline');
       return;
     }
-
+  
     setErrorMessage('');
   
     const APICallString = `http://localhost:3001/search/${riotID}/${tagline}`;
     const currentTime = getCurrentTime();  // Get current time for lastSearchTime
-    
+  
     axios
       .get(APICallString)
       .then(function (response) {
@@ -401,7 +435,7 @@ function App() {
           existingDecayDays = playerData[normalizedKey].decayDaysLeft || 0;
           existingLastSearchTime = playerData[normalizedKey].lastSearchTime || currentTime;
         }
-
+  
         const updatedPlayerData = {
           ...playerData,
           [normalizedKey]: {
@@ -410,24 +444,24 @@ function App() {
             lastSearchTime: currentTime,  // Update the last search time to the current time
           },
         };
-
+  
         setPlayerData(updatedPlayerData);
         const updatedUnsortedPlayers = Object.keys(updatedPlayerData).map((key) => updatedPlayerData[key]);
-
+  
         const searchedPlayer = updatedUnsortedPlayers.find(
           (player) => `${player.gameName}-${player.tagLine}`.toLowerCase() === normalizedKey
         );
-
+  
         const otherPlayers = updatedUnsortedPlayers.filter(
           (player) => `${player.gameName}-${player.tagLine}`.toLowerCase() !== normalizedKey
         );
-
+  
         if (searchedPlayer) {
           setSortedPlayers([searchedPlayer, ...otherPlayers]);
         } else {
           setSortedPlayers(otherPlayers);
         }
-
+  
         forceRender((prev) => prev + 1);
       })
       .catch(function (error) {
@@ -435,7 +469,7 @@ function App() {
         console.log('Error fetching player data:', error.response ? error.response.data : error.message);
       });
   };
-
+  
 
   const handleDecayRefresh = (playerKey) => {
     const normalizedKey = playerKey.toLowerCase();
@@ -451,98 +485,90 @@ function App() {
       return;
     }
   
-    if (!player.lastSearchTime) {
-      player.lastSearchTime = getCurrentTime(); // Initialize if not set
-    }
-  
     const currentTime = getCurrentTime();
-    const lastSearchTime = player.lastSearchTime;
   
-    // The decay refresh happens at 11:44 PM PST
-    const refreshHour = 23;
-    const refreshMinute = 44;
-  
-    // Create a Date object for the last search time
-    const lastSearchDate = new Date();
-    lastSearchDate.setDate(lastSearchTime.day);
-    lastSearchDate.setHours(lastSearchTime.hours);
-    lastSearchDate.setMinutes(lastSearchTime.minutes);
-  
-    // Create a Date object for the current time
-    const currentDate = new Date();
-    currentDate.setDate(currentTime.day);
-    currentDate.setHours(currentTime.hours);
-    currentDate.setMinutes(currentTime.minutes);
-  
-    // Get the next 11:44 PM after the last search date
-    const nextRefreshDate = new Date(lastSearchDate);
-    nextRefreshDate.setHours(refreshHour, refreshMinute, 0, 0);
-  
-    if (lastSearchDate.getTime() > nextRefreshDate.getTime()) {
-      // Move to the next day if last search was after 11:44 PM
-      nextRefreshDate.setDate(nextRefreshDate.getDate() + 1);
-    }
-  
-    // Calculate the number of full decay refreshes (11:44 PMs) that have passed
-    let decayDaysPassed = 0;
-    while (nextRefreshDate.getTime() <= currentDate.getTime()) {
-      decayDaysPassed += 1;
-      nextRefreshDate.setDate(nextRefreshDate.getDate() + 1); // Move to next 11:44 PM
-    }
-  
-    // Maximum decay days based on the player's tier
-    const maxDecayDays = player.summonerData.tier === "DIAMOND" ? 28 : 14;
-  
-    // Update the decay days based on how many full refreshes have passed
-    let updatedDecayDays = Math.max(0, player.decayDaysLeft - decayDaysPassed);
-
     // Fetch updated ranked solo match data
     const APICallString = `http://localhost:3001/search/${player.gameName}/${player.tagLine}`;
   
     axios
       .get(APICallString)
-      .then(function (response) {
+      .then((response) => {
+        const newRankedSoloMatches = response.data.rankedSoloMatches || [];
+        const previousMatches = player.rankedSoloMatches || [];
+  
+        console.log("Previous matches:", previousMatches);
+        console.log("New matches:", newRankedSoloMatches);
+  
+        // Extract the match IDs from the previous and new matches
+        const previousMatchIds = previousMatches.map((match) => match.matchId);
+        const newMatches = newRankedSoloMatches.filter(
+          (match) => !previousMatchIds.includes(match.matchId)
+        );
+  
+        console.log(`New matches added: ${newMatches.length}`);
+  
+        // Increment decayDaysLeft by the number of new matches added, capped at max decay days
+        const maxDecayDays = player.summonerData.tier === "DIAMOND" ? 28 : 14;
+        let updatedDecayDays = player.decayDaysLeft;
+  
+        if (newMatches.length > 0) {
+          updatedDecayDays = Math.min(player.decayDaysLeft + newMatches.length, maxDecayDays);
+        }
+  
+        console.log(`Updated Decay Days: ${updatedDecayDays}`);
+  
+        // Create a new player object to maintain immutability
+        const updatedPlayer = {
+          ...player,
+          decayDaysLeft: updatedDecayDays,
+          lastSearchTime: currentTime, // Update last search time to the current time
+          rankedSoloMatches: [...newRankedSoloMatches], // Ensure a new array reference
+        };
+  
+        // Create new playerData object to trigger React's state change detection
         const updatedPlayerData = {
           ...playerData,
-          [normalizedKey]: {
-            ...player,
-            decayDaysLeft: updatedDecayDays,
-            lastSearchTime: currentTime, // Update last search time to the current time
-            rankedSoloMatches: response.data.rankedSoloMatches || player.rankedSoloMatches // Update rankedSoloMatches
-          },
+          [normalizedKey]: updatedPlayer, // Spread the new player object
         };
-
-        setPlayerData(updatedPlayerData);
-        forceRender((prev) => prev + 1);
-
+  
+        // Update the state with the new object, ensuring immutability
+        setPlayerData({ ...updatedPlayerData }); // Create a new object reference
+        setSortedPlayers([...Object.values(updatedPlayerData)]); // Also update sortedPlayers if needed
+  
+        forceRender((prev) => prev + 1); // Force a re-render
+  
         // Send the updated data to the server
         axios
-          .post('http://localhost:3001/update-decay', { playerKey, decayDays: updatedDecayDays, lastSearchTime: currentTime })
+          .post("http://localhost:3001/update-decay", {
+            playerKey,
+            decayDays: updatedDecayDays,
+            lastSearchTime: currentTime,
+          })
           .then(() => {
-            console.log('Decay days, lastSearchTime, and rankedSoloMatches updated successfully!');
+            console.log("Decay days, lastSearchTime, and rankedSoloMatches updated successfully!");
           })
           .catch((error) => {
-            console.error('Error updating decay data:', error);
+            console.error("Error updating decay data:", error);
           });
       })
-      .catch(function (error) {
-        console.error('Error fetching updated player data for ranked solo matches:', error);
+      .catch((error) => {
+        console.error("Error fetching updated player data for ranked solo matches:", error);
       });
   };
-
   
   
 
   const renderPlayerData = () => {
     if (!playerData) return null;
-
+  
     return sortedPlayers.map((player, index) => {
-      const { credentials, rankedSoloMatches } = player;
+      console.log('Rendering player:', player.gameName, 'with decayDaysLeft:', player.decayDaysLeft);
+  
+      const { credentials, rankedSoloMatches = [] } = player; // Set default to empty array to avoid ReferenceError
       const hasCredentials = credentials && credentials.username && credentials.password;
       const soloQueueData = getSoloQueueData(player.leagueData);
-
       const uniqueKey = `${player.gameName.toLowerCase()}-${player.tagLine.toLowerCase()}`;
-
+  
       if (!player.summonerData) {
         return (
           <div key={index} className="player-data">
@@ -554,16 +580,16 @@ function App() {
           </div>
         );
       }
-
+  
       const profileIconUrl = getProfileIconUrl(player.summonerData?.profileIconId);
-      const winRate = calculateWinRate(soloQueueData.wins, soloQueueData.losses);
-      const playerRank = `${soloQueueData.tier} ${soloQueueData.rank}`;
-      const leaguePoints = soloQueueData.leaguePoints;
-      const wins = soloQueueData.wins;
-      const losses = soloQueueData.losses;
-
-      const rankBorder = getRankBorder(soloQueueData.tier);
-
+      const isRanked = !!soloQueueData; // Check if the player has ranked data
+      const playerRank = isRanked ? `${soloQueueData.tier} ${soloQueueData.rank}` : 'UNRANKED';
+      const leaguePoints = isRanked ? `${soloQueueData.leaguePoints}LP` : ''; // LP only if ranked
+      const wins = isRanked ? soloQueueData.wins : 0;
+      const losses = isRanked ? soloQueueData.losses : 0;
+      const winRate = isRanked ? calculateWinRate(wins, losses) : 'N/A'; // Only calculate if ranked
+      const rankBorder = isRanked ? getRankBorder(soloQueueData.tier) : getRankBorder('UNRANKED');
+  
       return (
         <div key={index} className="player-data">
           <button className="credentials-button" onClick={() => openModal(uniqueKey)}>
@@ -572,27 +598,35 @@ function App() {
           <div className='data-cont'>
             <div className="player-profile">
               <div className="icon-container-app">
-                <img className="border-image-app" src={rankBorder} alt={`${soloQueueData.tier} Border`} />
+                <img className="border-image-app" src={rankBorder} alt={`${playerRank} Border`} />
                 {profileIconUrl && (
                   <img className="icon-modal-app" src={profileIconUrl} alt="Profile Icon" />
                 )}
               </div>
               <div className='user-pass-copy'>
                 <span className='user-copy'>
-                  <a className='user-copy' onClick={() => copyToClipboard(credentials?.username || 'No username')}>[user]</a>
+                  <button className='clipboard-btn'>
+                    <a className='user-copy' onClick={() => copyToClipboard(playerData[uniqueKey]?.credentials?.username || 'No username')}>
+                      user
+                    </a>
+                  </button>
                 </span>
+                <button className='clipboard-btn'>
                 <span className='user-copy'>
-                  <a className='user-copy' onClick={() => copyToClipboard(credentials?.password || 'No password')}>[pass]</a>
+                  <a className='user-copy' onClick={() => copyToClipboard(playerData[uniqueKey]?.credentials?.password || 'No password')}>
+                    pass
+                  </a>
                 </span>
+                </button>
               </div>
             </div>
-
+  
             <div className='container-player-info'>
               <h3 className="game-name">{player.gameName}#{player.tagLine}</h3>
-
+  
               <div className="rank-info">
                 <div className='container-rankwr'>
-                  <p className="rank">{playerRank} {leaguePoints}LP</p>
+                  <p className="rank">{playerRank} {leaguePoints}</p>
                 </div>
                 <div className='container-wl'>
                   <p className="wins">{wins}W</p>
@@ -600,41 +634,41 @@ function App() {
                   <p className="win-rate">({winRate}%)</p>
                 </div>
               </div>
-
+  
               <div className='match-history-cont'>
-                  {rankedSoloMatches && rankedSoloMatches.slice(0, 8).map((match, idx) => (
-                    <div
-                      key={idx}
-                      className="match-history-item"
-                      style={{
-                        position: 'relative',
-                        display: 'inline-block',
-                        margin: '0 -3px',
-                      }}
-                    >
-                      <img
-                        src={getChampionIconUrl(match.champion)}
-                        alt={match.champion}
-                        className={match.win ? 'win' : 'lose'}
-                      />
-                    </div>
-                  ))}
-                </div>
-
+                {rankedSoloMatches.slice(0, 8).map((match, idx) => (
+                  <div
+                    key={idx}
+                    className="match-history-item"
+                    style={{
+                      position: 'relative',
+                      display: 'inline-block',
+                      margin: '0 -3px',
+                    }}
+                  >
+                    <img
+                      src={getChampionIconUrl(match.champion)}
+                      alt={match.champion}
+                      className={match.win ? 'win' : 'lose'}
+                    />
+                  </div>
+                ))}
+              </div>
+  
             </div>
-
+  
             <div className='container-right'>
               <div className='decay-container'>
                 <div>
-                <a className='decay-modal' onClick={() => openDecayModal(uniqueKey)}>
-                  <h1 className='decay-count'>{player.decayDaysLeft || 0}</h1>
-                </a>
+                  <a className='decay-modal' onClick={() => openDecayModal(uniqueKey)}>
+                    <h1 className='decay-count'>{player.decayDaysLeft || 0}</h1>
+                  </a>
                   <h1 className='decay-count2'>days</h1>
                 </div>
-
+  
                 <div className='decay-btn-container'>
                   <button className='decay-btn-refresh' onClick={() => handleDecayRefresh(uniqueKey)}>
-                  <FontAwesomeIcon icon={faRotateRight} size="2x" color="white" />
+                    <FontAwesomeIcon icon={faRotateRight} size="2x" color="white" />
                   </button>
                 </div>
               </div>
@@ -644,6 +678,7 @@ function App() {
       );
     });
   };
+  
 
   return (
     <div className="App">
@@ -666,27 +701,30 @@ function App() {
         </div>
 
         <div className='container-data'>
-          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-          
-          <button className='btn-filter' onClick={handleSortRankHighToLow}>
-            Sort Rank: High to Low
-            <FontAwesomeIcon icon={faFilter} size="lg" color="#181a1b" />
-          </button>
 
-          <button className='btn-filter' onClick={handleSortRankLowToHigh}>
-            Sort Rank: Low to High
-            <FontAwesomeIcon icon={faFilter} size="lg" color="#181a1b" />
-          </button>
+          <div className='filter-container'>
 
-          <button className='btn-filter-decay' onClick={handleSortDecayLowToHigh}>
-            Sort Decay: Low to High
-            <FontAwesomeIcon icon={faFilter} size="lg" color="#181a1b" />
-          </button>
+            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+            
+            <button className='btn-filter' onClick={handleSortRankHighToLow}>
+              Rank ▲
+            </button>
 
-          <button className='btn-filter-decay' onClick={handleSortDecayHighToLow}>
-            Sort Decay: High to Low
-            <FontAwesomeIcon icon={faFilter} size="lg" color="#181a1b" />
-          </button>
+            <button className='btn-filter' onClick={handleSortRankLowToHigh}>
+              Rank ▼
+            </button>
+
+            <button className='btn-filter-decay' onClick={handleSortDecayLowToHigh}>
+            Decay ▼
+              
+            </button>
+
+            <button className='btn-filter-decay' onClick={handleSortDecayHighToLow}>
+            Decay ▲
+            
+            </button>
+            
+          </div>
           {renderPlayerData()}
         </div>
 

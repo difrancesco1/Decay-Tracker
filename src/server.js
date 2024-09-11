@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 app.use(apiLimiter);
 
-const API_KEY = 'RGAPI-0a522d7f-d6dd-4e26-b154-74867b394c53';  // Use environment variable for the API key
+const API_KEY = 'RGAPI-0cdcfdc4-d0c7-4a00-8d59-e6e1b951fade';  // Use environment variable for the API key
 
 // Function to get current day, hours, and minutes in PST using moment-timezone
 const getCurrentTime = () => {
@@ -174,11 +174,17 @@ const fetchMatchHistory = (puuid, riotID, tagline, combinedPlayerData, res) => {
       readDataFromFile((data) => {
         const playerKey = `${riotID.toLowerCase()}-${tagline.toLowerCase()}`;
         const existingPlayer = data[playerKey];
-        let updatedDecayDays = existingPlayer ? existingPlayer.decayDaysLeft : 0;
 
-        // Increment decay days if new matches are found
-        if (existingPlayer && rankedSoloMatches.length > existingPlayer.rankedSoloMatches.length) {
-          updatedDecayDays = Math.min(updatedDecayDays + 1, 14); // Cap decay days at 14
+        // Safely check if rankedSoloMatches exist, default to an empty array if undefined
+        const existingRankedSoloMatches = existingPlayer?.rankedSoloMatches || [];
+
+        // Calculate how many new matches were added
+        const newMatchesCount = rankedSoloMatches.length - existingRankedSoloMatches.length;
+        let updatedDecayDays = existingPlayer?.decayDaysLeft || 0;
+
+        // Increment decay days based on new matches added
+        if (newMatchesCount > 0) {
+          updatedDecayDays = Math.min(updatedDecayDays + newMatchesCount, 14); // Cap at 14 decay days
         }
 
         combinedPlayerData.decayDaysLeft = updatedDecayDays;
@@ -187,6 +193,7 @@ const fetchMatchHistory = (puuid, riotID, tagline, combinedPlayerData, res) => {
         // Add combined player data to playerData.json
         data[playerKey] = combinedPlayerData;
 
+        // Write updated data back to file
         writeDataToFile(data, () => {
           res.json(combinedPlayerData); // Respond to the client with the updated data
         });
@@ -197,6 +204,9 @@ const fetchMatchHistory = (puuid, riotID, tagline, combinedPlayerData, res) => {
     res.status(500).send('Error fetching match history');
   });
 };
+
+
+
 
 // Route to update player credentials and decay time
 app.post('/update-decay', (req, res) => {

@@ -132,9 +132,9 @@ const Modal = ({ isOpen, onClose, onSubmit, onReset, existingCredentials, profil
           </button>
         </div>
 
-        <svg className='svg-wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        {/* <svg className='svg-wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path fill="#EABEC3" fillOpacity="1" d="M0,256L120,256C240,256,480,256,720,229.3C960,203,1200,149,1320,122.7L1440,96L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-        </svg>
+        </svg> */}
       </div>
     </>
   );
