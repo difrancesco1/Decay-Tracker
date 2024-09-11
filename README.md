@@ -34,6 +34,56 @@ Back-end:
     fs (File System): To read and write player data to playerData.json.
     Riot Games API: Provides the data for ranked matches, player details, and match history.
 
+
+Setup and Installation
+Prerequisites:
+
+    Node.js: Ensure you have Node.js installed on your machine.
+    Riot API Key: Obtain an API key from the Riot Developer Portal.
+
+Steps:
+
+    Clone the repository:
+
+    bash
+
+git clone https://github.com/your-repo/ranked-decay-tracker.git
+cd ranked-decay-tracker
+
+Install dependencies:
+
+bash
+
+npm install
+
+Set up environment variables:
+
+    Create a .env file in the project root and add your Riot API key:
+
+    makefile
+
+    RIOT_API_KEY=your-riot-api-key
+
+Start the server:
+
+bash
+
+npm run server
+
+Start the front-end:
+
+bash
+
+npm run start
+
+Open the app in your browser:
+
+arduino
+
+http://localhost:3000
+
+
+
 # Getting Started with Decay Tracker React App
 
 ## Available Scripts
