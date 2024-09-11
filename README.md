@@ -82,19 +82,41 @@ arduino
 
 http://localhost:3000
 
+How It Works
+Player Search
 
+    Users enter the player’s Riot ID and Tagline in the format RiotID#Tagline.
+    The app sends a request to the backend, which communicates with the Riot Games API to fetch player data based on their Riot ID and tagline.
+    The app retrieves player data such as:
+        Ranked Solo Queue tier, rank, and LP.
+        Match history with details about champions played, win/loss, etc.
+        The app stores and displays this data for the user.
 
-# Getting Started with Decay Tracker React App
+Decay Tracking
 
-## Available Scripts
+    When new ranked solo matches are added to the player’s match history, the app increments the decay days counter.
+    The decay counter is capped at a maximum (14 days for most tiers, 28 days for Diamond and above).
+    The app recalculates decay days based on the player's tier and recent activity.
 
-In the project directory, you can run the program by:
+App Components
+Search Player Component
 
-### `npm start` on Decay-Tracker
-### `node server.js` on src 
+    This component allows users to search for players by entering their Riot ID and Tagline.
+    On submission, it calls the backend to fetch data from the Riot API, updating the UI with player data or error messages.
 
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Decay Modal
+
+    A pop-up modal that allows users to view and manually adjust the decay days left for a player.
+    The modal tracks and displays the number of days until decay, based on player tier and activity.
+
+Player Profile Card
+
+    Displays the player’s ranked data, including their tier, rank, LP, and a list of their recent ranked solo queue matches.
+    The card updates dynamically when new data is fetched from the API.
+
+Credential Management
+
+    Users can add or view account credentials associated with a player profile. These credentials are securely stored and only accessible via the app.
 
 
 
