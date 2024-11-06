@@ -6,13 +6,14 @@
 /* #ffc3d0 LIGHTER pink (for something will figure that out later) */
 
 :root {
-  --main: #ff8aa9;
+  --main: #9FB7E3;
   --light: #ffb1c0;
   --win: #69aded;
   --loss: #e07087;
   --bg: #292c2e;
   --container: #181a1b;
   --text: #9aa4af;
+  --black: #0A111A;
 }
 
 * {
@@ -21,17 +22,6 @@
 
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -49,14 +39,6 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .container-main {
   display: flex;
@@ -79,7 +61,7 @@
   border-radius: 15px;
   border: solid var(--main) .2px;
   width: 800px;
-  color: var(--light);
+  color: var(--black);
   font-weight: bold;
 }
 
@@ -112,8 +94,8 @@
 }
 
 .search-btn:hover {
-  background: #ffb1c0;
-  box-shadow: #ff8aa9 0 10px 20px -10px;
+  background: #294A8F;
+  /* box-shadow: #ff8aa9 0 10px 20px -10px; */
   transition: .5s;
 }
 
@@ -121,8 +103,7 @@
   position: relative;
   overflow-x: clip;
   padding: 20px;
-  margin-bottom: 20px;
-  background: var(--main);
+  background: #294A8F;
 }
 
 .svg-wave {
@@ -137,13 +118,13 @@
 .container-data {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  background: var(--container);
   background: linear-gradient(121deg, rgba(24,26,27,1) 0%, rgba(32,54,82,0.7623249983587185) 100%);
   gap: 15px;
+  height: 100vh;
+  justify-content: normal;
 }
 
 .title-app {
@@ -162,6 +143,8 @@
   padding: 20px;
   border-radius: 20px;
   background-image: url(./assets/cardbg7.png);
+  background-image: url(./assets/cardbgblue.png);
+  /* background-image: url(./assets/cardbgpurp.png); */
   width: 555px;
   height: 200px;
   border: 1px solid var(--main);
@@ -177,6 +160,8 @@
   padding: 20px;
   border-radius: 20px;
   background-image: url(./assets/cardbg7.png);
+  background-image: url(./assets/cardbgblue.png);
+  /* background-image: url(./assets/cardbgpurp.png); */
   width:555px;
   height:200px;
   border: 1px solid var(--main); /* Set your own border color */
@@ -303,7 +288,6 @@
 }
 
 .user-copy, .pass-copy {
-  opacity: .8;
   transition: 1s;
   z-index: 5;
   padding: .5px;
@@ -406,8 +390,8 @@ img.lose {
 }
 
 .clipboard-btn:hover {
-  background: #ffb1c0;
-  box-shadow: #ff8aa9 0 10px 20px -10px;
+  background: #294A8F;
+  /* box-shadow: #9FB7E3 0 10px 20px -10px; */
   transition: .5s;
 }
 
@@ -438,10 +422,10 @@ img.lose {
   padding: 8px 18px;
   border-radius: 999px;
   border: .5px solid white;
-  background: var(--main);
+  background: #294A8F;
   color: #FFFFFF;
   cursor: pointer;
-  transition: 1s;
+  transition: .5s;
   box-sizing: border-box;
   font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
   font-size: 16px;
@@ -484,10 +468,10 @@ img.lose {
   padding: 8px 18px;
   border-radius: 999px;
   border: .5px solid white;
-  background: var(--main);
+  background: #294A8F;
   color: #FFFFFF;
   cursor: pointer;
-  transition: 1s;
+  transition: .5s;
   box-sizing: border-box;
   font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
   font-size: 16px;
@@ -508,4 +492,60 @@ img.lose {
   flex-direction: row;
   gap:15px;
   padding-bottom: 30px;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: .5px solid white;
+  background: var(--main);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 1s;
+  box-sizing: border-box;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  text-wrap: nowrap;
+}
+
+.dropdown-btn:hover {
+  background: #294A8F;
+  /* box-shadow: #ff8aa9 0 10px 20px -10px; */
+  transition: .5s;
+}
+
+/* .dropdown-menu { No longer needed, using btn click to change theme (dark mode / light mode)
+  
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  position: absolute;
+  top:70px;
+  right:-60px;
+} */
+
+.dropdown-menu a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
 }

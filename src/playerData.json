@@ -1,5 +1,5 @@
 {
-  "turbo inter l9-rosie": {
+  "turbointerl9-rosie": {
     "puuid": "7Z7S3GUOzlSal9DB0U3F7CGxULqfFoxDGXIXkH6qWq-Ue4-MD1hkaxsJfAeacDUNIt3Ec4umG9VsZw",
     "gameName": "TURBO INTER L9",
     "tagLine": "rosie",
@@ -8,424 +8,19 @@
       "accountId": "s-P1LYgm8f4abTwGt0M-Im7FCGv1dvut7kbp1bPozH0YAVs",
       "puuid": "7Z7S3GUOzlSal9DB0U3F7CGxULqfFoxDGXIXkH6qWq-Ue4-MD1hkaxsJfAeacDUNIt3Ec4umG9VsZw",
       "profileIconId": 5453,
-      "revisionDate": 1725927294745,
-      "summonerLevel": 176
+      "revisionDate": 1730932607672,
+      "summonerLevel": 184
     },
     "leagueData": [
       {
-        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
+        "leagueId": "c35042ee-2bae-334b-bb21-d5998ed7b6f9",
         "queueType": "RANKED_SOLO_5x5",
         "tier": "MASTER",
         "rank": "I",
         "summonerId": "u5PZ8hAvg81X00PalZWEylloN8E2LYIBFnQeWKiRkZWgn_o",
-        "leaguePoints": 95,
-        "wins": 44,
-        "losses": 40,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      },
-      {
-        "queueType": "CHERRY",
-        "summonerId": "u5PZ8hAvg81X00PalZWEylloN8E2LYIBFnQeWKiRkZWgn_o",
-        "leaguePoints": 0,
-        "wins": 9,
-        "losses": 3,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": true
-      }
-    ],
-    "decayDaysLeft": 14,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5108451074",
-        "win": false,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5108426829",
-        "win": false,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5108400857",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5108373606",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5108349904",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5105808033",
-        "win": false,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5105781144",
-        "win": false,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5105760748",
-        "win": false,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5104451134",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5104360412",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5104314681",
-        "win": false,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5104275299",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5104246663",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5104215465",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5104187168",
-        "win": false,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5104152634",
-        "win": false,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5104108370",
-        "win": false,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5102869008",
-        "win": false,
-        "champion": "Ziggs"
-      }
-    ],
-    "credentials": {
-      "username": "TEST",
-      "password": "TEST"
-    }
-  },
-  "tallhandsometop-na1": {
-    "puuid": "yCsNdn7kWFsasvT2U5coCZX75jC3B9IDrohy22j75usic14nsf9GzOQACIPbw6Ma3BZd3QlLNoVYvA",
-    "gameName": "TALLHANDSOMETOP",
-    "tagLine": "NA1",
-    "summonerData": {
-      "id": "0axOx_Js7KQul8vCik0BAfZMj1LYNt6eE6yXj3KXNRiEXZW4M5lwTY_img",
-      "accountId": "txI2vYcbJFNnDrY_lGElWYBKCMO-1kzdIHxENccZsxIO_FcWz-_E-fSv",
-      "puuid": "yCsNdn7kWFsasvT2U5coCZX75jC3B9IDrohy22j75usic14nsf9GzOQACIPbw6Ma3BZd3QlLNoVYvA",
-      "profileIconId": 5451,
-      "revisionDate": 1725974316964,
-      "summonerLevel": 200
-    },
-    "leagueData": [
-      {
-        "leagueId": "35dd9a75-5a72-41cc-b2ba-a82f0d9d3999",
-        "queueType": "RANKED_FLEX_SR",
-        "tier": "DIAMOND",
-        "rank": "I",
-        "summonerId": "0axOx_Js7KQul8vCik0BAfZMj1LYNt6eE6yXj3KXNRiEXZW4M5lwTY_img",
-        "leaguePoints": 75,
-        "wins": 19,
-        "losses": 11,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      },
-      {
-        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "MASTER",
-        "rank": "I",
-        "summonerId": "0axOx_Js7KQul8vCik0BAfZMj1LYNt6eE6yXj3KXNRiEXZW4M5lwTY_img",
-        "leaguePoints": 285,
-        "wins": 100,
-        "losses": 89,
-        "veteran": true,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "10",
-      "hours": "13",
-      "minutes": "24"
-    },
-    "decayDaysLeft": 10,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5108905434",
-        "win": false,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5108638914",
-        "win": false,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5108589304",
-        "win": true,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5108547724",
-        "win": false,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5108507157",
-        "win": false,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5104575688",
-        "win": false,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5104471396",
-        "win": true,
-        "champion": "Aurora"
-      },
-      {
-        "matchId": "NA1_5103599991",
-        "win": false,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5103556695",
-        "win": false,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5103501572",
-        "win": true,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5103469910",
-        "win": true,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5103408877",
-        "win": true,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5103368352",
-        "win": false,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5102863626",
-        "win": false,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5102731536",
-        "win": false,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5102674580",
-        "win": true,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5102613023",
-        "win": true,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5102133492",
-        "win": false,
-        "champion": "Hwei"
-      },
-      {
-        "matchId": "NA1_5101918677",
-        "win": false,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5101820782",
-        "win": false,
-        "champion": "Akshan"
-      }
-    ]
-  },
-  "1018-tall": {
-    "puuid": "Cg7BpnG-svgssnN4tza-AT35C-T_yRz-Rudb_9goNzNP9jtXs_ovhbUTTuOgqWdRW34GvSM1pULXYQ",
-    "gameName": "1018",
-    "tagLine": "TALL",
-    "summonerData": {
-      "id": "zWol3KafYGe0fpz6WjDFq7rZ2d9X0nIM-6SmvC8t2EizjZu8rcFzcKw6DA",
-      "accountId": "IdcpiUgiqt_8AnoxJlaT7k4FuUdpTw6QUkBLf9Xg-8I9gagRp9hmPpM1",
-      "puuid": "Cg7BpnG-svgssnN4tza-AT35C-T_yRz-Rudb_9goNzNP9jtXs_ovhbUTTuOgqWdRW34GvSM1pULXYQ",
-      "profileIconId": 6624,
-      "revisionDate": 1722473952000,
-      "summonerLevel": 34
-    },
-    "leagueData": [
-      {
-        "leagueId": "d0e1d7c5-bc49-495c-a8e8-3b3b24c338a8",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "EMERALD",
-        "rank": "IV",
-        "summonerId": "zWol3KafYGe0fpz6WjDFq7rZ2d9X0nIM-6SmvC8t2EizjZu8rcFzcKw6DA",
-        "leaguePoints": 7,
-        "wins": 24,
-        "losses": 12,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "11",
-      "hours": "01",
-      "minutes": "20"
-    },
-    "decayDaysLeft": 5,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5070510033",
-        "win": false,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5070451713",
-        "win": false,
-        "champion": "Nidalee"
-      },
-      {
-        "matchId": "NA1_5070405789",
-        "win": false,
-        "champion": "Leblanc"
-      },
-      {
-        "matchId": "NA1_5070362994",
-        "win": false,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5033920301",
-        "win": false,
-        "champion": "Caitlyn"
-      },
-      {
-        "matchId": "NA1_5016427167",
-        "win": false,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5016391998",
-        "win": true,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5016363931",
-        "win": false,
-        "champion": "Cassiopeia"
-      },
-      {
-        "matchId": "NA1_5016335493",
-        "win": true,
-        "champion": "Akshan"
-      },
-      {
-        "matchId": "NA1_5014338851",
-        "win": false,
-        "champion": "Sylas"
-      },
-      {
-        "matchId": "NA1_5014310458",
-        "win": true,
-        "champion": "Sylas"
-      },
-      {
-        "matchId": "NA1_5014291314",
-        "win": true,
-        "champion": "Sylas"
-      },
-      {
-        "matchId": "NA1_5014268384",
-        "win": true,
-        "champion": "Camille"
-      },
-      {
-        "matchId": "NA1_5014222570",
-        "win": false,
-        "champion": "Tristana"
-      },
-      {
-        "matchId": "NA1_5014205076",
-        "win": true,
-        "champion": "Cassiopeia"
-      },
-      {
-        "matchId": "NA1_5014153865",
-        "win": true,
-        "champion": "Annie"
-      }
-    ]
-  },
-  "quantum-na1": {
-    "puuid": "7W72fi4pOGFpM7g2UGm5FTwWDIIQk43vRs36i5jmW-OI4l3YRZRU799KZirJlN-8t6u6ux0UBR7AAg",
-    "gameName": "Quantum",
-    "tagLine": "NA1",
-    "summonerData": {
-      "id": "t3cM11qLvPWIl6m18LvQb0QP1DcIHbx3Oc5ovpa_XOcVIuI",
-      "accountId": "vqlLm87PDdkqYoSKCT8PVqOgHwrQgYxmHt6xGePTsW7KU3I",
-      "puuid": "7W72fi4pOGFpM7g2UGm5FTwWDIIQk43vRs36i5jmW-OI4l3YRZRU799KZirJlN-8t6u6ux0UBR7AAg",
-      "profileIconId": 5955,
-      "revisionDate": 1725855079000,
-      "summonerLevel": 1282
-    },
-    "leagueData": [
-      {
-        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "MASTER",
-        "rank": "I",
-        "summonerId": "t3cM11qLvPWIl6m18LvQb0QP1DcIHbx3Oc5ovpa_XOcVIuI",
-        "leaguePoints": 455,
-        "wins": 381,
-        "losses": 363,
+        "leaguePoints": 12,
+        "wins": 39,
+        "losses": 31,
         "veteran": false,
         "inactive": false,
         "freshBlood": true,
@@ -433,1890 +28,111 @@
       }
     ],
     "lastSearchTime": {
-      "day": "10",
-      "hours": "10",
-      "minutes": "00"
-    },
-    "decayDaysLeft": 13,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5107900656",
-        "win": false,
-        "champion": "AurelionSol"
-      },
-      {
-        "matchId": "NA1_5107849564",
-        "win": true,
-        "champion": "Diana"
-      },
-      {
-        "matchId": "NA1_5107812474",
-        "win": true,
-        "champion": "Vex"
-      },
-      {
-        "matchId": "NA1_5107762568",
-        "win": false,
-        "champion": "Jhin"
-      },
-      {
-        "matchId": "NA1_5107721883",
-        "win": false,
-        "champion": "Swain"
-      },
-      {
-        "matchId": "NA1_5107694949",
-        "win": true,
-        "champion": "Aurora"
-      },
-      {
-        "matchId": "NA1_5107659634",
-        "win": true,
-        "champion": "Diana"
-      },
-      {
-        "matchId": "NA1_5107640019",
-        "win": false,
-        "champion": "Naafiri"
-      },
-      {
-        "matchId": "NA1_5107298164",
-        "win": false,
-        "champion": "Qiyana"
-      },
-      {
-        "matchId": "NA1_5107268010",
-        "win": false,
-        "champion": "Diana"
-      },
-      {
-        "matchId": "NA1_5107262754",
-        "win": false,
-        "champion": "Veigar"
-      },
-      {
-        "matchId": "NA1_5107251791",
-        "win": false,
-        "champion": "Vex"
-      },
-      {
-        "matchId": "NA1_5107242000",
-        "win": true,
-        "champion": "AurelionSol"
-      },
-      {
-        "matchId": "NA1_5107236463",
-        "win": true,
-        "champion": "Fizz"
-      },
-      {
-        "matchId": "NA1_5107226720",
-        "win": false,
-        "champion": "Ezreal"
-      },
-      {
-        "matchId": "NA1_5107209619",
-        "win": false,
-        "champion": "Diana"
-      },
-      {
-        "matchId": "NA1_5107197550",
-        "win": false,
-        "champion": "Jhin"
-      },
-      {
-        "matchId": "NA1_5107186620",
-        "win": true,
-        "champion": "Vex"
-      },
-      {
-        "matchId": "NA1_5107178189",
-        "win": true,
-        "champion": "Vex"
-      },
-      {
-        "matchId": "NA1_5107167036",
-        "win": false,
-        "champion": "AurelionSol"
-      }
-    ]
-  },
-  "rocktank10-na1": {
-    "puuid": "qas6tJxj3kShW2MW7rURl_DSx7Z2vn-xnEztIfCTp_GohLz_J4PjUQfVjRcQ_iotv_7sSMObWhN-aw",
-    "gameName": "Rocktank10",
-    "tagLine": "NA1",
-    "summonerData": {
-      "id": "9GxXJ_shznNQXfT9adqdOBWnq5YYbFl3yd714VuWdRw7A40",
-      "accountId": "-ih07GX8dK674Jc3eQSIdtkpoGttP3pBayunc_s2iaaiVbg",
-      "puuid": "qas6tJxj3kShW2MW7rURl_DSx7Z2vn-xnEztIfCTp_GohLz_J4PjUQfVjRcQ_iotv_7sSMObWhN-aw",
-      "profileIconId": 3778,
-      "revisionDate": 1725916506489,
-      "summonerLevel": 776
-    },
-    "leagueData": [
-      {
-        "queueType": "CHERRY",
-        "summonerId": "9GxXJ_shznNQXfT9adqdOBWnq5YYbFl3yd714VuWdRw7A40",
-        "leaguePoints": 0,
-        "wins": 58,
-        "losses": 58,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      },
-      {
-        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "MASTER",
-        "rank": "I",
-        "summonerId": "9GxXJ_shznNQXfT9adqdOBWnq5YYbFl3yd714VuWdRw7A40",
-        "leaguePoints": 475,
-        "wins": 194,
-        "losses": 180,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      },
-      {
-        "leagueId": "41f6d61c-f635-48fa-be00-70b5fb17e786",
-        "queueType": "RANKED_FLEX_SR",
-        "tier": "EMERALD",
-        "rank": "II",
-        "summonerId": "9GxXJ_shznNQXfT9adqdOBWnq5YYbFl3yd714VuWdRw7A40",
-        "leaguePoints": 61,
-        "wins": 5,
-        "losses": 0,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": true
-      }
-    ],
-    "lastSearchTime": {
-      "day": "10",
-      "hours": "09",
+      "day": "06",
+      "hours": "17",
       "minutes": "58"
     },
-    "decayDaysLeft": 5,
+    "decayDaysLeft": 14,
     "rankedSoloMatches": [
       {
-        "matchId": "NA1_5108317096",
-        "win": true,
-        "champion": "Maokai"
-      },
-      {
-        "matchId": "NA1_5108295937",
-        "win": false,
-        "champion": "Karma"
-      },
-      {
-        "matchId": "NA1_5108272384",
-        "win": true,
-        "champion": "Rell"
-      },
-      {
-        "matchId": "NA1_5107897713",
-        "win": false,
-        "champion": "Maokai"
-      },
-      {
-        "matchId": "NA1_5107849564",
-        "win": false,
-        "champion": "Karma"
-      },
-      {
-        "matchId": "NA1_5106973794",
-        "win": true,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5106929326",
-        "win": true,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5106885697",
-        "win": true,
-        "champion": "Blitzcrank"
-      },
-      {
-        "matchId": "NA1_5106868718",
-        "win": true,
-        "champion": "Maokai"
-      },
-      {
-        "matchId": "NA1_5106847764",
-        "win": true,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5106819760",
-        "win": false,
-        "champion": "Senna"
-      },
-      {
-        "matchId": "NA1_5106553709",
-        "win": false,
-        "champion": "Pyke"
-      }
-    ]
-  },
-  "crowny-na1": {
-    "puuid": "SW05uEnNC8-SOkjDChHkIJLv_3LekdO4wWev-dUv7IO_a7g_C2HKAv3H8ycNkoQZJAqTSdE8LHFVvg",
-    "gameName": "Crowny",
-    "tagLine": "NA1",
-    "summonerData": {
-      "id": "F8C3Qd0RM_LuZj2704j7CtKQiQpylzp9gjQGovgYfMtaevI",
-      "accountId": "Q3Fjap4jvqOne4MxuesJBBleqjpqPkGcewU-UiUqccAthA4",
-      "puuid": "SW05uEnNC8-SOkjDChHkIJLv_3LekdO4wWev-dUv7IO_a7g_C2HKAv3H8ycNkoQZJAqTSdE8LHFVvg",
-      "profileIconId": 4021,
-      "revisionDate": 1725938849104,
-      "summonerLevel": 424
-    },
-    "leagueData": [
-      {
-        "leagueId": "78e00038-9a65-438a-be82-4fe4126fe04a",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "DIAMOND",
-        "rank": "I",
-        "summonerId": "F8C3Qd0RM_LuZj2704j7CtKQiQpylzp9gjQGovgYfMtaevI",
-        "leaguePoints": 33,
-        "wins": 143,
-        "losses": 115,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      },
-      {
-        "queueType": "CHERRY",
-        "summonerId": "F8C3Qd0RM_LuZj2704j7CtKQiQpylzp9gjQGovgYfMtaevI",
-        "leaguePoints": 0,
-        "wins": 39,
-        "losses": 34,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      },
-      {
-        "leagueId": "911b6d0d-27c3-4137-80ab-3841d106f86a",
-        "queueType": "RANKED_FLEX_SR",
-        "tier": "DIAMOND",
-        "rank": "II",
-        "summonerId": "F8C3Qd0RM_LuZj2704j7CtKQiQpylzp9gjQGovgYfMtaevI",
-        "leaguePoints": 51,
-        "wins": 63,
-        "losses": 45,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      }
-    ],
-    "decayDaysLeft": 28,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5108638914",
-        "win": false,
-        "champion": "Poppy"
-      }
-    ]
-  },
-  "为啥不好好玩-rosie": {
-    "puuid": "nF08w27f6194UvbgThF8Ins2eRH-PaDrDzQAO3lCk6-cwWySXs8QcvUcWq8jKthlnrKjd2ukPy0zSA",
-    "gameName": "为啥不好好玩",
-    "tagLine": "rosie",
-    "summonerData": {
-      "id": "na1qD3lbr69A_FzGf3o8eFsYgAWT2Deo9LUmnB8dpQ2st9DMgFCdj_C00w",
-      "accountId": "6JnsDoZTOgxnCeF2EOrV4pOOg_SZMXuSwOKWR6poKUaAezQGE12fEvrv",
-      "puuid": "nF08w27f6194UvbgThF8Ins2eRH-PaDrDzQAO3lCk6-cwWySXs8QcvUcWq8jKthlnrKjd2ukPy0zSA",
-      "profileIconId": 5453,
-      "revisionDate": 1725929074000,
-      "summonerLevel": 52
-    },
-    "leagueData": [
-      {
-        "queueType": "CHERRY",
-        "summonerId": "na1qD3lbr69A_FzGf3o8eFsYgAWT2Deo9LUmnB8dpQ2st9DMgFCdj_C00w",
-        "leaguePoints": 0,
-        "wins": 6,
-        "losses": 2,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      },
-      {
-        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "MASTER",
-        "rank": "I",
-        "summonerId": "na1qD3lbr69A_FzGf3o8eFsYgAWT2Deo9LUmnB8dpQ2st9DMgFCdj_C00w",
-        "leaguePoints": 279,
-        "wins": 89,
-        "losses": 55,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "11",
-      "hours": "01",
-      "minutes": "19"
-    },
-    "decayDaysLeft": 9,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5108488229",
+        "matchId": "NA1_5148365406",
         "win": true,
         "champion": "Ziggs"
       },
       {
-        "matchId": "NA1_5104138933",
+        "matchId": "NA1_5148349859",
+        "win": true,
+        "champion": "Ziggs"
+      },
+      {
+        "matchId": "NA1_5148326497",
+        "win": false,
+        "champion": "Ziggs"
+      },
+      {
+        "matchId": "NA1_5147307477",
+        "win": false,
+        "champion": "Ziggs"
+      },
+      {
+        "matchId": "NA1_5147274090",
+        "win": false,
+        "champion": "Ziggs"
+      },
+      {
+        "matchId": "NA1_5138698176",
+        "win": false,
+        "champion": "Ziggs"
+      },
+      {
+        "matchId": "NA1_5138109743",
+        "win": true,
+        "champion": "Ziggs"
+      },
+      {
+        "matchId": "NA1_5138084314",
+        "win": true,
+        "champion": "Ziggs"
+      },
+      {
+        "matchId": "NA1_5138055076",
+        "win": true,
+        "champion": "Ziggs"
+      },
+      {
+        "matchId": "NA1_5138037979",
+        "win": true,
+        "champion": "Ziggs"
+      },
+      {
+        "matchId": "NA1_5138023857",
         "win": true,
         "champion": "Lulu"
       },
       {
-        "matchId": "NA1_5103463066",
+        "matchId": "NA1_5134665250",
         "win": false,
         "champion": "Ziggs"
       },
       {
-        "matchId": "NA1_5103418567",
+        "matchId": "NA1_5134651975",
+        "win": false,
+        "champion": "Ziggs"
+      },
+      {
+        "matchId": "NA1_5134106154",
+        "win": false,
+        "champion": "Ziggs"
+      },
+      {
+        "matchId": "NA1_5134088811",
         "win": true,
         "champion": "Ziggs"
       },
       {
-        "matchId": "NA1_5103391426",
+        "matchId": "NA1_5134054698",
         "win": true,
         "champion": "Ziggs"
       },
       {
-        "matchId": "NA1_5103370127",
+        "matchId": "NA1_5134032359",
         "win": false,
-        "champion": "Zyra"
+        "champion": "Ziggs"
       },
       {
-        "matchId": "NA1_5103335519",
+        "matchId": "NA1_5133461278",
+        "win": true,
+        "champion": "Lulu"
+      },
+      {
+        "matchId": "NA1_5133428612",
         "win": true,
         "champion": "Ziggs"
       },
       {
-        "matchId": "NA1_5103308021",
-        "win": false,
-        "champion": "Zyra"
-      },
-      {
-        "matchId": "NA1_5102398442",
+        "matchId": "NA1_5133416747",
         "win": true,
         "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5102377998",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5102333672",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5102315131",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5099320820",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5099275388",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5099231564",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5099196987",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5097033028",
-        "win": true,
-        "champion": "Ziggs"
-      },
-      {
-        "matchId": "NA1_5096953077",
-        "win": true,
-        "champion": "Ziggs"
-      }
-    ]
-  },
-  "annie bot-na1": {
-    "puuid": "1QSVNau9wvb3fvNxKsxUDEyxwwjOl1akqvWLXW8A3pN2cVFBNlk4xViT25TsjYVGG51SxG3L91AFLg",
-    "gameName": "Annie Bot",
-    "tagLine": "NA1",
-    "summonerData": {
-      "id": "fZBpuqQKC1iWtzHUnharVVRMhvUvOPWJTrEvRvkYh7wlkFE",
-      "accountId": "PHu9RcGJeIIh79QQsDmo_dLVraBEQx06upHIo653GdH4fQ",
-      "puuid": "1QSVNau9wvb3fvNxKsxUDEyxwwjOl1akqvWLXW8A3pN2cVFBNlk4xViT25TsjYVGG51SxG3L91AFLg",
-      "profileIconId": 4418,
-      "revisionDate": 1726010905904,
-      "summonerLevel": 1403
-    },
-    "leagueData": [
-      {
-        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "MASTER",
-        "rank": "I",
-        "summonerId": "fZBpuqQKC1iWtzHUnharVVRMhvUvOPWJTrEvRvkYh7wlkFE",
-        "leaguePoints": 40,
-        "wins": 379,
-        "losses": 370,
-        "veteran": true,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "11",
-      "hours": "01",
-      "minutes": "13"
-    },
-    "decayDaysLeft": 14,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5109180415",
-        "win": true,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5109163235",
-        "win": true,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5109137057",
-        "win": false,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5109111150",
-        "win": true,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5109084413",
-        "win": false,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5108451074",
-        "win": false,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5108417329",
-        "win": true,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5108387945",
-        "win": false,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5108365863",
-        "win": false,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5108347377",
-        "win": true,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5108320662",
-        "win": true,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5107665972",
-        "win": false,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5107544626",
-        "win": true,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5107509593",
-        "win": true,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5107483687",
-        "win": false,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5106715540",
-        "win": false,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5106696631",
-        "win": false,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5106672556",
-        "win": false,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5106638420",
-        "win": false,
-        "champion": "Annie"
-      },
-      {
-        "matchId": "NA1_5106611463",
-        "win": false,
-        "champion": "Annie"
-      }
-    ]
-  },
-  "free palestine-humzh": {
-    "puuid": "AtlPhiR6Ovm-Tvpp9tLQv1Na0ilxUOqVzLtfiK4evZVFAefcbrNqv-doupYQOmxhnzZmWx6xiozK5w",
-    "gameName": "FREE PALESTINE",
-    "tagLine": "humzh",
-    "summonerData": {
-      "id": "7hkgr_4BIm0gI_3Fpg-43tz6ljXG3ctaUzJdilvrXlLoBIYS",
-      "accountId": "mhFTE7Hwx1EKtP72ccl_EeX9sJ6AUoim58MesAbuXaZVrgh9xod44pKA",
-      "puuid": "AtlPhiR6Ovm-Tvpp9tLQv1Na0ilxUOqVzLtfiK4evZVFAefcbrNqv-doupYQOmxhnzZmWx6xiozK5w",
-      "profileIconId": 4076,
-      "revisionDate": 1725994013561,
-      "summonerLevel": 544
-    },
-    "leagueData": [
-      {
-        "leagueId": "cdf6a3dd-36db-31c2-bef7-bcc8ab24bd00",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "CHALLENGER",
-        "rank": "I",
-        "summonerId": "7hkgr_4BIm0gI_3Fpg-43tz6ljXG3ctaUzJdilvrXlLoBIYS",
-        "leaguePoints": 1082,
-        "wins": 359,
-        "losses": 316,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "11",
-      "hours": "01",
-      "minutes": "14"
-    },
-    "decayDaysLeft": 4,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5109027891",
-        "win": false,
-        "champion": "Draven"
-      },
-      {
-        "matchId": "NA1_5109009268",
-        "win": false,
-        "champion": "Smolder"
-      },
-      {
-        "matchId": "NA1_5108996030",
-        "win": true,
-        "champion": "Samira"
-      },
-      {
-        "matchId": "NA1_5108975320",
-        "win": true,
-        "champion": "Draven"
-      },
-      {
-        "matchId": "NA1_5108966735",
-        "win": true,
-        "champion": "Jhin"
-      },
-      {
-        "matchId": "NA1_5108945261",
-        "win": false,
-        "champion": "MissFortune"
-      },
-      {
-        "matchId": "NA1_5108931558",
-        "win": true,
-        "champion": "Draven"
-      },
-      {
-        "matchId": "NA1_5108390630",
-        "win": false,
-        "champion": "Draven"
-      },
-      {
-        "matchId": "NA1_5108368939",
-        "win": false,
-        "champion": "Draven"
-      },
-      {
-        "matchId": "NA1_5108355498",
-        "win": true,
-        "champion": "Draven"
-      },
-      {
-        "matchId": "NA1_5108333237",
-        "win": false,
-        "champion": "MissFortune"
-      },
-      {
-        "matchId": "NA1_5108303679",
-        "win": false,
-        "champion": "Lucian"
-      },
-      {
-        "matchId": "NA1_5108291435",
-        "win": false,
-        "champion": "Vayne"
-      },
-      {
-        "matchId": "NA1_5108271597",
-        "win": true,
-        "champion": "Draven"
-      },
-      {
-        "matchId": "NA1_5108257466",
-        "win": false,
-        "champion": "Smolder"
-      },
-      {
-        "matchId": "NA1_5108243296",
-        "win": true,
-        "champion": "Smolder"
-      },
-      {
-        "matchId": "NA1_5108232287",
-        "win": false,
-        "champion": "Draven"
-      },
-      {
-        "matchId": "NA1_5108222970",
-        "win": true,
-        "champion": "Draven"
-      },
-      {
-        "matchId": "NA1_5108185366",
-        "win": true,
-        "champion": "Draven"
-      },
-      {
-        "matchId": "NA1_5107621200",
-        "win": false,
-        "champion": "MissFortune"
-      }
-    ]
-  },
-  "ll stylish-na1": {
-    "puuid": "nfcrYlKG0AOA123JX3yA-gbsPEFkj9rZp8rWO-Z4H2de9BBiEpodGHcBVr8MlA1sSXrVJkHHZkv3RA",
-    "gameName": "LL Stylish",
-    "tagLine": "NA1",
-    "summonerData": {
-      "id": "tGk7DzuIB0BPOCbHBU7vxDXV7khBmKRhomdZ3YTOjCgul4w",
-      "accountId": "OStuSk4y0i18KRMs0-auD4qWxY398HvszH65A6fW5fdQ-p0",
-      "puuid": "nfcrYlKG0AOA123JX3yA-gbsPEFkj9rZp8rWO-Z4H2de9BBiEpodGHcBVr8MlA1sSXrVJkHHZkv3RA",
-      "profileIconId": 7,
-      "revisionDate": 1725989997712,
-      "summonerLevel": 391
-    },
-    "leagueData": [
-      {
-        "leagueId": "af0200fb-8246-34c2-8377-3c289428cd4b",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "GRANDMASTER",
-        "rank": "I",
-        "summonerId": "tGk7DzuIB0BPOCbHBU7vxDXV7khBmKRhomdZ3YTOjCgul4w",
-        "leaguePoints": 884,
-        "wins": 324,
-        "losses": 296,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": true,
-        "hotStreak": true
-      },
-      {
-        "queueType": "CHERRY",
-        "summonerId": "tGk7DzuIB0BPOCbHBU7vxDXV7khBmKRhomdZ3YTOjCgul4w",
-        "leaguePoints": 0,
-        "wins": 10,
-        "losses": 4,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "10",
-      "hours": "14",
-      "minutes": "21"
-    },
-    "decayDaysLeft": 4,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5108995209",
-        "win": true,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5108971699",
-        "win": true,
-        "champion": "Ahri"
-      },
-      {
-        "matchId": "NA1_5108966735",
-        "win": true,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5107547883",
-        "win": true,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5107522969",
-        "win": false,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5107479320",
-        "win": false,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5107457093",
-        "win": false,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5107422929",
-        "win": false,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5107394337",
-        "win": true,
-        "champion": "LeeSin"
-      },
-      {
-        "matchId": "NA1_5107366481",
-        "win": false,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5107339676",
-        "win": true,
-        "champion": "Ahri"
-      },
-      {
-        "matchId": "NA1_5107325663",
-        "win": true,
-        "champion": "LeeSin"
-      },
-      {
-        "matchId": "NA1_5106806113",
-        "win": true,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5106768058",
-        "win": true,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5106725092",
-        "win": true,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5104952220",
-        "win": false,
-        "champion": "Velkoz"
-      },
-      {
-        "matchId": "NA1_5104923392",
-        "win": true,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5104903363",
-        "win": false,
-        "champion": "LeeSin"
-      },
-      {
-        "matchId": "NA1_5104884417",
-        "win": false,
-        "champion": "Ahri"
-      },
-      {
-        "matchId": "NA1_5104864061",
-        "win": true,
-        "champion": "Zed"
-      }
-    ]
-  },
-  "10april-na1": {
-    "puuid": "K6ghuADQ0vFP1Wd5Rp5RDyYvuZGEK58pEMdIRmLYGXTk1dnAakW1nfKx7EBFj2NXbeN9PoGqYE7KMg",
-    "gameName": "10April",
-    "tagLine": "NA1",
-    "summonerData": {
-      "id": "QkdJBaqNPwodWVoGvl93AJYN5yTvMvO2Vn90tsQFVwccNA4",
-      "accountId": "HIH0inRwDLC6Wq9B-1VL271BsfrJE9_-K9k1UL4ciOF4NrU",
-      "puuid": "K6ghuADQ0vFP1Wd5Rp5RDyYvuZGEK58pEMdIRmLYGXTk1dnAakW1nfKx7EBFj2NXbeN9PoGqYE7KMg",
-      "profileIconId": 4861,
-      "revisionDate": 1725990875959,
-      "summonerLevel": 406
-    },
-    "leagueData": [
-      {
-        "queueType": "CHERRY",
-        "summonerId": "QkdJBaqNPwodWVoGvl93AJYN5yTvMvO2Vn90tsQFVwccNA4",
-        "leaguePoints": 0,
-        "wins": 95,
-        "losses": 61,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      },
-      {
-        "leagueId": "af0200fb-8246-34c2-8377-3c289428cd4b",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "GRANDMASTER",
-        "rank": "I",
-        "summonerId": "QkdJBaqNPwodWVoGvl93AJYN5yTvMvO2Vn90tsQFVwccNA4",
-        "leaguePoints": 778,
-        "wins": 201,
-        "losses": 161,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "10",
-      "hours": "14",
-      "minutes": "21"
-    },
-    "decayDaysLeft": 7,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5109005936",
-        "win": false,
-        "champion": "Viego"
-      },
-      {
-        "matchId": "NA1_5108993967",
-        "win": true,
-        "champion": "Gwen"
-      },
-      {
-        "matchId": "NA1_5108978021",
-        "win": true,
-        "champion": "Rakan"
-      },
-      {
-        "matchId": "NA1_5108966735",
-        "win": true,
-        "champion": "Gwen"
-      },
-      {
-        "matchId": "NA1_5108945261",
-        "win": false,
-        "champion": "Gwen"
-      },
-      {
-        "matchId": "NA1_5108319822",
-        "win": true,
-        "champion": "Nidalee"
-      },
-      {
-        "matchId": "NA1_5108300863",
-        "win": true,
-        "champion": "Gwen"
-      },
-      {
-        "matchId": "NA1_5108277820",
-        "win": false,
-        "champion": "Rengar"
-      },
-      {
-        "matchId": "NA1_5108255242",
-        "win": true,
-        "champion": "Gwen"
-      },
-      {
-        "matchId": "NA1_5107982543",
-        "win": true,
-        "champion": "Udyr"
-      },
-      {
-        "matchId": "NA1_5107957085",
-        "win": true,
-        "champion": "Nidalee"
-      },
-      {
-        "matchId": "NA1_5107740734",
-        "win": true,
-        "champion": "Janna"
-      }
-    ]
-  },
-  "mid gap sorry-gn396": {
-    "puuid": "6xcpDxK8r-X5hOC5OWLiYSZeazoq5RDTbjAWpLoz6tChYamG6RqQ5JHoI79-qOkyzaIaC9TWLtGmRw",
-    "gameName": "mid gap sorry",
-    "tagLine": "gn396",
-    "summonerData": {
-      "id": "n4zb_QZ1iHxJQ8ulD1Z-fqPyYoIgzW8Z9Ah8gBY4FPLem-_TxbXAeCZOog",
-      "accountId": "dVkCk8zzq_jmh-HT_weGt23mXa1A0vtrf8EAKLN-NQ-qYHg-lnYGxG-b",
-      "puuid": "6xcpDxK8r-X5hOC5OWLiYSZeazoq5RDTbjAWpLoz6tChYamG6RqQ5JHoI79-qOkyzaIaC9TWLtGmRw",
-      "profileIconId": 1,
-      "revisionDate": 1725985227025,
-      "summonerLevel": 160
-    },
-    "leagueData": [
-      {
-        "leagueId": "cdf6a3dd-36db-31c2-bef7-bcc8ab24bd00",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "CHALLENGER",
-        "rank": "I",
-        "summonerId": "n4zb_QZ1iHxJQ8ulD1Z-fqPyYoIgzW8Z9Ah8gBY4FPLem-_TxbXAeCZOog",
-        "leaguePoints": 1028,
-        "wins": 240,
-        "losses": 197,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": true,
-        "hotStreak": true
-      }
-    ],
-    "lastSearchTime": {
-      "day": "10",
-      "hours": "13",
-      "minutes": "15"
-    },
-    "decayDaysLeft": 3,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5108966735",
-        "win": true,
-        "champion": "Nautilus"
-      },
-      {
-        "matchId": "NA1_5108945261",
-        "win": true,
-        "champion": "Nautilus"
-      },
-      {
-        "matchId": "NA1_5108195009",
-        "win": true,
-        "champion": "Zoe"
-      },
-      {
-        "matchId": "NA1_5108179504",
-        "win": true,
-        "champion": "Nautilus"
-      },
-      {
-        "matchId": "NA1_5105705337",
-        "win": true,
-        "champion": "Aurora"
-      },
-      {
-        "matchId": "NA1_5105672646",
-        "win": true,
-        "champion": "Zoe"
-      },
-      {
-        "matchId": "NA1_5104914708",
-        "win": true,
-        "champion": "Leblanc"
-      },
-      {
-        "matchId": "NA1_5104749395",
-        "win": true,
-        "champion": "Nautilus"
-      },
-      {
-        "matchId": "NA1_5104075331",
-        "win": true,
-        "champion": "Tristana"
-      },
-      {
-        "matchId": "NA1_5104051931",
-        "win": true,
-        "champion": "Ezreal"
-      },
-      {
-        "matchId": "NA1_5103291759",
-        "win": false,
-        "champion": "Ezreal"
-      },
-      {
-        "matchId": "NA1_5103237891",
-        "win": true,
-        "champion": "Nautilus"
-      },
-      {
-        "matchId": "NA1_5103025208",
-        "win": false,
-        "champion": "Ezreal"
-      },
-      {
-        "matchId": "NA1_5102290229",
-        "win": false,
-        "champion": "Aurora"
-      },
-      {
-        "matchId": "NA1_5102199116",
-        "win": false,
-        "champion": "Leblanc"
-      },
-      {
-        "matchId": "NA1_5102072555",
-        "win": false,
-        "champion": "Nautilus"
-      },
-      {
-        "matchId": "NA1_5100976301",
-        "win": true,
-        "champion": "Aurora"
-      },
-      {
-        "matchId": "NA1_5100903324",
-        "win": true,
-        "champion": "Nautilus"
-      },
-      {
-        "matchId": "NA1_5100886195",
-        "win": true,
-        "champion": "Nautilus"
-      },
-      {
-        "matchId": "NA1_5100861220",
-        "win": true,
-        "champion": "Leblanc"
-      }
-    ]
-  },
-  "gemi-swift": {
-    "puuid": "KWW1fEo8phOpUdCNnY7VO-DXTR7siUyRrD63GcTJ-FBvwR221iO4gEhYQ2gRO57nSoVupM_lkYmWgw",
-    "gameName": "gemi",
-    "tagLine": "swift",
-    "summonerData": {
-      "id": "PYfOEPEQD48kVUQMAxetiItJSubvtEJtWjIlO1mwEfgvjS4",
-      "accountId": "5u71jx4C2MU3Jx05Bj3Tk7P0Bma4B5ETeenqaRROE1_PD3w",
-      "puuid": "KWW1fEo8phOpUdCNnY7VO-DXTR7siUyRrD63GcTJ-FBvwR221iO4gEhYQ2gRO57nSoVupM_lkYmWgw",
-      "profileIconId": 5184,
-      "revisionDate": 1725991776285,
-      "summonerLevel": 821
-    },
-    "leagueData": [
-      {
-        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "MASTER",
-        "rank": "I",
-        "summonerId": "PYfOEPEQD48kVUQMAxetiItJSubvtEJtWjIlO1mwEfgvjS4",
-        "leaguePoints": 480,
-        "wins": 284,
-        "losses": 261,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      },
-      {
-        "queueType": "CHERRY",
-        "summonerId": "PYfOEPEQD48kVUQMAxetiItJSubvtEJtWjIlO1mwEfgvjS4",
-        "leaguePoints": 0,
-        "wins": 14,
-        "losses": 14,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "10",
-      "hours": "14",
-      "minutes": "24"
-    },
-    "decayDaysLeft": 14,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5109005199",
-        "win": true,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108996030",
-        "win": false,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108983893",
-        "win": false,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108962567",
-        "win": true,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108405203",
-        "win": true,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108370285",
-        "win": false,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108344430",
-        "win": true,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108327272",
-        "win": true,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108313112",
-        "win": true,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108295737",
-        "win": false,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108266506",
-        "win": false,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108249250",
-        "win": true,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108233360",
-        "win": true,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108214697",
-        "win": false,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108198697",
-        "win": false,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5108194911",
-        "win": true,
-        "champion": "Poppy"
-      },
-      {
-        "matchId": "NA1_5107536019",
-        "win": true,
-        "champion": "Poppy"
-      }
-    ]
-  },
-  "soodangkim-na3": {
-    "puuid": "cSK-700PB-MQe6xRLea3hxZrhO_BU_M2g9owmxQekVroI43IdIVHpH5MiAoAG2nmOWo72i34_P6c8Q",
-    "gameName": "SOODANGKIM",
-    "tagLine": "NA3",
-    "summonerData": {
-      "id": "WgIIfzmRjXlf5ik_R5o-QKLMdu4tC9AoEyJD_Zl-hQqTeMQ",
-      "accountId": "SaIwWHhFoQCpyweb2c6E_I2UGdBkKAVkv-fpmN1fbW023IE",
-      "puuid": "cSK-700PB-MQe6xRLea3hxZrhO_BU_M2g9owmxQekVroI43IdIVHpH5MiAoAG2nmOWo72i34_P6c8Q",
-      "profileIconId": 5760,
-      "revisionDate": 1725991733434,
-      "summonerLevel": 1113
-    },
-    "leagueData": [
-      {
-        "leagueId": "af0200fb-8246-34c2-8377-3c289428cd4b",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "GRANDMASTER",
-        "rank": "I",
-        "summonerId": "WgIIfzmRjXlf5ik_R5o-QKLMdu4tC9AoEyJD_Zl-hQqTeMQ",
-        "leaguePoints": 553,
-        "wins": 111,
-        "losses": 92,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": true,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "10",
-      "hours": "14",
-      "minutes": "26"
-    },
-    "decayDaysLeft": 14,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5109009268",
-        "win": false,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5108996030",
-        "win": false,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5108983893",
-        "win": false,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5108733128",
-        "win": true,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5108706756",
-        "win": true,
-        "champion": "Sylas"
-      },
-      {
-        "matchId": "NA1_5108243477",
-        "win": false,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5108232341",
-        "win": false,
-        "champion": "Sylas"
-      },
-      {
-        "matchId": "NA1_5107964759",
-        "win": true,
-        "champion": "Sylas"
-      },
-      {
-        "matchId": "NA1_5107926522",
-        "win": true,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5107696671",
-        "win": true,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5107646818",
-        "win": true,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5107566268",
-        "win": true,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5107543836",
-        "win": false,
-        "champion": "Sylas"
-      },
-      {
-        "matchId": "NA1_5107481806",
-        "win": false,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5107382314",
-        "win": true,
-        "champion": "Sylas"
-      },
-      {
-        "matchId": "NA1_5107355722",
-        "win": true,
-        "champion": "Sylas"
-      },
-      {
-        "matchId": "NA1_5107334614",
-        "win": false,
-        "champion": "Pyke"
-      },
-      {
-        "matchId": "NA1_5107314661",
-        "win": true,
-        "champion": "Sylas"
-      },
-      {
-        "matchId": "NA1_5107131803",
-        "win": false,
-        "champion": "Draven"
-      },
-      {
-        "matchId": "NA1_5107102258",
-        "win": false,
-        "champion": "Zeri"
-      }
-    ]
-  },
-  "hope1-1549": {
-    "puuid": "4ebTw586o5pJpGlfgXC8T50z9Szgx3_gVLd-zTL2lv41f7A6lLkir70Q4tHQ81sni8BNkgc-Lv15PA",
-    "gameName": "hope1",
-    "tagLine": "1549",
-    "summonerData": {
-      "id": "-S49oKgge9xjCmqAHB7-3dbk_MKcuQRemd7Hqlt-lXA3H9Y",
-      "accountId": "sroHy4Ech3y7pwY-97LX7yAOrulb9inHdSnupbEi70ubUSI",
-      "puuid": "4ebTw586o5pJpGlfgXC8T50z9Szgx3_gVLd-zTL2lv41f7A6lLkir70Q4tHQ81sni8BNkgc-Lv15PA",
-      "profileIconId": 4832,
-      "revisionDate": 1725988012253,
-      "summonerLevel": 1210
-    },
-    "leagueData": [
-      {
-        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "MASTER",
-        "rank": "I",
-        "summonerId": "-S49oKgge9xjCmqAHB7-3dbk_MKcuQRemd7Hqlt-lXA3H9Y",
-        "leaguePoints": 300,
-        "wins": 114,
-        "losses": 100,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": true
-      },
-      {
-        "leagueId": "b2f356ca-e68a-46a0-8b3c-c4e648f3820b",
-        "queueType": "RANKED_FLEX_SR",
-        "tier": "EMERALD",
-        "rank": "II",
-        "summonerId": "-S49oKgge9xjCmqAHB7-3dbk_MKcuQRemd7Hqlt-lXA3H9Y",
-        "leaguePoints": 3,
-        "wins": 4,
-        "losses": 2,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": true
-      },
-      {
-        "queueType": "CHERRY",
-        "summonerId": "-S49oKgge9xjCmqAHB7-3dbk_MKcuQRemd7Hqlt-lXA3H9Y",
-        "leaguePoints": 0,
-        "wins": 110,
-        "losses": 81,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "10",
-      "hours": "10",
-      "minutes": "21"
-    },
-    "decayDaysLeft": 14,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5108982081",
-        "win": true,
-        "champion": "Varus"
-      },
-      {
-        "matchId": "NA1_5108963177",
-        "win": true,
-        "champion": "Ezreal"
-      },
-      {
-        "matchId": "NA1_5108512427",
-        "win": true,
-        "champion": "Kaisa"
-      },
-      {
-        "matchId": "NA1_5108476354",
-        "win": true,
-        "champion": "Leblanc"
-      },
-      {
-        "matchId": "NA1_5107575376",
-        "win": true,
-        "champion": "Jhin"
-      },
-      {
-        "matchId": "NA1_5107539630",
-        "win": false,
-        "champion": "Ezreal"
-      },
-      {
-        "matchId": "NA1_5107500574",
-        "win": true,
-        "champion": "Jhin"
-      },
-      {
-        "matchId": "NA1_5107466925",
-        "win": false,
-        "champion": "Ezreal"
-      },
-      {
-        "matchId": "NA1_5107447940",
-        "win": false,
-        "champion": "MissFortune"
-      },
-      {
-        "matchId": "NA1_5104957457",
-        "win": false,
-        "champion": "Zeri"
-      },
-      {
-        "matchId": "NA1_5104939065",
-        "win": false,
-        "champion": "Camille"
-      },
-      {
-        "matchId": "NA1_5104814803",
-        "win": false,
-        "champion": "Ezreal"
-      },
-      {
-        "matchId": "NA1_5102298733",
-        "win": true,
-        "champion": "Ezreal"
-      },
-      {
-        "matchId": "NA1_5102269173",
-        "win": false,
-        "champion": "Azir"
-      },
-      {
-        "matchId": "NA1_5102235428",
-        "win": false,
-        "champion": "Kaisa"
-      },
-      {
-        "matchId": "NA1_5102207861",
-        "win": true,
-        "champion": "Varus"
-      },
-      {
-        "matchId": "NA1_5102167314",
-        "win": false,
-        "champion": "Jhin"
-      },
-      {
-        "matchId": "NA1_5102075059",
-        "win": false,
-        "champion": "Zeri"
-      }
-    ]
-  },
-  "six kings-na1": {
-    "puuid": "_mjfGtfy3EtB4r-oZEeqAhlr_-PaMSjHjdpZbn6spdfwFf5_c-aQz4wMvW9UILXKNCQdV7DxYISv5g",
-    "gameName": "Six Kings",
-    "tagLine": "NA1",
-    "summonerData": {
-      "id": "W8uo3xPgJ_f_JFlLEcupO2gdd0RCGSCr7zhSFwhVGibPb2Q",
-      "accountId": "pvUqS7sKRIeWHO1Sj8821QfxAxmxe86WAX0Crvqg8mxGYw",
-      "puuid": "_mjfGtfy3EtB4r-oZEeqAhlr_-PaMSjHjdpZbn6spdfwFf5_c-aQz4wMvW9UILXKNCQdV7DxYISv5g",
-      "profileIconId": 545,
-      "revisionDate": 1725988143617,
-      "summonerLevel": 913
-    },
-    "leagueData": [
-      {
-        "leagueId": "d61fdf8f-56dc-36c2-a36f-f6559f37075a",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "MASTER",
-        "rank": "I",
-        "summonerId": "W8uo3xPgJ_f_JFlLEcupO2gdd0RCGSCr7zhSFwhVGibPb2Q",
-        "leaguePoints": 109,
-        "wins": 104,
-        "losses": 79,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      },
-      {
-        "queueType": "CHERRY",
-        "summonerId": "W8uo3xPgJ_f_JFlLEcupO2gdd0RCGSCr7zhSFwhVGibPb2Q",
-        "leaguePoints": 0,
-        "wins": 231,
-        "losses": 181,
-        "veteran": true,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "10",
-      "hours": "10",
-      "minutes": "22"
-    },
-    "decayDaysLeft": 10,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5107547114",
-        "win": false,
-        "champion": "Olaf"
-      },
-      {
-        "matchId": "NA1_5107470554",
-        "win": true,
-        "champion": "Olaf"
-      },
-      {
-        "matchId": "NA1_5107446760",
-        "win": false,
-        "champion": "Pantheon"
-      },
-      {
-        "matchId": "NA1_5107415595",
-        "win": true,
-        "champion": "Olaf"
-      },
-      {
-        "matchId": "NA1_5107384480",
-        "win": false,
-        "champion": "Olaf"
-      },
-      {
-        "matchId": "NA1_5106543899",
-        "win": true,
-        "champion": "Pantheon"
-      },
-      {
-        "matchId": "NA1_5106519313",
-        "win": true,
-        "champion": "Olaf"
-      },
-      {
-        "matchId": "NA1_5105980228",
-        "win": false,
-        "champion": "Olaf"
-      },
-      {
-        "matchId": "NA1_5104894575",
-        "win": true,
-        "champion": "Gwen"
-      },
-      {
-        "matchId": "NA1_5104842399",
-        "win": false,
-        "champion": "Olaf"
-      }
-    ]
-  },
-  "思維方式-915": {
-    "puuid": "957Lhy53BvwtXLu6Q5GB36B25vnEtV_WKBF-gt8dNdH03C1DwGkarw6z4VJhKW9azjA6deNI3LqtWQ",
-    "gameName": "思維方式",
-    "tagLine": "915",
-    "summonerData": {
-      "id": "JiGHX3dCKOb7NsKlCwTTNmm-bdS4cv0Lzwx36PCbnV0vgvzfxiLg6F1hrA",
-      "accountId": "mXzsUaGzzXISw5MGRzU6CbjlusreMXkv_AXBE5kJEaNLb1CQ2EhZlh2k",
-      "puuid": "957Lhy53BvwtXLu6Q5GB36B25vnEtV_WKBF-gt8dNdH03C1DwGkarw6z4VJhKW9azjA6deNI3LqtWQ",
-      "profileIconId": 26,
-      "revisionDate": 1725987479598,
-      "summonerLevel": 113
-    },
-    "leagueData": [
-      {
-        "leagueId": "cdf6a3dd-36db-31c2-bef7-bcc8ab24bd00",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "CHALLENGER",
-        "rank": "I",
-        "summonerId": "JiGHX3dCKOb7NsKlCwTTNmm-bdS4cv0Lzwx36PCbnV0vgvzfxiLg6F1hrA",
-        "leaguePoints": 1376,
-        "wins": 186,
-        "losses": 115,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": true,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "10",
-      "hours": "10",
-      "minutes": "23"
-    },
-    "decayDaysLeft": 14,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5108978021",
-        "win": false,
-        "champion": "Brand"
-      },
-      {
-        "matchId": "NA1_5108944811",
-        "win": true,
-        "champion": "Zyra"
-      },
-      {
-        "matchId": "NA1_5108805757",
-        "win": false,
-        "champion": "Zyra"
-      },
-      {
-        "matchId": "NA1_5108773863",
-        "win": true,
-        "champion": "XinZhao"
-      },
-      {
-        "matchId": "NA1_5108731483",
-        "win": true,
-        "champion": "Zyra"
-      },
-      {
-        "matchId": "NA1_5108703170",
-        "win": true,
-        "champion": "Amumu"
-      },
-      {
-        "matchId": "NA1_5108661659",
-        "win": false,
-        "champion": "Zed"
-      },
-      {
-        "matchId": "NA1_5108618343",
-        "win": true,
-        "champion": "Zyra"
-      },
-      {
-        "matchId": "NA1_5108586104",
-        "win": false,
-        "champion": "Lillia"
-      },
-      {
-        "matchId": "NA1_5108534648",
-        "win": false,
-        "champion": "Taliyah"
-      },
-      {
-        "matchId": "NA1_5108515024",
-        "win": false,
-        "champion": "Vi"
-      },
-      {
-        "matchId": "NA1_5108467862",
-        "win": true,
-        "champion": "Zyra"
-      },
-      {
-        "matchId": "NA1_5108423729",
-        "win": true,
-        "champion": "Ivern"
-      },
-      {
-        "matchId": "NA1_5108397025",
-        "win": false,
-        "champion": "Nidalee"
-      },
-      {
-        "matchId": "NA1_5108303679",
-        "win": true,
-        "champion": "Syndra"
-      },
-      {
-        "matchId": "NA1_5108278586",
-        "win": true,
-        "champion": "Zyra"
-      },
-      {
-        "matchId": "NA1_5108257466",
-        "win": true,
-        "champion": "Viego"
-      },
-      {
-        "matchId": "NA1_5107988684",
-        "win": true,
-        "champion": "XinZhao"
-      },
-      {
-        "matchId": "NA1_5107954176",
-        "win": true,
-        "champion": "Zyra"
-      },
-      {
-        "matchId": "NA1_5107932467",
-        "win": false,
-        "champion": "Diana"
-      }
-    ]
-  },
-  "drew-dozer": {
-    "puuid": "htpckMxGHrgYjmpOXby6-nkAaPI2Q1sv36DqQffqyAvf8ocHRuLhW7DrMqdUOdwliNwpLG48TTVz7w",
-    "gameName": "Drew",
-    "tagLine": "Dozer",
-    "summonerData": {
-      "id": "TKBA2RQs7omMRfcO-9QMdv3q9DY0rkB-uRjdojGEGr66o8E",
-      "accountId": "Z8Fw2VC5VYPeyt4s4DysHhA-bi7QPaGEv7Jye4Rlr0Zq14o",
-      "puuid": "htpckMxGHrgYjmpOXby6-nkAaPI2Q1sv36DqQffqyAvf8ocHRuLhW7DrMqdUOdwliNwpLG48TTVz7w",
-      "profileIconId": 1627,
-      "revisionDate": 1725987697569,
-      "summonerLevel": 806
-    },
-    "leagueData": [
-      {
-        "queueType": "CHERRY",
-        "summonerId": "TKBA2RQs7omMRfcO-9QMdv3q9DY0rkB-uRjdojGEGr66o8E",
-        "leaguePoints": 0,
-        "wins": 75,
-        "losses": 44,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": false,
-        "hotStreak": false
-      },
-      {
-        "leagueId": "af0200fb-8246-34c2-8377-3c289428cd4b",
-        "queueType": "RANKED_SOLO_5x5",
-        "tier": "GRANDMASTER",
-        "rank": "I",
-        "summonerId": "TKBA2RQs7omMRfcO-9QMdv3q9DY0rkB-uRjdojGEGr66o8E",
-        "leaguePoints": 529,
-        "wins": 161,
-        "losses": 137,
-        "veteran": false,
-        "inactive": false,
-        "freshBlood": true,
-        "hotStreak": false
-      }
-    ],
-    "lastSearchTime": {
-      "day": "10",
-      "hours": "10",
-      "minutes": "23"
-    },
-    "decayDaysLeft": 14,
-    "rankedSoloMatches": [
-      {
-        "matchId": "NA1_5108977997",
-        "win": false,
-        "champion": "Nautilus"
-      },
-      {
-        "matchId": "NA1_5108370573",
-        "win": false,
-        "champion": "Vex"
-      },
-      {
-        "matchId": "NA1_5108354237",
-        "win": true,
-        "champion": "Renekton"
-      },
-      {
-        "matchId": "NA1_5108328590",
-        "win": true,
-        "champion": "Ryze"
-      },
-      {
-        "matchId": "NA1_5105350077",
-        "win": false,
-        "champion": "Renekton"
-      },
-      {
-        "matchId": "NA1_5105312075",
-        "win": true,
-        "champion": "Yone"
-      },
-      {
-        "matchId": "NA1_5105271683",
-        "win": false,
-        "champion": "Vex"
-      },
-      {
-        "matchId": "NA1_5105244887",
-        "win": true,
-        "champion": "Renekton"
-      },
-      {
-        "matchId": "NA1_5105204081",
-        "win": false,
-        "champion": "Renekton"
-      },
-      {
-        "matchId": "NA1_5105172466",
-        "win": false,
-        "champion": "Garen"
-      },
-      {
-        "matchId": "NA1_5104973664",
-        "win": false,
-        "champion": "Garen"
-      },
-      {
-        "matchId": "NA1_5104955206",
-        "win": false,
-        "champion": "Ryze"
-      },
-      {
-        "matchId": "NA1_5104914125",
-        "win": false,
-        "champion": "Smolder"
-      },
-      {
-        "matchId": "NA1_5104895874",
-        "win": false,
-        "champion": "Cassiopeia"
-      },
-      {
-        "matchId": "NA1_5104869441",
-        "win": true,
-        "champion": "Vex"
-      },
-      {
-        "matchId": "NA1_5104851293",
-        "win": false,
-        "champion": "Garen"
-      },
-      {
-        "matchId": "NA1_5104832169",
-        "win": true,
-        "champion": "Vex"
       }
     ]
   },
@@ -2334,9 +150,9 @@
     },
     "leagueData": [],
     "lastSearchTime": {
-      "day": "10",
-      "hours": "12",
-      "minutes": "02"
+      "day": "05",
+      "hours": "18",
+      "minutes": "12"
     },
     "decayDaysLeft": 14,
     "rankedSoloMatches": [
@@ -2415,30 +231,180 @@
         "win": true,
         "champion": "Sylas"
       }
-    ]
+    ],
+    "credentials": {
+      "username": "asdfasdf111",
+      "password": "asfdasdf124"
+    }
   },
-  "nuggetz-na1": {
-    "puuid": "P8XV2zxkOhh66ekjbeWGZHpqnn9M4I7Ya_6OqOgHswTEGkGfoYthwxI3qZ0bkvL-v5JmStuDVUmxZg",
-    "gameName": "Nuggetz",
-    "tagLine": "NA1",
+  "ttvzileanaire-na2": {
+    "puuid": "aTBIVYgpxqvmJNulAOAGfnXmtGINQMx_c9yJSCKVWbb0X-nr137ihWCQ7-wrMs_TaKwr4nRLxkFiOA",
+    "gameName": "TTV Zileanaire",
+    "tagLine": "NA2",
     "summonerData": {
-      "id": "JzLjyxg_IMRSGdkWb7YE4efBo8D3xiW_7-Ya2t9VEuq4uQ4",
-      "accountId": "vpJtx-aaqQ4SHV8kKL3vEi52f3_5OK_j1GQzBJFQ9msa2Cw",
-      "puuid": "P8XV2zxkOhh66ekjbeWGZHpqnn9M4I7Ya_6OqOgHswTEGkGfoYthwxI3qZ0bkvL-v5JmStuDVUmxZg",
-      "profileIconId": 5987,
-      "revisionDate": 1715841796000,
-      "summonerLevel": 522
+      "id": "KLf154Sc7iCreLXdEekf3NBGg7wyH1oP00GEe1aewis2rvI",
+      "accountId": "KDm7ud2uFTwF8tVsfUiGy5x4daIUFGkK4LeySx62yHiZJnw",
+      "puuid": "aTBIVYgpxqvmJNulAOAGfnXmtGINQMx_c9yJSCKVWbb0X-nr137ihWCQ7-wrMs_TaKwr4nRLxkFiOA",
+      "profileIconId": 4829,
+      "revisionDate": 1730790148093,
+      "summonerLevel": 427
     },
     "leagueData": [
       {
-        "leagueId": "a100d1b8-5162-4842-ab15-ecbc1a972870",
+        "leagueId": "8aceca82-0cf6-3d16-9e10-4f8b66923668",
         "queueType": "RANKED_SOLO_5x5",
-        "tier": "EMERALD",
+        "tier": "GRANDMASTER",
         "rank": "I",
-        "summonerId": "JzLjyxg_IMRSGdkWb7YE4efBo8D3xiW_7-Ya2t9VEuq4uQ4",
-        "leaguePoints": 75,
-        "wins": 5,
-        "losses": 4,
+        "summonerId": "KLf154Sc7iCreLXdEekf3NBGg7wyH1oP00GEe1aewis2rvI",
+        "leaguePoints": 268,
+        "wins": 59,
+        "losses": 43,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": true,
+        "hotStreak": false
+      }
+    ],
+    "lastSearchTime": {
+      "day": "05",
+      "hours": "18",
+      "minutes": "11"
+    },
+    "decayDaysLeft": 14,
+    "rankedSoloMatches": [
+      {
+        "matchId": "NA1_5147471890",
+        "win": true,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5147457292",
+        "win": true,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5146859129",
+        "win": false,
+        "champion": "Zoe"
+      },
+      {
+        "matchId": "NA1_5146845838",
+        "win": true,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5146830067",
+        "win": true,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5145999126",
+        "win": true,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5145971056",
+        "win": false,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5145938767",
+        "win": true,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5145897158",
+        "win": true,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5145661637",
+        "win": true,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5145649162",
+        "win": false,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5140874656",
+        "win": false,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5140844139",
+        "win": true,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5140813981",
+        "win": false,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5140789101",
+        "win": true,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5140758336",
+        "win": true,
+        "champion": "Yone"
+      },
+      {
+        "matchId": "NA1_5140738637",
+        "win": true,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5140718003",
+        "win": false,
+        "champion": "Zilean"
+      },
+      {
+        "matchId": "NA1_5140699961",
+        "win": true,
+        "champion": "Zilean"
+      }
+    ]
+  },
+  "1018-goose": {
+    "puuid": "yCsNdn7kWFsasvT2U5coCZX75jC3B9IDrohy22j75usic14nsf9GzOQACIPbw6Ma3BZd3QlLNoVYvA",
+    "gameName": "1018",
+    "tagLine": "goose",
+    "summonerData": {
+      "id": "0axOx_Js7KQul8vCik0BAfZMj1LYNt6eE6yXj3KXNRiEXZW4M5lwTY_img",
+      "accountId": "txI2vYcbJFNnDrY_lGElWYBKCMO-1kzdIHxENccZsxIO_FcWz-_E-fSv",
+      "puuid": "yCsNdn7kWFsasvT2U5coCZX75jC3B9IDrohy22j75usic14nsf9GzOQACIPbw6Ma3BZd3QlLNoVYvA",
+      "profileIconId": 5451,
+      "revisionDate": 1730857074830,
+      "summonerLevel": 210
+    },
+    "leagueData": [
+      {
+        "leagueId": "14c44e08-46f4-4046-a44e-f765f5ba56ae",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "DIAMOND",
+        "rank": "IV",
+        "summonerId": "0axOx_Js7KQul8vCik0BAfZMj1LYNt6eE6yXj3KXNRiEXZW4M5lwTY_img",
+        "leaguePoints": 0,
+        "wins": 25,
+        "losses": 44,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      },
+      {
+        "leagueId": "4b2ce7a3-35f9-4f3c-932c-34e9baf59ae8",
+        "queueType": "RANKED_FLEX_SR",
+        "tier": "DIAMOND",
+        "rank": "III",
+        "summonerId": "0axOx_Js7KQul8vCik0BAfZMj1LYNt6eE6yXj3KXNRiEXZW4M5lwTY_img",
+        "leaguePoints": 50,
+        "wins": 1,
+        "losses": 5,
         "veteran": false,
         "inactive": false,
         "freshBlood": false,
@@ -2446,101 +412,1367 @@
       }
     ],
     "lastSearchTime": {
-      "day": "10",
-      "hours": "15",
-      "minutes": "27"
+      "day": "05",
+      "hours": "18",
+      "minutes": "10"
     },
-    "decayDaysLeft": 3,
+    "decayDaysLeft": 14,
     "rankedSoloMatches": [
       {
-        "matchId": "NA1_4998821557",
+        "matchId": "NA1_5147819662",
+        "win": false,
+        "champion": "Akshan"
+      },
+      {
+        "matchId": "NA1_5147737369",
+        "win": false,
+        "champion": "Akshan"
+      },
+      {
+        "matchId": "NA1_5146871176",
+        "win": false,
+        "champion": "Aurora"
+      },
+      {
+        "matchId": "NA1_5146834494",
+        "win": false,
+        "champion": "Aurora"
+      },
+      {
+        "matchId": "NA1_5146673519",
+        "win": false,
+        "champion": "Zeri"
+      },
+      {
+        "matchId": "NA1_5145157237",
+        "win": false,
+        "champion": "Aurora"
+      },
+      {
+        "matchId": "NA1_5145121826",
+        "win": true,
+        "champion": "Aurora"
+      },
+      {
+        "matchId": "NA1_5145087836",
+        "win": false,
+        "champion": "Aurora"
+      },
+      {
+        "matchId": "NA1_5144979202",
+        "win": false,
+        "champion": "Akali"
+      },
+      {
+        "matchId": "NA1_5144967693",
+        "win": false,
+        "champion": "Irelia"
+      },
+      {
+        "matchId": "NA1_5144953076",
+        "win": false,
+        "champion": "Zeri"
+      },
+      {
+        "matchId": "NA1_5144939339",
+        "win": true,
+        "champion": "Aurora"
+      },
+      {
+        "matchId": "NA1_5144449697",
+        "win": true,
+        "champion": "Akshan"
+      },
+      {
+        "matchId": "NA1_5144436959",
+        "win": false,
+        "champion": "Neeko"
+      },
+      {
+        "matchId": "NA1_5144365507",
+        "win": true,
+        "champion": "Aurora"
+      },
+      {
+        "matchId": "NA1_5143968537",
+        "win": false,
+        "champion": "Akali"
+      },
+      {
+        "matchId": "NA1_5143940428",
+        "win": true,
+        "champion": "Akali"
+      },
+      {
+        "matchId": "NA1_5143908242",
+        "win": false,
+        "champion": "Akali"
+      }
+    ]
+  },
+  "lowelo-yone": {
+    "puuid": "91Stun3B2ledJRcKY_jBozIQDGg1BF5rzwt0HUk51xYX544y6mXzNVrW0RR04vz15RoqCkgnRxtsMQ",
+    "gameName": "low elo",
+    "tagLine": "yone",
+    "summonerData": {
+      "id": "D3K1vcDJolni5MlYQHQ2ucKW1ycP6XQJeF6ZVdfVjRabdypf0O4MHmiAxg",
+      "accountId": "1lPyG8RDW4y4llEwTh7qoM6FgSomjrAsS58GDdDhm8_6GGAD-NMH2373",
+      "puuid": "91Stun3B2ledJRcKY_jBozIQDGg1BF5rzwt0HUk51xYX544y6mXzNVrW0RR04vz15RoqCkgnRxtsMQ",
+      "profileIconId": 5453,
+      "revisionDate": 1730934937551,
+      "summonerLevel": 38
+    },
+    "leagueData": [
+      {
+        "leagueId": "37d639e6-9a01-483b-9272-d100c4e681bb",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "EMERALD",
+        "rank": "III",
+        "summonerId": "D3K1vcDJolni5MlYQHQ2ucKW1ycP6XQJeF6ZVdfVjRabdypf0O4MHmiAxg",
+        "leaguePoints": 97,
+        "wins": 50,
+        "losses": 39,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": true,
+        "hotStreak": true
+      }
+    ],
+    "lastSearchTime": {
+      "day": "06",
+      "hours": "18",
+      "minutes": "28"
+    },
+    "decayDaysLeft": 14,
+    "rankedSoloMatches": [
+      {
+        "matchId": "NA1_5148387008",
+        "win": true,
+        "champion": "Lux"
+      },
+      {
+        "matchId": "NA1_5148141205",
+        "win": true,
+        "champion": "Karma"
+      },
+      {
+        "matchId": "NA1_5148130756",
+        "win": true,
+        "champion": "Lulu"
+      },
+      {
+        "matchId": "NA1_5148110361",
+        "win": false,
+        "champion": "Soraka"
+      },
+      {
+        "matchId": "NA1_5148099082",
+        "win": true,
+        "champion": "Nami"
+      },
+      {
+        "matchId": "NA1_5148078048",
+        "win": true,
+        "champion": "Karma"
+      },
+      {
+        "matchId": "NA1_5148043393",
+        "win": true,
+        "champion": "Nami"
+      },
+      {
+        "matchId": "NA1_5148017134",
+        "win": true,
+        "champion": "Janna"
+      },
+      {
+        "matchId": "NA1_5147987272",
+        "win": false,
+        "champion": "Karma"
+      },
+      {
+        "matchId": "NA1_5147960651",
+        "win": true,
+        "champion": "Lulu"
+      },
+      {
+        "matchId": "NA1_5147769155",
+        "win": false,
+        "champion": "Soraka"
+      },
+      {
+        "matchId": "NA1_5147761112",
+        "win": true,
+        "champion": "Lux"
+      },
+      {
+        "matchId": "NA1_5147738549",
+        "win": true,
+        "champion": "Karma"
+      },
+      {
+        "matchId": "NA1_5147499755",
+        "win": true,
+        "champion": "Lulu"
+      },
+      {
+        "matchId": "NA1_5147479082",
+        "win": false,
+        "champion": "Nami"
+      },
+      {
+        "matchId": "NA1_5147454438",
+        "win": true,
+        "champion": "Janna"
+      },
+      {
+        "matchId": "NA1_5147414112",
+        "win": false,
+        "champion": "Soraka"
+      },
+      {
+        "matchId": "NA1_5147241792",
+        "win": false,
+        "champion": "Lux"
+      },
+      {
+        "matchId": "NA1_5147212394",
+        "win": false,
+        "champion": "Soraka"
+      },
+      {
+        "matchId": "NA1_5147189106",
+        "win": false,
+        "champion": "Karma"
+      }
+    ]
+  },
+  "1018-tall": {
+    "puuid": "Cg7BpnG-svgssnN4tza-AT35C-T_yRz-Rudb_9goNzNP9jtXs_ovhbUTTuOgqWdRW34GvSM1pULXYQ",
+    "gameName": "1018",
+    "tagLine": "TALL",
+    "summonerData": {
+      "id": "zWol3KafYGe0fpz6WjDFq7rZ2d9X0nIM-6SmvC8t2EizjZu8rcFzcKw6DA",
+      "accountId": "IdcpiUgiqt_8AnoxJlaT7k4FuUdpTw6QUkBLf9Xg-8I9gagRp9hmPpM1",
+      "puuid": "Cg7BpnG-svgssnN4tza-AT35C-T_yRz-Rudb_9goNzNP9jtXs_ovhbUTTuOgqWdRW34GvSM1pULXYQ",
+      "profileIconId": 6624,
+      "revisionDate": 1730884610866,
+      "summonerLevel": 36
+    },
+    "leagueData": [
+      {
+        "leagueId": "d3d2941a-7811-4673-99fe-4cf89cf85249",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "EMERALD",
+        "rank": "II",
+        "summonerId": "zWol3KafYGe0fpz6WjDFq7rZ2d9X0nIM-6SmvC8t2EizjZu8rcFzcKw6DA",
+        "leaguePoints": 54,
+        "wins": 11,
+        "losses": 8,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": true,
+        "hotStreak": false
+      }
+    ],
+    "lastSearchTime": {
+      "day": "06",
+      "hours": "17",
+      "minutes": "41"
+    },
+    "decayDaysLeft": 14,
+    "rankedSoloMatches": [
+      {
+        "matchId": "NA1_5148141205",
+        "win": true,
+        "champion": "Akshan"
+      },
+      {
+        "matchId": "NA1_5148130756",
+        "win": true,
+        "champion": "Aurora"
+      },
+      {
+        "matchId": "NA1_5148110361",
+        "win": false,
+        "champion": "Aurora"
+      },
+      {
+        "matchId": "NA1_5148099082",
+        "win": true,
+        "champion": "Aurora"
+      },
+      {
+        "matchId": "NA1_5148078048",
+        "win": true,
+        "champion": "Akshan"
+      },
+      {
+        "matchId": "NA1_5148043393",
+        "win": true,
+        "champion": "Akshan"
+      },
+      {
+        "matchId": "NA1_5148017134",
+        "win": true,
+        "champion": "Aurora"
+      },
+      {
+        "matchId": "NA1_5147987272",
+        "win": false,
+        "champion": "Nidalee"
+      },
+      {
+        "matchId": "NA1_5147960651",
+        "win": true,
+        "champion": "Aurora"
+      },
+      {
+        "matchId": "NA1_5147499755",
+        "win": true,
+        "champion": "Akali"
+      },
+      {
+        "matchId": "NA1_5147479082",
+        "win": false,
+        "champion": "Akshan"
+      },
+      {
+        "matchId": "NA1_5147454438",
+        "win": true,
+        "champion": "Akshan"
+      },
+      {
+        "matchId": "NA1_5147414112",
+        "win": false,
+        "champion": "Akali"
+      },
+      {
+        "matchId": "NA1_5146636267",
+        "win": false,
+        "champion": "Annie"
+      },
+      {
+        "matchId": "NA1_5145794791",
+        "win": true,
+        "champion": "Nidalee"
+      },
+      {
+        "matchId": "NA1_5145463957",
+        "win": false,
+        "champion": "Akali"
+      },
+      {
+        "matchId": "NA1_5145456853",
+        "win": false,
+        "champion": "Leblanc"
+      },
+      {
+        "matchId": "NA1_5145450794",
+        "win": false,
+        "champion": "Akali"
+      },
+      {
+        "matchId": "NA1_5145435597",
+        "win": true,
+        "champion": "Akali"
+      },
+      {
+        "matchId": "NA1_5070510033",
+        "win": false,
+        "champion": "Pyke"
+      }
+    ]
+  },
+  "kingt0n-na1": {
+    "puuid": "KvQ4tSCIDxtdcRpviGfJUBeZuSH1O0fGYGCfWeaMMPai2rBRRX4wwyPYdErDnuvNJHYqZYwJdEBjkw",
+    "gameName": "kingt0n",
+    "tagLine": "NA1",
+    "summonerData": {
+      "id": "vrRnqO8Ed_jYn7EwaEmDeWZfktdgT4DQ6kJAZ5ao1OIfuG2f",
+      "accountId": "g0NE3gx9bnQr_PIxrSH6rUSdZpHkb5wufIvMkjm5DoxDiRWUvSHWtyAV",
+      "puuid": "KvQ4tSCIDxtdcRpviGfJUBeZuSH1O0fGYGCfWeaMMPai2rBRRX4wwyPYdErDnuvNJHYqZYwJdEBjkw",
+      "profileIconId": 4568,
+      "revisionDate": 1730934937551,
+      "summonerLevel": 140
+    },
+    "leagueData": [
+      {
+        "leagueId": "2a49d42f-e4f4-409d-9e5c-a4464171d412",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "EMERALD",
+        "rank": "III",
+        "summonerId": "vrRnqO8Ed_jYn7EwaEmDeWZfktdgT4DQ6kJAZ5ao1OIfuG2f",
+        "leaguePoints": 4,
+        "wins": 36,
+        "losses": 36,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      }
+    ],
+    "decayDaysLeft": 12,
+    "rankedSoloMatches": [
+      {
+        "matchId": "NA1_5148387008",
+        "win": false,
+        "champion": "Yone"
+      },
+      {
+        "matchId": "NA1_5148367440",
+        "win": true,
+        "champion": "Gragas"
+      },
+      {
+        "matchId": "NA1_5147163290",
+        "win": false,
+        "champion": "Galio"
+      },
+      {
+        "matchId": "NA1_5147110662",
+        "win": true,
+        "champion": "Poppy"
+      },
+      {
+        "matchId": "NA1_5146691736",
+        "win": true,
+        "champion": "Mordekaiser"
+      },
+      {
+        "matchId": "NA1_5146646807",
+        "win": true,
+        "champion": "Galio"
+      },
+      {
+        "matchId": "NA1_5146471246",
+        "win": false,
+        "champion": "Sylas"
+      },
+      {
+        "matchId": "NA1_5146450498",
+        "win": false,
+        "champion": "Gragas"
+      },
+      {
+        "matchId": "NA1_5146417725",
+        "win": true,
+        "champion": "Mordekaiser"
+      },
+      {
+        "matchId": "NA1_5146378294",
+        "win": true,
+        "champion": "JarvanIV"
+      },
+      {
+        "matchId": "NA1_5146288913",
+        "win": true,
+        "champion": "Poppy"
+      },
+      {
+        "matchId": "NA1_5146272962",
+        "win": false,
+        "champion": "Maokai"
+      },
+      {
+        "matchId": "NA1_5146262390",
+        "win": false,
+        "champion": "Gnar"
+      },
+      {
+        "matchId": "NA1_5146245468",
+        "win": false,
+        "champion": "Yone"
+      },
+      {
+        "matchId": "NA1_5145925251",
+        "win": true,
+        "champion": "Lissandra"
+      },
+      {
+        "matchId": "NA1_5145912536",
+        "win": false,
+        "champion": "Mordekaiser"
+      },
+      {
+        "matchId": "NA1_5145641704",
+        "win": false,
+        "champion": "Yone"
+      },
+      {
+        "matchId": "NA1_5145610138",
+        "win": true,
+        "champion": "Yone"
+      },
+      {
+        "matchId": "NA1_5144629951",
+        "win": true,
+        "champion": "Lissandra"
+      },
+      {
+        "matchId": "NA1_5138354067",
+        "win": false,
+        "champion": "Nocturne"
+      }
+    ],
+    "credentials": {
+      "username": "123",
+      "password": "321"
+    }
+  },
+  "phongcách-stđv": {
+    "puuid": "8L9jio5YzyOLuT3VvbjgV3ynm7FDd_wm6dt3hITZvQJ2SKx53mdHGSxaY_QEhTgYB-rlopYpLexrWg",
+    "gameName": "Phong Cách",
+    "tagLine": "STĐV",
+    "summonerData": {
+      "id": "11QS7UVsdP-BIEcBhvHkEgFZxPtXuh-iurq4sgaiMwREa8-z",
+      "accountId": "H_RA3y6GIc2xyw3T6gf5KV766EdglJukZ9GLE_U6mNx_ixM8U4R8Z87m",
+      "puuid": "8L9jio5YzyOLuT3VvbjgV3ynm7FDd_wm6dt3hITZvQJ2SKx53mdHGSxaY_QEhTgYB-rlopYpLexrWg",
+      "profileIconId": 6631,
+      "revisionDate": 1730932606483,
+      "summonerLevel": 329
+    },
+    "leagueData": [
+      {
+        "leagueId": "8d3bfe9b-be1f-4e41-9f2f-1b7183340e60",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "EMERALD",
+        "rank": "IV",
+        "summonerId": "11QS7UVsdP-BIEcBhvHkEgFZxPtXuh-iurq4sgaiMwREa8-z",
+        "leaguePoints": 76,
+        "wins": 32,
+        "losses": 44,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": true,
+        "hotStreak": false
+      }
+    ],
+    "lastSearchTime": {
+      "day": "06",
+      "hours": "15",
+      "minutes": "03"
+    },
+    "decayDaysLeft": 14,
+    "rankedSoloMatches": [
+      {
+        "matchId": "NA1_5147161117",
+        "win": false,
+        "champion": "Malzahar"
+      },
+      {
+        "matchId": "NA1_5147138401",
+        "win": true,
+        "champion": "Chogath"
+      },
+      {
+        "matchId": "NA1_5147107825",
+        "win": true,
+        "champion": "Leblanc"
+      },
+      {
+        "matchId": "NA1_5146895085",
+        "win": true,
+        "champion": "Ziggs"
+      },
+      {
+        "matchId": "NA1_5146147400",
+        "win": true,
+        "champion": "Yone"
+      },
+      {
+        "matchId": "NA1_5146074349",
+        "win": true,
+        "champion": "Corki"
+      },
+      {
+        "matchId": "NA1_5146063675",
+        "win": false,
+        "champion": "Ashe"
+      },
+      {
+        "matchId": "NA1_5145739983",
+        "win": true,
+        "champion": "Smolder"
+      },
+      {
+        "matchId": "NA1_5145720791",
+        "win": false,
+        "champion": "Yone"
+      },
+      {
+        "matchId": "NA1_5145706382",
+        "win": true,
+        "champion": "Leblanc"
+      },
+      {
+        "matchId": "NA1_5145681611",
+        "win": true,
+        "champion": "Yone"
+      },
+      {
+        "matchId": "NA1_5145663559",
+        "win": true,
+        "champion": "Annie"
+      },
+      {
+        "matchId": "NA1_5145270667",
         "win": false,
         "champion": "Tristana"
       },
       {
-        "matchId": "NA1_4998794608",
-        "win": false,
-        "champion": "Xayah"
-      },
-      {
-        "matchId": "NA1_4998771025",
-        "win": true,
-        "champion": "Xayah"
-      },
-      {
-        "matchId": "NA1_4998742213",
-        "win": false,
-        "champion": "Kaisa"
-      },
-      {
-        "matchId": "NA1_4998708052",
-        "win": true,
-        "champion": "Kaisa"
-      },
-      {
-        "matchId": "NA1_4998667455",
-        "win": true,
-        "champion": "Tristana"
-      },
-      {
-        "matchId": "NA1_4998634055",
+        "matchId": "NA1_5145243507",
         "win": false,
         "champion": "Tristana"
       },
       {
-        "matchId": "NA1_4998593440",
-        "win": true,
-        "champion": "Xayah"
-      },
-      {
-        "matchId": "NA1_4998564086",
-        "win": true,
-        "champion": "Lucian"
-      },
-      {
-        "matchId": "NA1_4997357337",
+        "matchId": "NA1_5145219909",
         "win": false,
-        "champion": "Nautilus"
-      },
-      {
-        "matchId": "NA1_4997341077",
-        "win": true,
-        "champion": "Lucian"
-      },
-      {
-        "matchId": "NA1_4997305742",
-        "win": true,
         "champion": "Tristana"
       },
       {
-        "matchId": "NA1_4997264399",
+        "matchId": "NA1_5145095568",
         "win": true,
-        "champion": "Twitch"
-      },
-      {
-        "matchId": "NA1_4997240162",
-        "win": true,
-        "champion": "Lucian"
-      },
-      {
-        "matchId": "NA1_4994512194",
-        "win": false,
         "champion": "Jhin"
-      },
+      }
+    ]
+  },
+  "onfr-na1": {
+    "puuid": "Xs9kBE4Wa8KjXyyuIgwCBGwRerUPciFIXx4Gz08eCy-A0pWvywxQ4oXfUDylS3haMfgiruQIDIbaWA",
+    "gameName": "ONFR",
+    "tagLine": "NA1",
+    "summonerData": {
+      "id": "DrmiWWNuYRdyRoEiyG0C-LDe4BokRqlB5JwBfgdnKE5luTM",
+      "accountId": "eoH1x4DW7qCVo_USqHPyxCLq9lIZ8FderY_GJYbrnwhjkg",
+      "puuid": "Xs9kBE4Wa8KjXyyuIgwCBGwRerUPciFIXx4Gz08eCy-A0pWvywxQ4oXfUDylS3haMfgiruQIDIbaWA",
+      "profileIconId": 28,
+      "revisionDate": 1730932655549,
+      "summonerLevel": 122
+    },
+    "leagueData": [
       {
-        "matchId": "NA1_4994469624",
-        "win": true,
-        "champion": "Twitch"
-      },
+        "leagueId": "a29be7ec-3419-480f-8479-22086317e821",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "EMERALD",
+        "rank": "III",
+        "summonerId": "DrmiWWNuYRdyRoEiyG0C-LDe4BokRqlB5JwBfgdnKE5luTM",
+        "leaguePoints": 58,
+        "wins": 43,
+        "losses": 32,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      }
+    ],
+    "lastSearchTime": {
+      "day": "06",
+      "hours": "15",
+      "minutes": "04"
+    },
+    "decayDaysLeft": 14,
+    "rankedSoloMatches": [
       {
-        "matchId": "NA1_4994445558",
+        "matchId": "NA1_5148359650",
         "win": false,
-        "champion": "Tristana"
+        "champion": "FiddleSticks"
       },
       {
-        "matchId": "NA1_4992226625",
+        "matchId": "NA1_5148250162",
         "win": true,
-        "champion": "Twitch"
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5148093456",
+        "win": true,
+        "champion": "Elise"
+      },
+      {
+        "matchId": "NA1_5147860900",
+        "win": true,
+        "champion": "Elise"
+      },
+      {
+        "matchId": "NA1_5147337144",
+        "win": true,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5147309454",
+        "win": true,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5147281192",
+        "win": true,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5146734309",
+        "win": false,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5146691736",
+        "win": false,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5146670413",
+        "win": true,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5146631630",
+        "win": false,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5146092220",
+        "win": true,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5145975144",
+        "win": false,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5145943947",
+        "win": false,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5145904546",
+        "win": true,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5145874971",
+        "win": true,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5145834580",
+        "win": false,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5145394601",
+        "win": false,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5145376695",
+        "win": false,
+        "champion": "FiddleSticks"
+      },
+      {
+        "matchId": "NA1_5145197482",
+        "win": false,
+        "champion": "FiddleSticks"
+      }
+    ]
+  },
+  "doctblack-na1": {
+    "puuid": "mQhA7PEO8UjCP4Q8WT8hPelqXp9TLoulUAVeK8A98kr1kXSjFvMRJVLIAdOHq1VhFdpcljvYzbWqeg",
+    "gameName": "Doct Black ",
+    "tagLine": "NA1",
+    "summonerData": {
+      "id": "B_1iPw4Ifc-XQzkHPnQfW8ba_fxhKAaB_I8S6R-R5Y6SMbxt1c3X7ZuY-g",
+      "accountId": "Us2S1BSm7sosT5WfhTZ8Nqg84q7Cj2E-gcrtSFWcELjzkn2UGgY9Eud9",
+      "puuid": "mQhA7PEO8UjCP4Q8WT8hPelqXp9TLoulUAVeK8A98kr1kXSjFvMRJVLIAdOHq1VhFdpcljvYzbWqeg",
+      "profileIconId": 26,
+      "revisionDate": 1730845012000,
+      "summonerLevel": 126
+    },
+    "leagueData": [
+      {
+        "leagueId": "557c5752-9506-4264-a827-7cf60dc68890",
+        "queueType": "RANKED_FLEX_SR",
+        "tier": "PLATINUM",
+        "rank": "II",
+        "summonerId": "B_1iPw4Ifc-XQzkHPnQfW8ba_fxhKAaB_I8S6R-R5Y6SMbxt1c3X7ZuY-g",
+        "leaguePoints": 52,
+        "wins": 25,
+        "losses": 18,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      },
+      {
+        "leagueId": "bc45f23f-f452-4c79-8ad3-b62ae0e1a4c7",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "EMERALD",
+        "rank": "III",
+        "summonerId": "B_1iPw4Ifc-XQzkHPnQfW8ba_fxhKAaB_I8S6R-R5Y6SMbxt1c3X7ZuY-g",
+        "leaguePoints": 63,
+        "wins": 45,
+        "losses": 45,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      }
+    ],
+    "lastSearchTime": {
+      "day": "06",
+      "hours": "15",
+      "minutes": "04"
+    },
+    "decayDaysLeft": 12,
+    "rankedSoloMatches": [
+      {
+        "matchId": "NA1_5147725278",
+        "win": true,
+        "champion": "Yasuo"
+      },
+      {
+        "matchId": "NA1_5147161441",
+        "win": true,
+        "champion": "Volibear"
+      },
+      {
+        "matchId": "NA1_5147132060",
+        "win": false,
+        "champion": "Warwick"
+      },
+      {
+        "matchId": "NA1_5146672043",
+        "win": true,
+        "champion": "Warwick"
+      },
+      {
+        "matchId": "NA1_5146433089",
+        "win": false,
+        "champion": "Warwick"
+      },
+      {
+        "matchId": "NA1_5146403327",
+        "win": false,
+        "champion": "Warwick"
+      },
+      {
+        "matchId": "NA1_5144670880",
+        "win": true,
+        "champion": "Warwick"
+      },
+      {
+        "matchId": "NA1_5144395570",
+        "win": true,
+        "champion": "Warwick"
+      },
+      {
+        "matchId": "NA1_5143850830",
+        "win": true,
+        "champion": "Volibear"
+      },
+      {
+        "matchId": "NA1_5143831019",
+        "win": false,
+        "champion": "Warwick"
+      },
+      {
+        "matchId": "NA1_5143236889",
+        "win": true,
+        "champion": "Warwick"
+      },
+      {
+        "matchId": "NA1_5143216718",
+        "win": true,
+        "champion": "Volibear"
+      }
+    ]
+  },
+  "speeve-stove": {
+    "puuid": "zbJYwUS3AKrsNhd0rmWg2v8aOtMTttk5kI0JbfLSO8zMrvU80E0xKtEEma4l_2nD-pj4NRZWFWZLiA",
+    "gameName": "speeve",
+    "tagLine": "stove",
+    "summonerData": {
+      "id": "AJgTfENFldrXeNUhpz85zQ--d3BcAYBX5UAeIsUVUPtUjAk",
+      "accountId": "NhNQjb_TUJzIj3LvY8NcehFUd35KOqMWV4fWUjZ3-oXnQSI",
+      "puuid": "zbJYwUS3AKrsNhd0rmWg2v8aOtMTttk5kI0JbfLSO8zMrvU80E0xKtEEma4l_2nD-pj4NRZWFWZLiA",
+      "profileIconId": 5870,
+      "revisionDate": 1730919434823,
+      "summonerLevel": 248
+    },
+    "leagueData": [
+      {
+        "leagueId": "1f4fb7ac-bab8-4267-a493-bb18e27798e6",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "EMERALD",
+        "rank": "III",
+        "summonerId": "AJgTfENFldrXeNUhpz85zQ--d3BcAYBX5UAeIsUVUPtUjAk",
+        "leaguePoints": 6,
+        "wins": 21,
+        "losses": 16,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": true
+      }
+    ],
+    "lastSearchTime": {
+      "day": "06",
+      "hours": "15",
+      "minutes": "05"
+    },
+    "decayDaysLeft": 14,
+    "rankedSoloMatches": [
+      {
+        "matchId": "NA1_5148244681",
+        "win": true,
+        "champion": "Ahri"
+      },
+      {
+        "matchId": "NA1_5148173645",
+        "win": true,
+        "champion": "Veigar"
+      },
+      {
+        "matchId": "NA1_5147946842",
+        "win": true,
+        "champion": "Ahri"
+      },
+      {
+        "matchId": "NA1_5147931086",
+        "win": true,
+        "champion": "Ahri"
+      },
+      {
+        "matchId": "NA1_5147666625",
+        "win": true,
+        "champion": "Ahri"
+      },
+      {
+        "matchId": "NA1_5147644423",
+        "win": false,
+        "champion": "Lissandra"
+      },
+      {
+        "matchId": "NA1_5147634503",
+        "win": false,
+        "champion": "Ahri"
+      },
+      {
+        "matchId": "NA1_5147355014",
+        "win": true,
+        "champion": "Ahri"
+      },
+      {
+        "matchId": "NA1_5147312640",
+        "win": false,
+        "champion": "Ahri"
+      },
+      {
+        "matchId": "NA1_5147280748",
+        "win": false,
+        "champion": "Ahri"
+      },
+      {
+        "matchId": "NA1_5147251136",
+        "win": true,
+        "champion": "Ahri"
+      },
+      {
+        "matchId": "NA1_5147134194",
+        "win": true,
+        "champion": "Lissandra"
+      },
+      {
+        "matchId": "NA1_5135482092",
+        "win": true,
+        "champion": "Ahri"
+      },
+      {
+        "matchId": "NA1_5135469366",
+        "win": true,
+        "champion": "Lissandra"
+      },
+      {
+        "matchId": "NA1_5135431307",
+        "win": false,
+        "champion": "Lissandra"
+      },
+      {
+        "matchId": "NA1_5135411047",
+        "win": true,
+        "champion": "Lissandra"
+      },
+      {
+        "matchId": "NA1_5134609029",
+        "win": false,
+        "champion": "Ahri"
+      },
+      {
+        "matchId": "NA1_5134583678",
+        "win": true,
+        "champion": "Lissandra"
+      },
+      {
+        "matchId": "NA1_5134574170",
+        "win": false,
+        "champion": "Veigar"
+      },
+      {
+        "matchId": "NA1_5134549321",
+        "win": true,
+        "champion": "Lux"
+      }
+    ]
+  },
+  "zekkers-na1": {
+    "puuid": "nVh1JAxZIm53jYGdibxg7711_AC6LPaSptb3hVPz7EKjVlj93xpIMhFgmDpJCgNZ0IReiEYzbDl1fg",
+    "gameName": "Zekkers",
+    "tagLine": "NA1",
+    "summonerData": {
+      "id": "zJ4CSrE5z0bzS9md3wRvjH33ZblNtE23JFfM6xQq2mvNSON3",
+      "accountId": "-M1IDVBAChsgRvVrddHEJ0kijhyCTfYSXp4RgQzUxvKC8fv6_AeSungB",
+      "puuid": "nVh1JAxZIm53jYGdibxg7711_AC6LPaSptb3hVPz7EKjVlj93xpIMhFgmDpJCgNZ0IReiEYzbDl1fg",
+      "profileIconId": 3160,
+      "revisionDate": 1730932062677,
+      "summonerLevel": 619
+    },
+    "leagueData": [
+      {
+        "leagueId": "f598c07d-d015-4ee8-bdc5-3cbb335da869",
+        "queueType": "RANKED_FLEX_SR",
+        "tier": "EMERALD",
+        "rank": "II",
+        "summonerId": "zJ4CSrE5z0bzS9md3wRvjH33ZblNtE23JFfM6xQq2mvNSON3",
+        "leaguePoints": 64,
+        "wins": 21,
+        "losses": 17,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": true
+      },
+      {
+        "leagueId": "2da435ca-7317-4af1-ada1-1c2390286760",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "EMERALD",
+        "rank": "III",
+        "summonerId": "zJ4CSrE5z0bzS9md3wRvjH33ZblNtE23JFfM6xQq2mvNSON3",
+        "leaguePoints": 81,
+        "wins": 63,
+        "losses": 63,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      }
+    ],
+    "lastSearchTime": {
+      "day": "06",
+      "hours": "15",
+      "minutes": "05"
+    },
+    "decayDaysLeft": 10,
+    "rankedSoloMatches": [
+      {
+        "matchId": "NA1_5148355770",
+        "win": false,
+        "champion": "Orianna"
+      },
+      {
+        "matchId": "NA1_5148332393",
+        "win": false,
+        "champion": "Sivir"
+      },
+      {
+        "matchId": "NA1_5148312726",
+        "win": false,
+        "champion": "Varus"
+      },
+      {
+        "matchId": "NA1_5147951534",
+        "win": true,
+        "champion": "Corki"
+      },
+      {
+        "matchId": "NA1_5147797560",
+        "win": true,
+        "champion": "Corki"
+      },
+      {
+        "matchId": "NA1_5147731671",
+        "win": true,
+        "champion": "Corki"
+      },
+      {
+        "matchId": "NA1_5147707352",
+        "win": false,
+        "champion": "Corki"
+      },
+      {
+        "matchId": "NA1_5147692917",
+        "win": false,
+        "champion": "Corki"
+      },
+      {
+        "matchId": "NA1_5147387467",
+        "win": false,
+        "champion": "Corki"
+      },
+      {
+        "matchId": "NA1_5147359889",
+        "win": false,
+        "champion": "KogMaw"
+      }
+    ]
+  },
+  "nauti-xoxo": {
+    "puuid": "J6z8NGGza_hZgaMdV8BpSEj60aalD_LItC_ZGKgYfl5boXsyiXLY28Mril7Jx2OFjo-GudgchRZEuw",
+    "gameName": "nauti",
+    "tagLine": "xoxo",
+    "summonerData": {
+      "id": "eTi9iDGZAx8TNOW7ZNrR0vn_wAx0nH2lT8Kaa_cckTFe1c3AvSLtVav2Lg",
+      "accountId": "uWDUhpo47UWkZ9aOpkVqwbEwIiVbB1id-3It3xL3i3OrrYpepTS_NE6N",
+      "puuid": "J6z8NGGza_hZgaMdV8BpSEj60aalD_LItC_ZGKgYfl5boXsyiXLY28Mril7Jx2OFjo-GudgchRZEuw",
+      "profileIconId": 5721,
+      "revisionDate": 1730934937551,
+      "summonerLevel": 644
+    },
+    "leagueData": [
+      {
+        "leagueId": "fba498b9-1ac0-4d6f-9942-9a3a8c936c59",
+        "queueType": "RANKED_FLEX_SR",
+        "tier": "IRON",
+        "rank": "I",
+        "summonerId": "eTi9iDGZAx8TNOW7ZNrR0vn_wAx0nH2lT8Kaa_cckTFe1c3AvSLtVav2Lg",
+        "leaguePoints": 68,
+        "wins": 7,
+        "losses": 0,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": true
+      },
+      {
+        "leagueId": "2e45773b-9eb2-4142-a8a3-175e67986326",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "EMERALD",
+        "rank": "IV",
+        "summonerId": "eTi9iDGZAx8TNOW7ZNrR0vn_wAx0nH2lT8Kaa_cckTFe1c3AvSLtVav2Lg",
+        "leaguePoints": 27,
+        "wins": 134,
+        "losses": 135,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      }
+    ],
+    "lastSearchTime": {
+      "day": "06",
+      "hours": "18",
+      "minutes": "30"
+    },
+    "decayDaysLeft": 13,
+    "rankedSoloMatches": [
+      {
+        "matchId": "NA1_5148387008",
+        "win": false,
+        "champion": "Yuumi"
+      },
+      {
+        "matchId": "NA1_5148355770",
+        "win": false,
+        "champion": "Yuumi"
+      },
+      {
+        "matchId": "NA1_5148343122",
+        "win": true,
+        "champion": "Yuumi"
+      },
+      {
+        "matchId": "NA1_5148266056",
+        "win": false,
+        "champion": "Yuumi"
+      },
+      {
+        "matchId": "NA1_5148247619",
+        "win": false,
+        "champion": "Renata"
+      },
+      {
+        "matchId": "NA1_5148233839",
+        "win": false,
+        "champion": "Seraphine"
+      },
+      {
+        "matchId": "NA1_5148222569",
+        "win": false,
+        "champion": "Nami"
+      },
+      {
+        "matchId": "NA1_5148207558",
+        "win": true,
+        "champion": "Lulu"
+      },
+      {
+        "matchId": "NA1_5148190360",
+        "win": false,
+        "champion": "Lux"
+      },
+      {
+        "matchId": "NA1_5147956607",
+        "win": true,
+        "champion": "Yuumi"
+      },
+      {
+        "matchId": "NA1_5147912655",
+        "win": true,
+        "champion": "Yuumi"
+      },
+      {
+        "matchId": "NA1_5147894871",
+        "win": false,
+        "champion": "Yuumi"
+      },
+      {
+        "matchId": "NA1_5147746041",
+        "win": false,
+        "champion": "Karma"
+      },
+      {
+        "matchId": "NA1_5147726513",
+        "win": true,
+        "champion": "Nami"
+      },
+      {
+        "matchId": "NA1_5147682481",
+        "win": false,
+        "champion": "Soraka"
+      },
+      {
+        "matchId": "NA1_5147668773",
+        "win": true,
+        "champion": "Seraphine"
+      },
+      {
+        "matchId": "NA1_5147652593",
+        "win": false,
+        "champion": "Sona"
+      },
+      {
+        "matchId": "NA1_5147192131",
+        "win": false,
+        "champion": "Yuumi"
+      }
+    ]
+  },
+  "mochi-web0": {
+    "puuid": "sqKTrDoX1RWcWEV-MT3VH0IjS-gONOrVxxE6rFJyHqj9ywlAtZccKJollrXaZfJs0ehM-o19_EmjWA",
+    "gameName": "mochi",
+    "tagLine": "WEB0",
+    "summonerData": {
+      "id": "3vJtt3zmQfkPYRGydK1Fk2gE-N1X1xeBjXHDiMJriAvKVQ3y",
+      "accountId": "W3ZgLTJiz79EwT8XCDmcHabkDomqqp2GlJbqbD1dPOyCIJstLCNPIuVO",
+      "puuid": "sqKTrDoX1RWcWEV-MT3VH0IjS-gONOrVxxE6rFJyHqj9ywlAtZccKJollrXaZfJs0ehM-o19_EmjWA",
+      "profileIconId": 6749,
+      "revisionDate": 1730934937551,
+      "summonerLevel": 773
+    },
+    "leagueData": [
+      {
+        "leagueId": "31b5500b-7361-45a5-8a22-067f4c707d6f",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "EMERALD",
+        "rank": "II",
+        "summonerId": "3vJtt3zmQfkPYRGydK1Fk2gE-N1X1xeBjXHDiMJriAvKVQ3y",
+        "leaguePoints": 3,
+        "wins": 41,
+        "losses": 45,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+      }
+    ],
+    "lastSearchTime": {
+      "day": "06",
+      "hours": "18",
+      "minutes": "30"
+    },
+    "decayDaysLeft": 1,
+    "rankedSoloMatches": [
+      {
+        "matchId": "NA1_5148387008",
+        "win": false,
+        "champion": "XinZhao"
+      },
+      {
+        "matchId": "NA1_5147541729",
+        "win": false,
+        "champion": "Neeko"
+      },
+      {
+        "matchId": "NA1_5147535630",
+        "win": false,
+        "champion": "XinZhao"
+      },
+      {
+        "matchId": "NA1_5147161117",
+        "win": false,
+        "champion": "XinZhao"
+      },
+      {
+        "matchId": "NA1_5147138401",
+        "win": true,
+        "champion": "XinZhao"
+      },
+      {
+        "matchId": "NA1_5147107825",
+        "win": true,
+        "champion": "Ornn"
+      },
+      {
+        "matchId": "NA1_5147089450",
+        "win": false,
+        "champion": "XinZhao"
+      },
+      {
+        "matchId": "NA1_5146895085",
+        "win": true,
+        "champion": "XinZhao"
+      },
+      {
+        "matchId": "NA1_5146872373",
+        "win": false,
+        "champion": "XinZhao"
+      },
+      {
+        "matchId": "NA1_5146850685",
+        "win": true,
+        "champion": "XinZhao"
+      },
+      {
+        "matchId": "NA1_5146354894",
+        "win": true,
+        "champion": "XinZhao"
+      },
+      {
+        "matchId": "NA1_5146147400",
+        "win": true,
+        "champion": "XinZhao"
+      },
+      {
+        "matchId": "NA1_5145739983",
+        "win": true,
+        "champion": "XinZhao"
+      },
+      {
+        "matchId": "NA1_5145720791",
+        "win": false,
+        "champion": "Sejuani"
+      },
+      {
+        "matchId": "NA1_5145706382",
+        "win": true,
+        "champion": "XinZhao"
       }
     ]
   }
