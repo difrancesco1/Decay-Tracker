@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Modal.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFloppyDisk, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 
 // Import Ranked Borders
 import challengerBorder from './assets/ranked-emblem/wings/wings_challenger.png';
@@ -41,14 +42,28 @@ const getRankBorder = (tier) => {
   }
 };
 
-const Modal = ({ isOpen, onClose, onSubmit, onReset, existingCredentials, profileIconId, gameName, tagLine, tier }) => {
-
+const Modal = ({
+  isOpen,
+  onClose,
+  onSubmit,
+  onReset,
+  onUpdatePlayerData,
+  onDeletePlayer,
+  existingCredentials,
+  profileIconId,
+  gameName,
+  tagLine,
+  tier,
+  playerKey,
+  isFavorite, // Receive the favorite status
+}) => {
   // Log the tier received in Modal.js
   console.log("Tier received in Modal.js: ", tier);
   console.log("Profile Icon ID received in Modal.js: ", profileIconId);
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [favoriteStatus, setFavoriteStatus] = useState(isFavorite); // Local state for favorite status
 
   useEffect(() => {
     if (existingCredentials) {
@@ -59,6 +74,10 @@ const Modal = ({ isOpen, onClose, onSubmit, onReset, existingCredentials, profil
       setPassword('');
     }
   }, [existingCredentials]);
+
+  useEffect(() => {
+    setFavoriteStatus(isFavorite); // Update local state when isFavorite prop changes
+  }, [isFavorite]);
 
   if (!isOpen) return null;
 
@@ -74,17 +93,67 @@ const Modal = ({ isOpen, onClose, onSubmit, onReset, existingCredentials, profil
     onClose();
   };
 
-  // Debugging logs to verify tier and profileIconId are being passed correctly
-  console.log("Tier in Modal: ", tier);  // This should log the tier such as 'GRANDMASTER'
-  console.log("Profile Icon ID in Modal: ", profileIconId);
+  const handleFavorite = () => {
+    if (typeof playerKey !== 'string') {
+      console.error("Expected playerKey to be a string but got:", playerKey);
+      return;
+    }
+
+    const normalizedKey = playerKey.replace(/\s+/g, '').toLowerCase();
+
+    onUpdatePlayerData((prevData) => {
+      const isFavorite = prevData[normalizedKey]?.favorite || false;
+      const updatedData = {
+        ...prevData,
+        [normalizedKey]: {
+          ...prevData[normalizedKey],
+          favorite: !isFavorite,
+        },
+      };
+
+      // Update the server with the new favorite status
+      axios
+        .post('http://localhost:3001/update-favorite', {
+          playerKey: normalizedKey,
+          favorite: !isFavorite,
+        })
+        .then(() => {
+          console.log("Favorite status updated on the server");
+          setFavoriteStatus(!isFavorite); // Update local state to reflect new status
+        })
+        .catch((error) => {
+          console.error("Error updating favorite status on server:", error);
+        });
+
+      return updatedData;
+    });
+  };
+
+  const handleDelete = () => {
+    const playerKey = `${gameName}-${tagLine}`.toLowerCase().replace(/\s+/g, '');
+  
+    axios
+      .post('http://localhost:3001/delete-player', { playerKey }) // Use correct endpoint here
+      .then(() => {
+        console.log(`Player ${gameName}-${tagLine} deleted successfully.`);
+        onDeletePlayer(playerKey); // Update UI
+        onClose(); // Close modal
+      })
+      .catch((error) => {
+        console.error("Error deleting player data:", error);
+      });
+  };
+  
+  
 
   const profileIconUrl = profileIconId
     ? `https://ddragon.leagueoflegends.com/cdn/14.17.1/img/profileicon/${profileIconId}.png`
     : null;
 
+  // Debugging logs to verify tier and profileIconId are being passed correctly
+  console.log("Tier in Modal: ", tier);  // This should log the tier such as 'GRANDMASTER'
+  console.log("Profile Icon ID in Modal: ", profileIconId);
 
-  // Check tier is passed correctly into Modal
-  console.log("Tier received in Modal.js: ", tier);
   const rankBorder = getRankBorder(tier);
 
   return (
@@ -130,11 +199,20 @@ const Modal = ({ isOpen, onClose, onSubmit, onReset, existingCredentials, profil
           <button className="button-modal" onClick={handleSave}>
             <FontAwesomeIcon icon={faFloppyDisk} size="lg" />
           </button>
-        </div>
 
-        {/* <svg className='svg-wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path fill="#EABEC3" fillOpacity="1" d="M0,256L120,256C240,256,480,256,720,229.3C960,203,1200,149,1320,122.7L1440,96L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-        </svg> */}
+          {/* Favorite/Unfavorite Button */}
+          <button
+            className="button-modal favorite-button"
+            onClick={handleFavorite}
+          >
+            {favoriteStatus ? 'Unfavorite' : 'Favorite'}
+          </button>
+
+          {/* Delete Button */}
+          <button className="button-modal delete-button" onClick={handleDelete}>
+            Delete
+          </button>
+        </div>
       </div>
     </>
   );

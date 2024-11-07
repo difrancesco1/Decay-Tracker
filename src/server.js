@@ -95,6 +95,45 @@ app.post('/update', (req, res) => {
   });
 });
 
+app.post('/update-favorite', (req, res) => {
+  const { playerKey, favorite } = req.body;
+  const normalizedKey = normalizeKey(playerKey);
+
+  readDataFromFile((fileData) => {
+    if (!fileData[normalizedKey]) {
+      return res.status(404).json({ error: 'Player not found' });
+    }
+    fileData[normalizedKey].favorite = favorite;
+
+    writeDataToFile(fileData, (err) => {
+      if (err) return res.status(500).json({ error: 'Error saving data to file' });
+      res.json({ message: 'Favorite status updated successfully' });
+    });
+  });
+});
+
+app.post('/delete-player', (req, res) => {
+  const { playerKey } = req.body;
+  const normalizedKey = normalizeKey(playerKey);
+
+  readDataFromFile((fileData) => {
+    if (!fileData[normalizedKey]) {
+      return res.status(404).json({ error: 'Player not found' });
+    }
+
+    // Delete the player from the file data
+    delete fileData[normalizedKey];
+
+    // Write the updated data back to the file
+    writeDataToFile(fileData, (err) => {
+      if (err) return res.status(500).json({ error: 'Error saving data to file' });
+      res.json({ message: `Player with key ${playerKey} deleted successfully.` });
+    });
+  });
+});
+
+
+
 app.get('/search/:riotID/:tagline', (req, res) => {
   const { riotID, tagline } = req.params;
   const searchTime = getCurrentTime();
@@ -169,8 +208,10 @@ const fetchMatchHistory = (puuid, riotID, tagline, combinedPlayerData, res) => {
         const newMatchesCount = rankedSoloMatches.length - (existingPlayer?.rankedSoloMatches?.length || 0);
         const updatedDecayDays = Math.min((existingPlayer?.decayDaysLeft || 0) + newMatchesCount, 14);
 
+        // Preserve the favorite status if it exists
         combinedPlayerData.decayDaysLeft = updatedDecayDays;
         combinedPlayerData.rankedSoloMatches = rankedSoloMatches;
+        combinedPlayerData.favorite = existingPlayer?.favorite || false; // Preserve favorite status
 
         data[playerKey] = combinedPlayerData;
 
@@ -181,6 +222,7 @@ const fetchMatchHistory = (puuid, riotID, tagline, combinedPlayerData, res) => {
     res.status(500).json({ error: 'Error fetching match history' });
   });
 };
+
 
 const port = 3001;
 app.listen(port, () => {
