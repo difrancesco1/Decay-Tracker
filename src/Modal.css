@@ -9,6 +9,10 @@ body, .your-element {
   }
 
 
+
+
+
+/* Modal Container */
 .modal {
     position: fixed;
     top: 50%;
@@ -23,10 +27,35 @@ body, .your-element {
     flex-direction: column;
     align-items: center;
     border: 5px solid #EABEC3;
-    width: 326.917px;
-    height: 256.917px;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+  }
+
+  /* Responsive Adjustments */
+@media (max-width: 1022px) {
+    .modal {
+        position: fixed;
+        top: 22%;
+        left: unset !important;
+        transform: none !important;
+        background-color: #EDEEF3;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 5px solid #EABEC3;
+        max-width: 350px;
+        box-sizing: border-box;
+  }
+
+
 }
 
+
+/* Modal Overlay */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -35,7 +64,7 @@ body, .your-element {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
-}
+  }
 
 .modal-close-button {
     position: absolute;
@@ -45,6 +74,8 @@ body, .your-element {
     font-size: 18px;
 }
 
+
+
 .form-modal {
     padding: 10px;
 }
@@ -52,6 +83,7 @@ body, .your-element {
 .buttons-modal {
     display: flex;
     justify-content: space-evenly;
+    gap:8px;
 
 }
 

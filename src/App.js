@@ -96,9 +96,7 @@ function App() {
     });
   };
   
-  
-  
-  
+// Fetch and set player data with favorites at the top
 const fetchData = async () => {
   try {
     // Fetch player data
@@ -150,7 +148,6 @@ const fetchData = async () => {
     setErrorMessage('Error fetching cached player data');
   }
 };
-
   useEffect(() => {
   
     fetchData();
@@ -565,82 +562,82 @@ const fetchData = async () => {
       });
   };
 
-  const handleDecayRefresh = async (playerKey) => {
-    const normalizedKey = playerKey.replace(/\s+/g, '').toLowerCase();
-  
-    if (!playerData) {
-      console.error("Player data is not loaded.");
-      return;
+// Function to handle decay refresh and maintain favorites at the top
+const handleDecayRefresh = async (playerKey) => {
+  const normalizedKey = playerKey.replace(/\s+/g, '').toLowerCase();
+
+  if (!playerData) {
+    console.error("Player data is not loaded.");
+    return;
+  }
+
+  const player = playerData[normalizedKey];
+  if (!player) {
+    console.error(`Player not found for key ${normalizedKey}`);
+    return;
+  }
+
+  const currentTime = getCurrentTime();
+  const APICallString = `http://localhost:3001/search/${player.gameName}/${player.tagLine}`;
+
+  try {
+    const response = await axios.get(APICallString);
+
+    const newRankedSoloMatches = response.data.rankedSoloMatches || [];
+    const previousMatches = player.rankedSoloMatches || [];
+    const previousMatchIds = previousMatches.map((match) => match.matchId);
+    const newMatches = newRankedSoloMatches.filter(
+      (match) => !previousMatchIds.includes(match.matchId)
+    );
+
+    const playerTier = response.data.leagueData?.[0]?.tier;
+    let maxDecayDays;
+
+    if (playerTier === "DIAMOND") {
+      maxDecayDays = 28;
+    } else if (["MASTER", "GRANDMASTER", "CHALLENGER"].includes(playerTier)) {
+      maxDecayDays = 14;
+    } else {
+      maxDecayDays = 0; // No decay for ranks below Diamond
     }
-  
-    const player = playerData[normalizedKey];
-    if (!player) {
-      console.error(`Player not found for key ${normalizedKey}`);
-      return;
+
+    let updatedDecayDays = player.decayDaysLeft;
+
+    if (newMatches.length > 0 && maxDecayDays > 0) {
+      updatedDecayDays = Math.min(player.decayDaysLeft + newMatches.length, maxDecayDays);
     }
-  
-    const currentTime = getCurrentTime();
-    const APICallString = `http://localhost:3001/search/${player.gameName}/${player.tagLine}`;
-  
-    try {
-      const response = await axios.get(APICallString);
-  
-      const newRankedSoloMatches = response.data.rankedSoloMatches || [];
-      const previousMatches = player.rankedSoloMatches || [];
-      const previousMatchIds = previousMatches.map((match) => match.matchId);
-      const newMatches = newRankedSoloMatches.filter(
-        (match) => !previousMatchIds.includes(match.matchId)
-      );
-  
-      const playerTier = response.data.leagueData?.[0]?.tier;
-      let maxDecayDays;
-  
-      if (playerTier === "DIAMOND") {
-        maxDecayDays = 28;
-      } else if (["MASTER", "GRANDMASTER", "CHALLENGER"].includes(playerTier)) {
-        maxDecayDays = 14;
-      } else {
-        maxDecayDays = 0; // No decay for ranks below Diamond
-      }
-  
-      let updatedDecayDays = player.decayDaysLeft;
-  
-      if (newMatches.length > 0 && maxDecayDays > 0) {
-        updatedDecayDays = Math.min(player.decayDaysLeft + newMatches.length, maxDecayDays);
-      }
-  
-      const storedCredentials = JSON.parse(localStorage.getItem(`credentials-${normalizedKey}`));
-  
-      // Explicitly keep the existing favorite status
-      const updatedPlayer = {
-        ...response.data,
-        decayDaysLeft: updatedDecayDays,
-        lastSearchTime: currentTime,
-        rankedSoloMatches: [...newRankedSoloMatches],
-        credentials: storedCredentials || player.credentials,
-        favorite: player.favorite, // Preserve favorite status
-      };
-  
-      const updatedPlayerData = {
-        ...playerData,
-        [normalizedKey]: updatedPlayer,
-      };
-  
-      setPlayerData(updatedPlayerData);
-      setSortedPlayers([...Object.values(updatedPlayerData)]);
-  
-      await axios.post("http://localhost:3001/update-decay", {
-        playerKey: normalizedKey,
-        decayDays: updatedDecayDays,
-        lastSearchTime: currentTime,
-      });
-  
-      console.log("Decay days, lastSearchTime, and rankedSoloMatches updated successfully!");
-  
-    } catch (error) {
-      console.error("Error fetching updated player data for ranked solo matches:", error);
-    }
-  };
+
+    const storedCredentials = JSON.parse(localStorage.getItem(`credentials-${normalizedKey}`));
+
+    // Explicitly keep the existing favorite status
+    const updatedPlayer = {
+      ...response.data,
+      decayDaysLeft: updatedDecayDays,
+      lastSearchTime: currentTime,
+      rankedSoloMatches: [...newRankedSoloMatches],
+      credentials: storedCredentials || player.credentials,
+      favorite: player.favorite, // Preserve favorite status
+    };
+
+    const updatedPlayerData = {
+      ...playerData,
+      [normalizedKey]: updatedPlayer,
+    };
+
+    setPlayerData(updatedPlayerData);
+    setSortedPlayers(sortPlayersWithFavorites(Object.values(updatedPlayerData))); // Maintain favorites at the top
+
+    await axios.post("http://localhost:3001/update-decay", {
+      playerKey: normalizedKey,
+      decayDays: updatedDecayDays,
+      lastSearchTime: currentTime,
+    });
+
+    console.log("Decay days, lastSearchTime, and rankedSoloMatches updated successfully!");
+  } catch (error) {
+    console.error("Error fetching updated player data for ranked solo matches:", error);
+  }
+};
   
   
 

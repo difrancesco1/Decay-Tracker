@@ -196,9 +196,11 @@ const Modal = ({
         </form>
 
         <div className="buttons-modal">
-          <button className="button-modal" onClick={handleSave}>
-            <FontAwesomeIcon icon={faFloppyDisk} size="lg" />
+        {/* Delete Button */}
+        <button className="button-modal delete-button" onClick={handleDelete}>
+            Delete
           </button>
+          
 
           {/* Favorite/Unfavorite Button */}
           <button
@@ -207,11 +209,11 @@ const Modal = ({
           >
             {favoriteStatus ? 'Unfavorite' : 'Favorite'}
           </button>
-
-          {/* Delete Button */}
-          <button className="button-modal delete-button" onClick={handleDelete}>
-            Delete
+          <button className="button-modal" onClick={handleSave}>
+            <FontAwesomeIcon icon={faFloppyDisk} size="lg" />
           </button>
+
+          
         </div>
       </div>
     </>

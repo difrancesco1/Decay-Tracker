@@ -16,13 +16,26 @@ app.use(cors({
   allowedHeaders: ['Content-Type'],
 }));
 app.use(express.json());
-app.use(rateLimit({
-  windowMs: 1 * 60 * 1000,
+
+// Rate limiters
+const secondRateLimiter = rateLimit({
+  windowMs: 1 * 1000, // 1 second
   max: 20,
-}));
+  message: { error: 'Too many requests, please try again after a second.' },
+});
+
+const minuteRateLimiter = rateLimit({
+  windowMs: 2 * 60 * 1000, // 2 minutes
+  max: 100,
+  message: { error: 'Too many requests, please try again after a few minutes.' },
+});
+
+// Apply rate limiters
+app.use(secondRateLimiter);
+app.use(minuteRateLimiter);
 
 // API Key
-const API_KEY = "RGAPI-472bc2e2-83f2-47bd-99db-b2ed77656acb";
+const API_KEY = process.env.API_KEY || "RGAPI-e3c3b905-cf41-4c3c-ad16-e1edc22ca4ab";
 
 // Get current time in PST
 const getCurrentTime = () => {
@@ -34,7 +47,7 @@ const getCurrentTime = () => {
   };
 };
 
-// Utility to read and write data from file
+// Utility functions to read and write data from file
 const readDataFromFile = (callback) => {
   fs.readFile('playerData.json', (err, data) => {
     if (err) return callback({});
@@ -132,8 +145,6 @@ app.post('/delete-player', (req, res) => {
   });
 });
 
-
-
 app.get('/search/:riotID/:tagline', (req, res) => {
   const { riotID, tagline } = req.params;
   const searchTime = getCurrentTime();
@@ -170,6 +181,7 @@ app.get('/search/:riotID/:tagline', (req, res) => {
       });
     })
     .catch(error => {
+      console.error("Error fetching account or summoner data:", error.message);
       res.status(500).json({ error: 'Error fetching player data' });
     });
 });
@@ -184,18 +196,23 @@ const fetchMatchHistory = (puuid, riotID, tagline, combinedPlayerData, res) => {
 
       return axios.get(matchDetailApiUrl).then(matchDetailResponse => {
         const matchInfo = matchDetailResponse.data.info;
-        if (matchInfo.queueId === 420) {
+        if (matchInfo && matchInfo.queueId === 420) {
           const playerDataInMatch = matchInfo.participants.find(
             participant => participant.puuid === puuid
           );
 
-          return {
-            matchId,
-            win: playerDataInMatch.win,
-            champion: playerDataInMatch.championName,
-          };
+          if (playerDataInMatch) {
+            return {
+              matchId,
+              win: playerDataInMatch.win,
+              champion: playerDataInMatch.championName,
+            };
+          }
         }
         return null;
+      }).catch(error => {
+        console.error(`Error fetching match details for match ID ${matchId}:`, error.message);
+        return null; // Return null for failed match details to prevent Promise.all rejection
       });
     });
 
@@ -219,10 +236,10 @@ const fetchMatchHistory = (puuid, riotID, tagline, combinedPlayerData, res) => {
       });
     });
   }).catch(error => {
+    console.error("Error fetching match history:", error.message);
     res.status(500).json({ error: 'Error fetching match history' });
   });
 };
-
 
 const port = 3001;
 app.listen(port, () => {
