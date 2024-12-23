@@ -30,7 +30,7 @@ Decay Tracker is a full-stack React application that helps users track multiple 
 - Riot Games API for data integration
 
 ## Installation and Setup
-###Prerequisites
+### Prerequisites
 Ensure you have the following installed:
 - Node.js (v14 or later)
 - npm or yarn
