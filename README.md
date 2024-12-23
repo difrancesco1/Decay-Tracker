@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Decay Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Decay Tracker is a full-stack React application that helps users track multiple League of Legends accounts, manage credentials securely, monitor days until ranked decay, and view account statistics. The app leverages the Riot Games API for real-time data retrieval and visualization.
 
-## Available Scripts
+![DecayTracker3](https://github.com/user-attachments/assets/045174cb-e567-496c-b505-67d5760637a3)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Account Management: Store and manage multiple account credentials with encryption and secure local storage.
+- Ranked Decay Tracking: Monitor the number of days remaining until ranked decay for each account.
+- Real-Time Statistics: Fetch and display detailed match history, rank, and performance data from Riot Games API.
+- Responsive UI: A modern, user-friendly interface designed with React, Tailwind CSS, and responsive design principles.
+- Error Handling: Robust error-handling mechanisms to ensure smooth data fetching and a seamless user experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend
+- React.js
+- JavaScript
 
-### `npm test`
+### Backend
+- Node.js
+- RESTful APIs
+- Axios
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Database
+- MongoDB
 
-### `npm run build`
+### Other Tools
+- Riot Games API for data integration
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation and Setup
+###Prerequisites
+Ensure you have the following installed:
+- Node.js (v14 or later)
+- npm or yarn
+- MongoDB (local or cloud)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Steps
+1. Clone the repository:
+   '''git clone https://github.com/difrancesco1/Decay-Tracker.git
+      cd Decay-Tracker'''
+2. Install dependencies:
+   '''npm install'''
+3. Set up environment variables:
+   - Create a .env file in the project root.
+   - Add the following variables:
+     '''REACT_APP_API_KEY=<Your Riot Games API Key>
+        NODE_ENV=development
+        MONGO_URI=<Your MongoDB connection string>'''
+4. Start the application:
+   '''npm start'''
+   The app will run on http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
+1. Login/Register: Create an account to start managing League of Legends accounts.
+2. Add Accounts: Add and save multiple accounts with their credentials.
+3. Track Decay: View the number of days until ranked decay for each account.
+4. View Statistics: Access detailed match history and performance metrics.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact 
+For inquiries or support, contact:
+Joshua DiFrancesco
+- Github: difrancesco1
