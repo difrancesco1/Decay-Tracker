@@ -38,18 +38,18 @@ Ensure you have the following installed:
 
 ### Steps
 1. Clone the repository:
-   '''git clone https://github.com/difrancesco1/Decay-Tracker.git
-      cd Decay-Tracker'''
+   `git clone https://github.com/difrancesco1/Decay-Tracker.git
+      cd Decay-Tracker`
 2. Install dependencies:
-   '''npm install'''
+   `npm install`
 3. Set up environment variables:
    - Create a .env file in the project root.
    - Add the following variables:
-     '''REACT_APP_API_KEY=<Your Riot Games API Key>
+     `REACT_APP_API_KEY=<Your Riot Games API Key>
         NODE_ENV=development
-        MONGO_URI=<Your MongoDB connection string>'''
+        MONGO_URI=<Your MongoDB connection string>`
 4. Start the application:
-   '''npm start'''
+   `npm start`
    The app will run on http://localhost:3000.
 
 ## Usage
